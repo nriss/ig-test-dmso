@@ -53,6 +53,16 @@ Le test pourra être poussé plus loin avec l'outillage suivant :
 
 Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globale entre tous les IGs
 
+### Contraintes
+
+* Les formulaires (`Questionnaire`) doivent être **versionnés**.
+* L'outil d'édition et de publication des formulaires doit être **simple d'usage**, y compris pour des profils non techniques.
+* Les réponses doivent être portées par des ressources `QuestionnaireResponse`, afin d'être en FHIR.
+
+### Perspective
+
+Utiliser l'opération **SDC `$extract`** (Structured Data Capture) pour extraire les réponses d'une `QuestionnaireResponse` en ressources FHIR `Observation`.
+
 ### Auteurs et contributeurs (optionnel)
 
 | Role  | Nom | Organisation | Contact |
