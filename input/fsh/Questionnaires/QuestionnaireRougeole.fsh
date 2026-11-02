@@ -254,19 +254,14 @@ Usage: #definition
 * item[2].item[17].required = true
 * item[2].item[17].answerOption[0].valueString = "Guérison"
 * item[2].item[17].answerOption[1].valueString = "Encore malade"
+* item[2].item[17].answerOption[2].valueString = "Décès"
 
-* item[2].item[18].linkId = "deces"
-* item[2].item[18].text = "Décès"
-* item[2].item[18].type = #choice
-* item[2].item[18].answerOption[0].valueString = "oui"
-* item[2].item[18].answerOption[1].valueString = "non"
-
-* item[2].item[19].linkId = "deces-date"
-* item[2].item[19].text = "Date du décès"
-* item[2].item[19].type = #date
-* item[2].item[19].enableWhen[0].question = "deces"
-* item[2].item[19].enableWhen[0].operator = #=
-* item[2].item[19].enableWhen[0].answerString = "oui"
+* item[2].item[18].linkId = "deces-date"
+* item[2].item[18].text = "Date du décès"
+* item[2].item[18].type = #date
+* item[2].item[18].enableWhen[0].question = "evolution"
+* item[2].item[18].enableWhen[0].operator = #=
+* item[2].item[18].enableWhen[0].answerString = "Décès"
 
 
 * item[3].linkId = "biologie"
