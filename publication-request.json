@@ -1,0 +1,18 @@
+{
+    "package-id" : "ans.fhir.fr.dmso",
+    "version" : "0.1.0",
+    "path" : "https://interop.esante.gouv.fr/ig/fhir/dmso",
+    "mode" : "milestone",
+    "status" : "release",
+    "sequence" : "STU1",
+    "title" : "IG Test DMSO",
+    "first" : true,
+    "desc" : "IG de test pour le DMSO",
+    "ci-build" : "https://nriss.github.io/ig-test-dmso",
+    "category" : "[todo]",
+    "introduction" : "[todo]",
+    "changes": "change-log.html",
+    "registry-description" : "{description to go in the FHIR IG registry} (only for first release)",
+    "registry-country" : "{country to go in the FHIR IG registry} (only for first release)",
+    "registry-authority" : "{authority to go in the FHIR IG registry} (only for first release)"
+  }
