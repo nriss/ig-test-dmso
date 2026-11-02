@@ -78,11 +78,14 @@ Le fichier [`sources/formulaire_ps_mso_rougeole.csv`](https://github.com/nriss/i
 
 ### Objectif de sortie
 
-Produire un `Bundle` de type `collection` contenant :
+Deux possibilités de sortie :
 
-* un `Patient` ;
-* un `Practitioner` ;
-* une `QuestionnaireResponse`.
+1. Produire un `Bundle` de type `collection` contenant :
+    * un `Patient` ;
+    * un `Practitioner` ;
+    * une `QuestionnaireResponse`.
+2. Produire une `QuestionnaireResponse` seule.
+3. Ou autre : produire du « full FHIR », avec des `Observation` et l'ensemble des ressources associées.
 
 ### Perspective
 
