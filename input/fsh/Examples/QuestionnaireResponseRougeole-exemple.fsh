@@ -118,7 +118,7 @@ Usage: #example
 * item[4].item[5].item[1].linkId = "contact-rougeole"
 * item[4].item[5].item[1].answer[0].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[4].item[5].item[2].linkId = "contact-rougeole-lieu"
-* item[4].item[5].item[2].answer[0].valueString = "Collectivité"
+* item[4].item[5].item[2].answer[0].valueCoding = http://snomed.info/sct#285202004 "environnement en collectivité"
 * item[4].item[5].item[3].linkId = "contact-rougeole-precision"
 * item[4].item[5].item[3].answer[0].valueString = "École élémentaire"
 * item[4].item[5].item[4].linkId = "autres-cas-entourage"

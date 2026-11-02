@@ -524,9 +524,7 @@ Usage: #definition
 * item[4].item[7].item[3].enableWhen[0].question = "contact-rougeole"
 * item[4].item[7].item[3].enableWhen[0].operator = #=
 * item[4].item[7].item[3].enableWhen[0].answerCoding = http://loinc.org#LA33-6 "Yes"
-* item[4].item[7].item[3].answerOption[0].valueString = "Famille"
-* item[4].item[7].item[3].answerOption[1].valueString = "Collectivité"
-* item[4].item[7].item[3].answerOption[2].valueString = "Milieu de soin"
+* item[4].item[7].item[3].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[4].item[7].item[4].linkId = "contact-rougeole-precision"
 * item[4].item[7].item[4].text = "Précisez"
@@ -549,9 +547,7 @@ Usage: #definition
 * item[4].item[7].item[6].enableWhen[0].question = "autres-cas-entourage"
 * item[4].item[7].item[6].enableWhen[0].operator = #=
 * item[4].item[7].item[6].enableWhen[0].answerCoding = http://loinc.org#LA33-6 "Yes"
-* item[4].item[7].item[6].answerOption[0].valueString = "Famille"
-* item[4].item[7].item[6].answerOption[1].valueString = "Collectivité"
-* item[4].item[7].item[6].answerOption[2].valueString = "Milieu de soin"
+* item[4].item[7].item[6].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[4].item[7].item[7].linkId = "autres-cas-precision"
 * item[4].item[7].item[7].text = "Précisez"
