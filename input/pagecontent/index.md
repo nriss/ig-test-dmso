@@ -88,6 +88,8 @@ Utiliser l'opération **SDC `$extract`** (Structured Data Capture) pour extraire
 
 Pour préparer cette extraction, le Questionnaire associe des codes **LOINC** aux questions qui disposent d'un code (identité du patient, date de début de l'éruption, hospitalisation, date de décès, pays du séjour, résultats biologiques RT-PCR / IgM / IgG) et aux réponses oui / non / ne sait pas et positif / négatif. Les autres questions (par exemple les signes cliniques : fièvre, toux, conjonctivite, coryza, signe de Köplik) n'ont pas de code LOINC identifié à ce stade et restent à coder.
 
+Question ouverte : existe-t-il des possibilités d'insérer des règles d'affichage graphique des champs (APE) ?
+
 ### Dépendances
 
 {% lang-fragment dependency-table.xhtml %}

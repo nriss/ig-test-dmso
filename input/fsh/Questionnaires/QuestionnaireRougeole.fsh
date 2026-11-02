@@ -327,16 +327,22 @@ Usage: #definition
 * item[3].item[4].linkId = "igm-sang"
 * item[3].item[4].text = "IgM : sang"
 * item[3].item[4].type = #group
-* item[3].item[4].item[0].linkId = "igm-sang-date"
-* item[3].item[4].item[0].text = "Date du prélèvement"
-* item[3].item[4].item[0].type = #date
+* item[3].item[4].item[0].linkId = "igm-sang-definition"
+* item[3].item[4].item[0].text = "Les IgM (immunoglobulines M) spécifiques de la rougeole sont des anticorps recherchés dans le sang (sérum) ; leur présence est le témoin d'une infection récente."
+* item[3].item[4].item[0].type = #display
+* item[3].item[4].item[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[3].item[4].item[0].extension[0].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-* item[3].item[4].item[1].linkId = "igm-sang-resultat"
-* item[3].item[4].item[1].text = "Résultat"
-* item[3].item[4].item[1].type = #choice
-* item[3].item[4].item[1].code[0] = http://loinc.org#21503-8 "Measles virus IgM Ab [Presence] in Serum"
-* item[3].item[4].item[1].answerOption[0].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[3].item[4].item[1].answerOption[1].valueCoding = http://loinc.org#LA6577-6 "Negative"
+* item[3].item[4].item[1].linkId = "igm-sang-date"
+* item[3].item[4].item[1].text = "Date du prélèvement"
+* item[3].item[4].item[1].type = #date
+
+* item[3].item[4].item[2].linkId = "igm-sang-resultat"
+* item[3].item[4].item[2].text = "Résultat"
+* item[3].item[4].item[2].type = #choice
+* item[3].item[4].item[2].code[0] = http://loinc.org#21503-8 "Measles virus IgM Ab [Presence] in Serum"
+* item[3].item[4].item[2].answerOption[0].valueCoding = http://loinc.org#LA6576-8 "Positive"
+* item[3].item[4].item[2].answerOption[1].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 
 * item[3].item[5].linkId = "igm-kit-salivaire"
@@ -364,7 +370,7 @@ Usage: #definition
 * item[3].item[6].item[1].linkId = "igg-sang-resultat"
 * item[3].item[6].item[1].text = "Résultat"
 * item[3].item[6].item[1].type = #choice
-* item[3].item[6].item[1].code[0] = http://loinc.org#20479-2 "Measles virus IgG Ab [Presence] in Serum"
+* item[3].item[6].item[1].code[0] = http://loinc.org#35275-7 "Measles virus IgG Ab [Presence] in Serum by Immunoassay"
 * item[3].item[6].item[1].answerOption[0].valueCoding = http://loinc.org#LA6576-8 "Positive"
 * item[3].item[6].item[1].answerOption[1].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
