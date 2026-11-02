@@ -73,6 +73,8 @@ Le fichier [`sources/formulaire_ps_mso_rougeole.csv`](https://github.com/nriss/i
 * Les formulaires (`Questionnaire`) doivent être **versionnés**.
 * L'outil d'édition et de publication des formulaires doit être **simple d'usage**, y compris pour des profils non techniques.
 * Les réponses doivent être portées par des ressources `QuestionnaireResponse`, afin d'être en FHIR.
+* Les libellés des jeux de valeurs (ValueSet) utilisés doivent être **les mêmes que ceux des ValueSet du SMT**, et non des adaptations faites pour le CERFA.
+* On s'appuiera sur les terminologies du CI-SIS (LOINC, SNOMED CT, etc.) pour créer les jeux de valeurs (JDV).
 
 ### Objectif de sortie
 

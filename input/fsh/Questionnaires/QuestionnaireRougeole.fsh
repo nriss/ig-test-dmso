@@ -13,7 +13,7 @@ Usage: #definition
 * extension[0].valueUrl = "https://smt.esante.gouv.fr/fhir"
 * date = "2026-11-02"
 * publisher = "Agence du Numérique en Santé (ANS)"
-* description = "Formulaire de signalement de la rougeole (cerfa n° 12554*04 du 22/04/2026).\n\n[Afficher le formulaire dans le Questionnaire Viewer](https://plynchnlm.github.io/questionnaire-viewer/?lfv=latest&q=https%3A%2F%2Fnriss.github.io%2Fig-test-dmso%2Fmain%2Fig%2Fen%2FQuestionnaire-QuestionnaireRougeole.json)"
+* description = "Formulaire de signalement de la rougeole (cerfa n° 12554*04 du 22/04/2026)."
 
 * item[0].linkId = "patient"
 * item[0].text = "Patient"
