@@ -356,6 +356,10 @@ Usage: #definition
 * item[4].item[4].item[1].linkId = "igm-sang-date"
 * item[4].item[4].item[1].text = "Date du prélèvement"
 * item[4].item[4].item[1].type = #date
+* item[4].item[4].item[1].text = "Date du prélèvement"
+* item[4].item[4].item[1].type = #display
+* item[4].item[4].item[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[4].item[4].item[1].extension[0].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 * item[4].item[4].item[2].linkId = "igm-sang-resultat"
 * item[4].item[4].item[2].text = "Résultat"
