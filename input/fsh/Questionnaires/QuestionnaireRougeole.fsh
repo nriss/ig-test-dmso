@@ -503,11 +503,12 @@ Usage: #definition
 
 * item[4].item[7].item[1].linkId = "sejour-etranger-pays"
 * item[4].item[7].item[1].text = "Pays du séjour"
-* item[4].item[7].item[1].type = #string
+* item[4].item[7].item[1].type = #choice
 * item[4].item[7].item[1].code[0] = http://loinc.org#94651-7 "Country of travel [Location]"
 * item[4].item[7].item[1].enableWhen[0].question = "sejour-etranger"
 * item[4].item[7].item[1].enableWhen[0].operator = #=
 * item[4].item[7].item[1].enableWhen[0].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[4].item[7].item[1].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[4].item[7].item[2].linkId = "contact-rougeole"
 * item[4].item[7].item[2].text = "Contact avec un cas de rougeole"
@@ -571,10 +572,11 @@ Usage: #definition
 
 * item[4].item[7].item[9].linkId = "autres-cas-pays"
 * item[4].item[7].item[9].text = "Pays du séjour des autres cas"
-* item[4].item[7].item[9].type = #string
+* item[4].item[7].item[9].type = #choice
 * item[4].item[7].item[9].enableWhen[0].question = "autres-cas-sejour-etranger"
 * item[4].item[7].item[9].enableWhen[0].operator = #=
 * item[4].item[7].item[9].enableWhen[0].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[4].item[7].item[9].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 
 
