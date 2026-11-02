@@ -75,6 +75,8 @@ Usage: #definition
 
 * item[0].item[11].linkId = "patient-informe"
 * item[0].item[11].text = "Le patient (ou le tiers) est-il informé du diagnostic ?"
+* item[0].item[11].code[0] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1337 "Le patient (ou le tiers) est-il informé du diagnostic ?"
+
 * item[0].item[11].type = #choice
 * item[0].item[11].required = true
 * item[0].item[11].answerOption[0].valueCoding = http://loinc.org#LA33-6 "Yes"
