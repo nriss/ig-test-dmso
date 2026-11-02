@@ -53,11 +53,34 @@ Le test pourra être poussé plus loin avec l'outillage suivant :
 
 Toujours laisser l'onglet "Ressources de conformité" pour s'assurer d'une cohérence globale entre tous les IGs
 
+### Fonctionnalités attendues
+
+Le fichier [`sources/formulaire_ps_mso_rougeole.csv`](https://github.com/nriss/ig-test-dmso/blob/main/sources/formulaire_ps_mso_rougeole.csv) décrit le formulaire de signalement de la rougeole (déclarant : professionnel de santé authentifié). Il se présente comme une table de décisions de règles qui génère les champs du formulaire. Les fonctionnalités nécessaires, déduites de ce fichier, sont les suivantes :
+
+* **Structuration en sections** : le formulaire est organisé en sections (déclarant, patient, suivi et signes cliniques, antécédents vaccinaux, exposition et séjour amont, biologie, autres informations, etc.), chacune contenant des champs ordonnés.
+* **Ajout et masquage de champs** : affichage d'un champ à une position donnée dans une section, ou masquage d'un champ.
+* **Règles conditionnelles inter-champs** : affichage ou masquage d'un champ selon la valeur d'un autre champ, avec les opérateurs `=`, `!=`, `parmi`, `pas parmi`, `>=` et `<` (par exemple : le champ « précisions » apparaît si la réponse « autre » est cochée ; la date de 2ème dose apparaît si le nombre de doses reçues est supérieur ou égal à 2).
+* **Champs conditionnant** : un champ peut être déclaré comme pilotant l'affichage d'autres champs.
+* **Champs obligatoires** : obligatoire ou non, le fichier porte deux indicateurs booléens par champ (la signification exacte de chacun reste à confirmer).
+* **Libellés spécifiques** : libellé propre à chaque champ.
+* **Aide à la saisie et infobulle** : texte d'aide (pouvant contenir du HTML) et infobulle par champ.
+* **Champs répétables (déclinables)** : un champ peut être saisi plusieurs fois, avec un nombre maximum d'occurrences (par exemple 5 pour les pays de séjour).
+* **Champs liés** et **masquage dans le PDF** : prévus par les colonnes du fichier mais non renseignés dans ce formulaire (à confirmer si nécessaires).
+* **Adaptation selon le contexte** : règles dépendant du type de déclarant et du type de signalement (ici : professionnel de santé authentifié, rougeole), avec variation selon la catégorie professionnelle du déclarant (par exemple, des champs « médecin prescripteur » ou « biologiste » affichés selon la catégorie).
+
 ### Contraintes
 
 * Les formulaires (`Questionnaire`) doivent être **versionnés**.
 * L'outil d'édition et de publication des formulaires doit être **simple d'usage**, y compris pour des profils non techniques.
 * Les réponses doivent être portées par des ressources `QuestionnaireResponse`, afin d'être en FHIR.
+
+### Objectif de sortie
+
+Produire un `Bundle` de type `collection` contenant :
+
+* un `Patient` ;
+* un `Practitioner` ;
+* une `QuestionnaireResponse`.
 
 ### Perspective
 
