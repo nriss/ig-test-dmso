@@ -78,7 +78,7 @@ Le fichier [`sources/formulaire_ps_mso_rougeole.csv`](https://github.com/nriss/i
 
 ### Objectif de sortie
 
-Deux possibilités de sortie :
+Possibilités de sortie :
 
 1. Produire un `Bundle` de type `collection` contenant :
     * un `Patient` ;
