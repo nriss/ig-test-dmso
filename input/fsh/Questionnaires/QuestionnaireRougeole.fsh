@@ -1,7 +1,7 @@
 Instance: QuestionnaireRougeole
 InstanceOf: Questionnaire
-Title: "Questionnaire de signalement de la rougeole"
-Description: "Questionnaire généré à partir du cerfa n° 12554*04 (rougeole, maladie à signalement obligatoire) du 22/04/2026. Les cadres administratifs (tampon ARS) ne sont pas repris."
+Title: "Formulaire de signalement de la rougeole"
+Description: "Formulaire correspondant au cerfa n° 12554*04 (rougeole, maladie à signalement obligatoire) du 22/04/2026."
 Usage: #definition
 * url = "https://interop.esante.gouv.fr/ig/fhir/dmso/Questionnaire/QuestionnaireRougeole"
 * version = "0.1.0"
