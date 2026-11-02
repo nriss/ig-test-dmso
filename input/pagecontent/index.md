@@ -86,12 +86,6 @@ Produire un `Bundle` de type `collection` contenant :
 
 Utiliser l'opération **SDC `$extract`** (Structured Data Capture) pour extraire les réponses d'une `QuestionnaireResponse` en ressources FHIR `Observation`.
 
-### Auteurs et contributeurs (optionnel)
-
-| Role  | Nom | Organisation | Contact |
-| --- | --- | --- | --- |
-| **Primary Editor** | Prenom Nom | Agence du Numérique en Santé | prenom.nom@address.email |
-
 ### Dépendances
 
 {% lang-fragment dependency-table.xhtml %}
