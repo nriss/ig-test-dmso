@@ -542,7 +542,7 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
 * item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen[+].question = ""cnr-autres-prelevements"
+* item[=].item[=].item[=].enableWhen[+].question = "cnr-autres-prelevements"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
@@ -724,7 +724,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-nombre-doses"
 * item[=].item[=].text = "Nombre total de doses reçues"
-* item[=].item[=].item[=].code[+] = http://loinc.org#30973-2 "Nombre de doses"
+* item[=].item[=].code[+] = http://loinc.org#30973-2 "Nombre de doses"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueString = "0"
 * item[=].item[=].answerOption[+].valueString = "1"
@@ -769,7 +769,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-source"
 * item[=].item[=].text = "Informations recueillies d'après"
-* item[=].item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
+* item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
 * item[=].item[=].type = #choice
 // Ajout jdv-origine-information-vaccin-rougeole-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
