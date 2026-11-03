@@ -312,7 +312,7 @@ Usage: #definition
 * item[=].item[=].text = "Statut clinique du patient"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-// ajouté jdv-complication-rougeole-cisis
+// ajouté jdv-evolution-rougeole-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-rougeole-cisis"
 //* item[=].item[=].answerOption[+].valueString = "Guérison"
 //* item[=].item[=].answerOption[+].valueString = "Encore malade"
@@ -326,7 +326,6 @@ Usage: #definition
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "Décès"
 * item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
-
 
 * item[+].linkId = "biologie"
 * item[=].text = "Biologie"
@@ -409,6 +408,7 @@ Usage: #definition
 * item[=].item[+].linkId = "igm-kit-salivaire"
 * item[=].item[=].text = "IgM : kit salivaire (Oracol©)"
 * item[=].item[=].type = #group
+
 * item[=].item[=].item[+].linkId = "igm-kit-salivaire-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
@@ -419,7 +419,6 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Measles virus IgM Ab [Presence] in Saliva (oral fluid) by Immunoassay"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
-
 
 * item[=].item[+].linkId = "igg-sang"
 * item[=].item[=].text = "IgG : sang"
@@ -468,14 +467,27 @@ Usage: #definition
 * item[=].item[+].linkId = "envoi-cnr"
 * item[=].item[=].text = "Envoi de prélèvements au CNR"
 * item[=].item[=].type = #group
+
+// ajout info bulle "A compléter par le médecin généraliste."
 * item[=].item[=].item[+].linkId = "cnr-kit-salivaire"
 * item[=].item[=].item[=].text = "Kit salivaire (Oracol©)"
+* item[=].item[=].item[+].linkId = "cnr-kit-salivaire-definition"
+* item[=].item[=].item[=].text = "A compléter par le médecin généraliste."
+* item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
+// ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
-* item[=].item[=].item[=].text = "Autres prélèvements (à compléter par le biologiste ou l'ARS)"
+* item[=].item[=].item[=].text = "Autres prélèvements"
+* item[=].item[=].item[+].linkId = "cnr-autres-prelevements-definition"
+* item[=].item[=].item[=].text = "A compléter par le biologiste ou l’ARS."
+* item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
