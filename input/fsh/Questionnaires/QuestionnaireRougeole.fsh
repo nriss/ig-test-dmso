@@ -476,9 +476,9 @@ Usage: #definition
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-* item[=].item[+].item[+].linkId = "igg-date-premier"
-* item[=].item[=].item[=].text = "Date du 1er prélèvement"
-* item[=].item[=].item[=].type = #date
+* item[=].item[+].linkId = "igg-date-premier"
+* item[=].item[=].text = "Date du 1er prélèvement"
+* item[=].item[=].type = #date
 
 // Remplacé "IgG : kit salivaire (Oracol©)" par "IgG : salive"
 * item[=].item[+].linkId = "igg-salive"
