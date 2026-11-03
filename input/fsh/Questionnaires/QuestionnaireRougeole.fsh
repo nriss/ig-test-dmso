@@ -500,6 +500,7 @@ Usage: #definition
 // ajout info bulle "A compléter par le médecin généraliste."
 * item[=].item[=].item[+].linkId = "cnr-kit-salivaire"
 * item[=].item[=].item[=].text = "Kit salivaire (Oracol©)"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1351 "Envoi kit salivaire au CNR"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -520,6 +521,7 @@ Usage: #definition
 // ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
 * item[=].item[=].item[=].text = "Autres prélèvements"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1352 "Envoi autres prélèvements au CNR"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
