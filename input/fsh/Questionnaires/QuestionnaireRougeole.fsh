@@ -543,12 +543,11 @@ Usage: #definition
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[+].linkId = "cnr-nombre-kits"
-* item[=].item[=].item[=].text = "Nombre de kits"
+* item[=].item[=].item[=].text = "Nombre de kits pour prélèvements souhaité ?"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "cnr-souhait-kits"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
-
 
 
 * item[+].linkId = "exposition"
