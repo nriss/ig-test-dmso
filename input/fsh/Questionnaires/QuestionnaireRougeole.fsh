@@ -717,10 +717,12 @@ Usage: #definition
 
 
 * item[+].linkId = "statut-vaccinal"
-* item[=].text = "Statut vaccinal"
+* item[=].text = "Statut vaccinal Rougeole"
 * item[=].type = #group
+
 * item[=].item[+].linkId = "vaccin-nombre-doses"
 * item[=].item[=].text = "Nombre total de doses reçues"
+* item[=].item[=].item[=].code[+] = http://loinc.org#30973-2 "Nombre de doses"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueString = "0"
 * item[=].item[=].answerOption[+].valueString = "1"
@@ -730,6 +732,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-date-dose-1"
 * item[=].item[=].text = "Date de la 1ère dose"
+// code à trouver ?
 * item[=].item[=].type = #date
 * item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
@@ -744,6 +747,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-date-dose-2"
 * item[=].item[=].text = "Date de la 2ème dose"
+// code à trouver ?
 * item[=].item[=].type = #date
 * item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
@@ -755,6 +759,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-date-dose-3"
 * item[=].item[=].text = "Date de la 3ème dose"
+// code à trouver ?
 * item[=].item[=].type = #date
 * item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
@@ -762,56 +767,130 @@ Usage: #definition
 
 * item[=].item[+].linkId = "vaccin-source"
 * item[=].item[=].text = "Informations recueillies d'après"
+* item[=].item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueString = "interrogatoire"
-* item[=].item[=].answerOption[+].valueString = "carnet de santé ou de vaccination/dossier médical"
+// Ajout jdv-origine-information-vaccin-rougeole-cisis
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
+// * item[=].item[=].answerOption[+].valueString = "interrogatoire"
+// * item[=].item[=].answerOption[+].valueString = "carnet de santé ou de vaccination/dossier médical"
 
-
-* item[+].linkId = "prescripteur"
-* item[=].text = "Médecin prescripteur / Signalant (ou tampon)"
+// "Prescripteur" remplacé par "Signalant" 
+* item[+].linkId = "signalant"
+* item[=].text = "Signalant"
 * item[=].type = #group
-* item[=].item[+].linkId = "prescripteur-nom-rpps"
-* item[=].item[=].text = "Nom / RPPS"
+
+// Identifiant RPPS du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
+* item[=].item[+].linkId = "prescripteur-rpps"
+* item[=].item[=].text = "Numéro RPPS"
+* item[=].item[=].required = true
 * item[=].item[=].type = #string
 
-* item[=].item[+].linkId = "prescripteur-lieu"
-* item[=].item[=].text = "Lieu d'exercice"
+// la profession du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
+* item[=].item[+].linkId = "prescripteur-profession"
+* item[=].item[=].text = "Profession"
+* item[=].item[=].required = true
 * item[=].item[=].type = #string
 
+// le nom du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
+* item[=].item[+].linkId = "prescripteur-nom"
+* item[=].item[=].text = "Nom"
+* item[=].item[=].required = true
+* item[=].item[=].type = #string
+
+// le prénom du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
+* item[=].item[+].linkId = "prescripteur-prenom"
+* item[=].item[=].text = "Prénom"
+* item[=].item[=].required = true
+* item[=].item[=].type = #string
+
+// Adresse du signalant est récupéré de la CPS (à voir comment) => obligatoire 
 * item[=].item[+].linkId = "prescripteur-adresse"
 * item[=].item[=].text = "Adresse"
+* item[=].item[=].required = true
 * item[=].item[=].type = #string
 
+// Code postal du signalant est récupéré de la CPS (à voir comment) => obligatoire
+* item[=].item[+].linkId = "prescripteur-code-postal"
+* item[=].item[=].text = "Code postal"
+* item[=].item[=].required = true
+* item[=].item[=].type = #string
+
+// N° FINESS de l'établissement du signalant est récupéré de la CPS (à voir comment)  => obligatoire ? à vérifier pour les libéraux ?
+* item[=].item[+].linkId = "prescripteur-es-finess"
+* item[=].item[=].text = "N° FINESS de l'établissement"
+* item[=].item[=].type = #string
+
+// Nom de l'établissement du signalant est récupéré de la CPS (à voir comment) => obligatoire ? à vérifier pour les libéraux ?
+* item[=].item[+].linkId = "prescripteur-es-nom"
+* item[=].item[=].text = "Nom de l'établissement"
+* item[=].item[=].type = #string
+
+// Téléphone du signalant => obligatoire
 * item[=].item[+].linkId = "prescripteur-telephone"
 * item[=].item[=].text = "Téléphone"
+* item[=].item[=].required = true
 * item[=].item[=].type = #string
 
+// Courriel du signalant => obligatoire
 * item[=].item[+].linkId = "prescripteur-courriel"
 * item[=].item[=].text = "Courriel"
+* item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 
 * item[+].linkId = "biologiste"
-* item[=].text = "Biologiste (ou tampon)"
+* item[=].text = "Biologiste"
 * item[=].type = #group
-* item[=].item[+].linkId = "biologiste-nom-rpps"
-* item[=].item[=].text = "Nom / RPPS"
+
+// Identifiant RPPS du biologiste
+* item[=].item[+].linkId = "biologiste-rpps"
+* item[=].item[=].text = "N° RPPS"
 * item[=].item[=].type = #string
 
-* item[=].item[+].linkId = "biologiste-lbm-finess"
-* item[=].item[=].text = "LBM / Finess"
+// la profession du biologiste
+* item[=].item[+].linkId = "biologiste-profession"
+* item[=].item[=].text = "Profession"
 * item[=].item[=].type = #string
 
+// le nom du biologiste
+* item[=].item[+].linkId = "biologiste-nom"
+* item[=].item[=].text = "Nom"
+* item[=].item[=].type = #string
+
+// le prénom du biologiste
+* item[=].item[+].linkId = "biologiste-prenom"
+* item[=].item[=].text = "Prénom"
+* item[=].item[=].type = #string
+
+// Adresse du biologiste 
 * item[=].item[+].linkId = "biologiste-adresse"
 * item[=].item[=].text = "Adresse"
 * item[=].item[=].type = #string
 
+// Code postal du biologiste
+* item[=].item[+].linkId = "biologiste-code-postal"
+* item[=].item[=].text = "Code postal"
+* item[=].item[=].type = #string
+
+// N° FINESS du laboratoire
+* item[=].item[+].linkId = "biologiste-es-finess"
+* item[=].item[=].text = "N° FINESS du laboratoire"
+* item[=].item[=].type = #string
+
+// Nom du laboratoire
+* item[=].item[+].linkId = "biologiste-es-nom"
+* item[=].item[=].text = "Nom du laboratoire"
+* item[=].item[=].type = #string
+
+// Téléphone du biologiste 
 * item[=].item[+].linkId = "biologiste-telephone"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
 
+// Courriel du biologiste 
 * item[=].item[+].linkId = "biologiste-courriel"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
+
 
 
