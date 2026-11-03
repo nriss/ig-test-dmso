@@ -234,7 +234,7 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
 // ajouté jdv-facteur-risque-rougeole-cisis
-* item[=].item[=].answerValueSet = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis"
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis"
 // * item[=].item[=].answerOption[+].valueString = "non"
 // * item[=].item[=].answerOption[+].valueString = "femme enceinte"
 // * item[=].item[=].answerOption[+].valueString = "immunodépression"
@@ -252,10 +252,12 @@ Usage: #definition
 * item[=].item[=].text = "Critères de gravité : complications"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption[+].valueString = "non"
-* item[=].item[=].answerOption[+].valueString = "Encéphalite"
-* item[=].item[=].answerOption[+].valueString = "Pneumopathie"
-* item[=].item[=].answerOption[+].valueString = "Autre, précisez"
+// ajouté jdv-complication-rougeole-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-complication-rougeole-cisis"
+// * item[=].item[=].answerOption[+].valueString = "non"
+// * item[=].item[=].answerOption[+].valueString = "Encéphalite"
+// * item[=].item[=].answerOption[+].valueString = "Pneumopathie"
+// * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 * item[=].item[+].linkId = "gravite-complications-autre"
 * item[=].item[=].text = "Complication : précisez"
