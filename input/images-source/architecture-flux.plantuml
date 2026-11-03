@@ -1,0 +1,36 @@
+@startuml
+' Version 0 - à améliorer
+title Architecture DMSO - acteurs et flux (v0)
+
+actor "Professionnel de santé" as PS
+participant "Form Filler" as FF
+participant "Form Manager" as FM
+participant "Annuaire Santé" as ANN
+participant "Téléservice INSi\n(à instruire)" as INSI
+participant "SMT\n(serveur de terminologies)" as SMT
+participant "Form Receiver" as FR
+database "AuditEvent" as AUD
+
+== Récupération du questionnaire ==
+PS -> FF : Ouvre le formulaire
+FF -> FM : GET Questionnaire
+FM --> FF : Questionnaire
+
+== Pré-remplissage (à instruire) ==
+FF -> ANN : Données du professionnel de santé
+ANN --> FF : Données du professionnel
+FF -> INSI : Identité du patient (droit d'usage à vérifier)
+INSI --> FF : Identité
+
+== Terminologies ==
+FF -> SMT : ValueSet/$expand (dont communes)
+SMT --> FF : Codes (risque de disponibilité)
+
+== Saisie et transmission ==
+PS -> FF : Saisit les données
+FF -> FR : POST QuestionnaireResponse
+FR --> FF : Accusé de réception
+
+== Traçabilité ==
+FR -> AUD : Crée AuditEvent\n(qui a saisi, quoi, quand)
+@enduml

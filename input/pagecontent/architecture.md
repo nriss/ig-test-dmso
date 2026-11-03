@@ -4,6 +4,14 @@
 
 ### Architecture
 
+#### Diagramme des acteurs et des flux (version 0)
+
+Ce diagramme est une première version, destinée à être améliorée.
+
+<div>
+{% include architecture-flux.svg %}
+</div>
+
 #### Rôle de chaque acteur SDC
 
 Cet Implementation Guide s'appuie sur le profil [SDC (Structured Data Capture)](https://hl7.org/fhir/uv/sdc/) pour la gestion des questionnaires et des réponses.
@@ -11,6 +19,16 @@ Cet Implementation Guide s'appuie sur le profil [SDC (Structured Data Capture)](
 | Acteur SDC | Rôle dans le DMSO |
 |---|---|
 | À compléter | À compléter |
+
+#### Form Filler : remplissage automatique
+
+Le Form Filler peut pré-remplir certains champs du questionnaire afin de limiter la saisie. Trois sources sont envisagées (version 0, à instruire) :
+
+| Sujet | Piste | Points à instruire |
+|---|---|---|
+| Annuaire Santé | Pré-remplissage des données du professionnel de santé déclarant à partir de l'Annuaire Santé | API à retenir, données à reprendre, authentification du déclarant |
+| Téléservice INSi | Pré-remplissage de l'identité du patient via le téléservice INSi | **Avons-nous le droit de l'utiliser pour ce cas d'usage ?** Base juridique et cadre d'utilisation à vérifier auprès de l'ANS avant toute décision. **Référentiel INS ?** Quel référentiel d'identité (INS) utiliser comme source ? |
+| Noms des communes | Liste de choix des communes (ValueSet) plutôt qu'une saisie libre | Terminologie source à retenir (référentiel des communes), disponibilité via le SMT |
 
 #### Risque de disponibilité du SMT
 
