@@ -8,13 +8,37 @@
 
 Ce diagramme est une première version, destinée à être améliorée.
 
-<div>
+<style>
+#architecture-flux svg { max-width: 100%; height: auto; }
+</style>
+<div id="architecture-flux" style="max-width: 100%; overflow-x: auto;">
 {% include architecture-flux.svg %}
 </div>
 
 #### Rôle de chaque acteur SDC
 
 Cet Implementation Guide s'appuie sur le profil [SDC (Structured Data Capture)](https://hl7.org/fhir/uv/sdc/) pour la gestion des questionnaires et des réponses.
+
+##### Personas
+
+Deux personas humains interagissent avec le système (hypothèses de la version 0, à valider) :
+
+| Persona | Description | Acteur SDC utilisé |
+|---|---|---|
+| Éditeur de formulaires | Personne qui crée, édite et met à jour les questionnaires (`Questionnaire`) | SDC Form Designer |
+| Médecin déclarant | Médecin qui remplit les formulaires pour déclarer une maladie à déclaration obligatoire | SDC Form Filler |
+
+##### Acteurs SDC
+
+##### Systèmes d'information
+
+Trois systèmes d'information sont identifiés (hypothèses de la version 0, à valider) :
+
+| Système d'information | Description | Acteur SDC correspondant |
+|---|---|---|
+| Repo de formulaires versionnés | Dépôt qui stocke et versionne les définitions de formulaires (`Questionnaire`) | SDC Form Manager |
+| Outil d'édition de formulaire | Outil utilisé par l'éditeur de formulaires pour concevoir les questionnaires | SDC Form Designer |
+| Outil d'affichage graphique du formulaire | Outil qui affiche le formulaire au médecin et génère la `QuestionnaireResponse` à partir de sa saisie | SDC Form Filler |
 
 Les acteurs et leur définition proviennent de la page [Basic SDC workflow](https://build.fhir.org/ig/HL7/sdc/en/workflow.html) (version CI-build 4.0.0, non publiée officiellement). La colonne « Rôle dans le DMSO » est une hypothèse de la version 0, à valider.
 
@@ -46,11 +70,15 @@ Le Form Filler peut pré-remplir certains champs du questionnaire afin de limite
 | Téléservice INSi | Pré-remplissage de l'identité du patient via le téléservice INSi | **Avons-nous le droit de l'utiliser pour ce cas d'usage ?** Base juridique et cadre d'utilisation à vérifier auprès de l'ANS avant toute décision. **Référentiel INS ?** Quel référentiel d'identité (INS) utiliser comme source ? |
 | Noms des communes | Liste de choix des communes (ValueSet) plutôt qu'une saisie libre | Terminologie source à retenir (référentiel des communes), disponibilité via le SMT |
 
-#### Risque de disponibilité du SMT
+#### Risque de disponibilité des services d'autocomplétion
 
-Les questionnaires s'appuient sur des terminologies hébergées par le serveur multi-terminologies (SMT) national : [https://smt.esante.gouv.fr/fhir](https://smt.esante.gouv.fr/fhir).
+Le risque de disponibilité concerne tous les services nécessaires à l'autocomplétion et au pré-remplissage des champs du questionnaire, notamment :
 
-Une indisponibilité du SMT constitue un risque pour le fonctionnement du service (affichage des listes de choix, validation des codes). Il faut prévoir un système de cache afin que les expansions de ValueSets restent disponibles même en cas d'indisponibilité du SMT. Les autres mesures d'atténuation sont à compléter.
+* le serveur multi-terminologies (SMT) national : [https://smt.esante.gouv.fr/fhir](https://smt.esante.gouv.fr/fhir) (listes de choix, noms des communes, validation des codes) ;
+* l'Annuaire Santé (données du professionnel de santé) ;
+* d'autres services à identifier (ex. INSi, si son usage est retenu).
+
+Une indisponibilité de l'un de ces services constitue un risque pour le fonctionnement du service. Il faut prévoir un système de cache afin que les données d'autocomplétion (ex. expansions de ValueSets) restent disponibles même en cas d'indisponibilité du service source. Les autres mesures d'atténuation sont à compléter.
 
 #### Sécurité, traçabilité et imputabilité
 
