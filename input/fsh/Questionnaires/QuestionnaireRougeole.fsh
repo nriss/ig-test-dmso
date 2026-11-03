@@ -308,6 +308,7 @@ Usage: #definition
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
+// Remplacé "Evolution" par "Statut clinique du patient"
 * item[=].item[+].linkId = "statut-clinique-du-patient"
 * item[=].item[=].text = "Statut clinique du patient"
 * item[=].item[=].type = #choice
@@ -339,23 +340,39 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
+// ajouté infobulle
 * item[=].item[+].linkId = "rtpcr-oropharynx"
 * item[=].item[=].text = "RT-PCR : oro-pharynx"
 * item[=].item[=].type = #group
+* item[=].item[=].item[+].linkId = "rtpcr-oropharynx-definition"
+* item[=].item[=].item[=].text = "RT-PCR Oro-pharynx et autres échantillons de voies aériennes supérieures."
+* item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
+
 * item[=].item[=].item[+].linkId = "rtpcr-oropharynx-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
 * item[=].item[=].item[+].linkId = "rtpcr-oropharynx-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#91077-8 "Rougeole virus ARN [Présence/Seuil] Échantillon du système respiratoire supérieur ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-
+// remplacé "RT-PCR : kit salivaire (Oracol©)" par "RT-PCR : Salive" + infobulle
 * item[=].item[+].linkId = "rtpcr-kit-salivaire"
-* item[=].item[=].text = "RT-PCR : kit salivaire (Oracol©)"
+* item[=].item[=].text = "RT-PCR : Salive"
 * item[=].item[=].type = #group
+* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-definition"
+* item[=].item[=].item[=].text = "Prélèvement à privilégier : recueil du liquide buccal sur Kit salivaire (Oracol©)."
+* item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
+
 * item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
@@ -363,106 +380,115 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-resultat"
 * item[=].item[=].item[=].text = "Résultat"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Measles virus RNA [Presence] in Saliva (oral fluid) by NAA with probe detection"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
-
+* item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "rtpcr-autre"
 * item[=].item[=].text = "RT-PCR : autre"
 * item[=].item[=].type = #group
+
 * item[=].item[=].item[+].linkId = "rtpcr-autre-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
 * item[=].item[=].item[+].linkId = "rtpcr-autre-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Measles virus RNA [Presence] in Specimen by NAA with probe detection"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
-
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igm-sang"
 * item[=].item[=].text = "IgM : sang"
 * item[=].item[=].type = #group
-* item[=].item[=].item[+].linkId = "igm-sang-definition"
-* item[=].item[=].item[=].text = "Les IgM (immunoglobulines M) spécifiques de la rougeole sont des anticorps recherchés dans le sang (sérum) ; leur présence est le témoin d'une infection récente."
-* item[=].item[=].item[=].type = #display
-* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 * item[=].item[=].item[+].linkId = "igm-sang-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].text = "Date du prélèvement"
 
 * item[=].item[=].item[+].linkId = "igm-sang-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#35276-5 "Rougeole virus Ac IgM [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#21503-8 "Measles virus IgM Ab [Presence] in Serum"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-
-* item[=].item[+].linkId = "igm-kit-salivaire"
-* item[=].item[=].text = "IgM : kit salivaire (Oracol©)"
+// Remplacé "IgM : kit salivaire (Oracol©)" par "IgM : salive"
+* item[=].item[+].linkId = "igm-salive"
+* item[=].item[=].text = "IgM : salive"
 * item[=].item[=].type = #group
 
-* item[=].item[=].item[+].linkId = "igm-kit-salivaire-date"
+* item[=].item[=].item[+].linkId = "igm-salive-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igm-kit-salivaire-resultat"
+* item[=].item[=].item[+].linkId = "igm-salive-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Rougeole virus Ac IgM [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Measles virus IgM Ab [Presence] in Saliva (oral fluid) by Immunoassay"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igg-sang"
 * item[=].item[=].text = "IgG : sang"
 * item[=].item[=].type = #group
+
+// Ajouté date du 1er prélèvement
 * item[=].item[=].item[+].linkId = "igg-sang-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
 * item[=].item[=].item[+].linkId = "igg-sang-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Rougeole virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Measles virus IgG Ab [Presence] in Serum by Immunoassay"
+// Ajouté jdv-mso-resultat-qualitatif-4-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
+* item[=].item[+].linkId = "igg-date-premier"
+* item[=].item[=].text = "Date du prélèvement"
+* item[=].item[=].type = #date
 
-* item[=].item[+].linkId = "igg-kit-salivaire"
-* item[=].item[=].text = "IgG : kit salivaire (Oracol©)"
+// Remplacé "IgG : kit salivaire (Oracol©)" par "IgG : salive"
+* item[=].item[+].linkId = "igg-salive"
+* item[=].item[=].text = "IgG : salive"
 * item[=].item[=].type = #group
-* item[=].item[=].item[+].linkId = "igg-kit-salivaire-date"
+
+* item[=].item[=].item[+].linkId = "igg-salive-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igg-kit-salivaire-resultat"
+* item[=].item[=].item[+].linkId = "igg-salive-resultat"
 * item[=].item[=].item[=].text = "Résultat"
+* item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Rougeole virus Ac IgG [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Measles virus IgG Ab [Presence] in Saliva (oral fluid) by Immunoassay"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
+// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
+// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
+// supprimé car considéré comme un résultat IgG sang
+// * item[=].item[+].linkId = "seroconversion-igg"
+// * item[=].item[=].text = "Séroconversion, ascension des IgG"
+// * item[=].item[=].type = #choice
+// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
+// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "seroconversion-igg"
-* item[=].item[=].text = "Séroconversion, ascension des IgG"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
-
-* item[=].item[+].linkId = "igg-date-premier"
-* item[=].item[=].text = "Date du 1er prélèvement"
-* item[=].item[=].type = #date
-
-* item[=].item[+].linkId = "igg-date-dernier"
-* item[=].item[=].text = "Date du dernier prélèvement"
-* item[=].item[=].type = #date
+// supprimé car idem date du prélèvement
+// * item[=].item[+].linkId = "igg-date-dernier"
+// * item[=].item[=].text = "Date du dernier prélèvement"
+// * item[=].item[=].type = #date
 
 * item[=].item[+].linkId = "envoi-cnr"
 * item[=].item[=].text = "Envoi de prélèvements au CNR"
