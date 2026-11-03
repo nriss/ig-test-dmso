@@ -16,7 +16,7 @@ Usage: #definition
 * description = "Formulaire de signalement de la rougeole (cerfa n° 12554*04 du 22/04/2026)."
 
 * item[+].linkId = "entete"
-* item[=].text = "Rougeole - cerfa n° 12554*04 du 22/04/2026"
+* item[=].text = "Rougeole"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "entete-definition-cas"
