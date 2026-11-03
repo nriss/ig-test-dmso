@@ -323,7 +323,7 @@ Usage: #definition
 * item[=].item[=].text = "Date du décès"
 * item[=].item[=].type = #date
 * item[=].item[=].code[+] = http://loinc.org#81954-0 "Date of death [Date]"
-* item[=].item[=].enableWhen[+].question = "evolution"
+* item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
 
