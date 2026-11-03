@@ -393,6 +393,13 @@ Usage: #definition
 * item[=].item[=].text = "RT-PCR : autre"
 * item[=].item[=].type = #group
 
+// Ajouté "type de prélèvement" pour "RT-PCR : autre"
+* item[=].item[=].item[+].linkId = "rtpcr-autre-prelevement"
+* item[=].item[=].item[=].text = "Nature du prélèvement"
+* item[=].item[=].item[=].code[+] = http://snomed.info/sct#17636008 "prélèvement d'échantillon"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-rougeole-cisis"
+
 * item[=].item[=].item[+].linkId = "rtpcr-autre-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
@@ -546,6 +553,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "cnr-nombre-kits"
 * item[=].item[=].item[=].text = "Nombre de kits pour prélèvements souhaité ?"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-429 "Nombre de kits"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "cnr-souhait-kits"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -555,13 +563,17 @@ Usage: #definition
 * item[+].linkId = "exposition"
 * item[=].text = "Exposition(s) à risque"
 * item[=].type = #group
+
 * item[=].item[+].linkId = "collectivite-risque"
 * item[=].item[=].text = "Le cas fréquente-t-il une collectivité accueillant des sujets à risque de rougeole grave ?"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-421 "Fréquentation d'une collectivité accueillant des sujets à risque de rougeole grave"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption[+].valueString = "Accueil petite enfance"
-* item[=].item[=].answerOption[+].valueString = "Milieu de soin"
-* item[=].item[=].answerOption[+].valueString = "Autre, précisez"
+// Ajouté jdv-collectivite-sujets-a-risque-rougeole-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-collectivite-sujets-a-risque-rougeole-cisis"
+// * item[=].item[=].answerOption[+].valueString = "Accueil petite enfance"
+// * item[=].item[=].answerOption[+].valueString = "Milieu de soin"
+// * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 * item[=].item[+].linkId = "collectivite-risque-autre"
 * item[=].item[=].text = "Collectivité : précisez"
@@ -572,18 +584,21 @@ Usage: #definition
 
 * item[=].item[+].linkId = "sujet-risque-entourage"
 * item[=].item[=].text = "Présence de sujet à risque de rougeole grave dans l'entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Présence de sujet à risque de rougeole grave dans l’entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "immunoglobulines"
 * item[=].item[=].text = "Administration d'immunoglobulines aux contacts à risque de rougeole grave"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Administration d’immunoglobulines aux contacts à risque de rougeole grave"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "immunoglobulines-nombre"
 * item[=].item[=].text = "Nombre de personnes (immunoglobulines)"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-425 "Nombre d'admministration d'immunoglobines aux contacts àrisque de rougeole grave"
 * item[=].item[=].type = #integer
 * item[=].item[=].enableWhen[+].question = "immunoglobulines"
 * item[=].item[=].enableWhen[=].operator = #=
@@ -591,12 +606,14 @@ Usage: #definition
 
 * item[=].item[+].linkId = "ror-72h"
 * item[=].item[=].text = "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-426 "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "ror-72h-nombre"
-* item[=].item[=].text = "Nombre de personnes (ROR)"
+* item[=].item[=].text = "Nombre de personnes (vaccin ROR)"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-427 "Nombre d'administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].type = #integer
 * item[=].item[=].enableWhen[+].question = "ror-72h"
 * item[=].item[=].enableWhen[=].operator = #=
