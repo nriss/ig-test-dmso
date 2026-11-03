@@ -136,47 +136,50 @@ Usage: #definition
 * item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
 * item[=].item[=].extension[=].valueExpression.expression = "now()"
 
-// remplacer item[2] et la question "type de tierce personne" par 2 rubriques séparées : 
+// supprimé la question "type de tierce personne" et remplacé par 2 rubriques séparées : 
 // - représentant légal (obligatoire pour les mineurs) [1..*] 
 // - Personne à contacter (si l’état clinique du patient ne lui permet pas de répondre à l’investigation de l’ARS) [0..1] 
 // avec pour ces 2 rubriques : nom, prénom, téléphone, courriel
 
-* item[+].linkId = "tierce-personne"
-* item[=].text = "Tierce personne"
+* item[+].linkId = "representant-legal"
+* item[=].text = "Représentant légal (obligatoire pour les mineurs)"
 * item[=].type = #group
-* item[=].item[+].linkId = "tierce-type"
-* item[=].item[=].text = "Type de tierce personne"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueString = "Représentant légal (obligatoire pour les mineurs)"
-* item[=].item[=].answerOption[+].valueString = "Personne de confiance, si l'état clinique du patient ne lui permet pas de répondre à l'investigation de l'ARS"
 
-* item[=].item[+].linkId = "tierce-nom"
+* item[=].item[+].linkId = "representant-legal-nom"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "tierce-type"
-* item[=].item[=].enableWhen[=].operator = #exists
-* item[=].item[=].enableWhen[=].answerBoolean = true
 
-* item[=].item[+].linkId = "tierce-prenom"
+* item[=].item[+].linkId = "representant-legal-prenom"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "tierce-type"
-* item[=].item[=].enableWhen[=].operator = #exists
-* item[=].item[=].enableWhen[=].answerBoolean = true
 
-* item[=].item[+].linkId = "tierce-telephone"
+* item[=].item[+].linkId = "representant-legal-telephone"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "tierce-type"
-* item[=].item[=].enableWhen[=].operator = #exists
-* item[=].item[=].enableWhen[=].answerBoolean = true
 
-* item[=].item[+].linkId = "tierce-courriel"
+* item[=].item[+].linkId = "representant-legal-courriel"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "tierce-type"
-* item[=].item[=].enableWhen[=].operator = #exists
-* item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[+].linkId = "personne-de-confiance"
+* item[=].text = "Personne de confiance (si l'état clinique du patient ne lui permet pas de répondre à l'investigation de l'ARS)"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "personne-de-confiance-nom"
+* item[=].item[=].text = "Nom"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "personne-de-confiance-prenom"
+* item[=].item[=].text = "Prénom"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "personne-de-confiance-telephone"
+* item[=].item[=].text = "Téléphone"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "personne-de-confiance-courriel"
+* item[=].item[=].text = "Courriel"
+* item[=].item[=].type = #string
 
 
 * item[+].linkId = "clinique"
@@ -187,7 +190,7 @@ Usage: #definition
 * item[=].item[=].text = "Date de début de l'éruption"
 * item[=].item[=].type = #date
 // code LOINC à vérifier avec Melissa.
-* item[=].item[=].code[+] = http://loinc.org#81268-5 "Date of rash onset"
+* item[=].item[=].code[+] = http://loinc.org#81268-5 "Date de début de l'éruption"
 * item[=].item[=].required = true
 
 * item[=].item[+].linkId = "fievre"
