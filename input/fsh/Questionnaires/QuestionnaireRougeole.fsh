@@ -323,9 +323,8 @@ Usage: #definition
 * item[=].item[=].text = "Date du décès"
 * item[=].item[=].type = #date
 * item[=].item[=].code[+] = http://loinc.org#81954-0 "Date of death [Date]"
-* item[=].item[=].enableWhen[+].question = "evolution"
+* item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
 * item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerString = "Décès"
 * item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
 
 * item[+].linkId = "biologie"
@@ -396,7 +395,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "rtpcr-autre-resultat"
 * item[=].item[=].item[=].text = "Résultat"
-* item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
+* item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
@@ -497,26 +496,26 @@ Usage: #definition
 // ajout info bulle "A compléter par le médecin généraliste."
 * item[=].item[=].item[+].linkId = "cnr-kit-salivaire"
 * item[=].item[=].item[=].text = "Kit salivaire (Oracol©)"
-* item[=].item[=].item[+].linkId = "cnr-kit-salivaire-definition"
-* item[=].item[=].item[=].text = "A compléter par le médecin généraliste."
-* item[=].item[=].item[=].type = #display
-* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].item[+].linkId = "cnr-kit-salivaire-definition"
+* item[=].item[=].item[=].item[=].text = "A compléter par le médecin généraliste."
+* item[=].item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 // ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
 * item[=].item[=].item[=].text = "Autres prélèvements"
-* item[=].item[=].item[+].linkId = "cnr-autres-prelevements-definition"
-* item[=].item[=].item[=].text = "A compléter par le biologiste ou l’ARS."
-* item[=].item[=].item[=].type = #display
-* item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
-* item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].item[+].linkId = "cnr-autres-prelevements-definition"
+* item[=].item[=].item[=].item[=].text = "A compléter par le biologiste ou l’ARS."
+* item[=].item[=].item[=].item[=].type = #display
+* item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
+* item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 * item[=].item[=].item[+].linkId = "cnr-date-envoi"
 * item[=].item[=].item[=].text = "Date d'envoi"
