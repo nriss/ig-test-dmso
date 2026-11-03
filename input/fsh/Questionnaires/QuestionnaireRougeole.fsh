@@ -175,61 +175,71 @@ Usage: #definition
 * item[=].item[+].linkId = "debut-eruption"
 * item[=].item[=].text = "Date de début de l'éruption"
 * item[=].item[=].type = #date
-// Qui a donné ce code LOINC ? ça me semble pas mal mais à vérifier avec Melissa.
+// code LOINC à vérifier avec Melissa.
 * item[=].item[=].code[+] = http://loinc.org#81268-5 "Date of rash onset"
 * item[=].item[=].required = true
 
 * item[=].item[+].linkId = "fievre"
 * item[=].item[=].text = "Fièvre > 38,5° C"
+* item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#R50.9 "Fièvre, sans précision"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "exantheme"
 * item[=].item[=].text = "Exanthème maculo papuleux"
+* item[=].item[=].code[+] = http://snomed.info/sct#247471006 "éruption maculopapuleuse"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "generalise"
-* item[=].item[=].text = "Généralisé"
+* item[=].item[+].linkId = "exantheme-generalise"
+* item[=].item[=].text = "Exanthème maculo papuleux généralisé"
+* item[=].item[=].code[+] = http://snomed.info/sct#725119006 "éruption cutanée généralisée"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "toux"
 * item[=].item[=].text = "Toux"
+* item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#R05 "Toux"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "conjonctivite"
 * item[=].item[=].text = "Conjonctivite"
+* item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#H10.9 "Conjonctivite, sans précision"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "coryza"
 * item[=].item[=].text = "Coryza"
+* item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#J00 "Rhinopharyngite aigüe [rhume banal]"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "koplik"
 * item[=].item[=].text = "Signe de Köplik"
+* item[=].item[=].code[+] = http://snomed.info/sct#271667004 "signes de Koplik"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "facteurs-risque"
 * item[=].item[=].text = "Facteurs de risque"
+* item[=].item[=].code[+] = http://loinc.org#46467-7 "Facteurs de risque"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-* item[=].item[=].answerOption[+].valueString = "non"
-* item[=].item[=].answerOption[+].valueString = "femme enceinte"
-* item[=].item[=].answerOption[+].valueString = "immunodépression"
-* item[=].item[=].answerOption[+].valueString = "nourrisson < 1 an"
-* item[=].item[=].answerOption[+].valueString = "Autre"
+// ajouté jdv-facteur-risque-rougeole-cisis
+* item[=].item[=].answerValueSet = https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis"
+// * item[=].item[=].answerOption[+].valueString = "non"
+// * item[=].item[=].answerOption[+].valueString = "femme enceinte"
+// * item[=].item[=].answerOption[+].valueString = "immunodépression"
+// * item[=].item[=].answerOption[+].valueString = "nourrisson < 1 an"
+// * item[=].item[=].answerOption[+].valueString = "Autre"
 
 * item[=].item[+].linkId = "facteurs-risque-autre"
 * item[=].item[=].text = "Facteur de risque : précisez"
