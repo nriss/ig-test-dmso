@@ -193,12 +193,16 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
+// il ne faudrait faire apparaître cette question si réponse oui à la question précédente ""Exanthème maculo papuleux"
 * item[=].item[+].linkId = "exantheme-generalise"
 * item[=].item[=].text = "Exanthème maculo papuleux généralisé"
 * item[=].item[=].code[+] = http://snomed.info/sct#725119006 "éruption cutanée généralisée"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].enableWhen[+].question = "exantheme"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "toux"
 * item[=].item[=].text = "Toux"
@@ -327,11 +331,14 @@ Usage: #definition
 * item[+].linkId = "biologie"
 * item[=].text = "Biologie"
 * item[=].type = #group
-* item[=].item[+].linkId = "biologie-statut"
-* item[=].item[=].text = "Statut de la biologie"
+
+// remplacé biologie (en cours/non fait) par Demande de confirmation biologique (oui / non)
+* item[=].item[+].linkId = "confirmation-biologique"
+* item[=].item[=].text = "Demande de confirmation biologique"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1360 "Demande de confirmation biologique "
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueString = "En cours"
-* item[=].item[=].answerOption[+].valueString = "Non fait"
+* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "rtpcr-oropharynx"
 * item[=].item[=].text = "RT-PCR : oro-pharynx"
