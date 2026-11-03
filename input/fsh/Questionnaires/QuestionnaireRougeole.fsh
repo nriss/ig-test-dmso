@@ -38,19 +38,22 @@ Usage: #definition
 * item[=].item[+].linkId = "patient-nom"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].type = #string
-* item[=].item[=].code[+] = http://loinc.org#45394-4 "Patient Last (Family) name"
+// code LOINC à vérifier par Melissa
+* item[=].item[=].code[+] = http://loinc.org#45394-4 "Nom du patient"
 * item[=].item[=].required = true
 
 * item[=].item[+].linkId = "patient-prenom"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].type = #string
-* item[=].item[=].code[+] = http://loinc.org#45392-8 "Patient First (Given) name"
+// code LOINC à vérifier par Melissa
+* item[=].item[=].code[+] = http://loinc.org#45392-8 "Prénom du patient"
 * item[=].item[=].required = true
 
-* item[=].item[+].linkId = "patient-naissance"
+* item[=].item[+].linkId = "patient-date-naissance"
 * item[=].item[=].text = "Date de naissance"
 * item[=].item[=].type = #date
-* item[=].item[=].code[+] = http://loinc.org#21112-8 "Birth date"
+// code LOINC à vérifier par Melissa
+* item[=].item[=].code[+] = http://loinc.org#21112-8 "Date de naissance"
 * item[=].item[=].required = true
 
 * item[=].item[+].linkId = "patient-telephone"
@@ -64,11 +67,14 @@ Usage: #definition
 * item[=].item[+].linkId = "patient-sexe"
 * item[=].item[=].text = "Sexe"
 * item[=].item[=].type = #choice
-* item[=].item[=].code[+] = http://loinc.org#76689-9 "Sex assigned at birth"
-* item[=].item[=].answerOption[+].valueString = "F"
-* item[=].item[=].answerOption[+].valueString = "M"
-* item[=].item[=].answerOption[+].valueString = "I"
-* item[=].item[=].required = true
+// code LOINC à vérifier par Melissa
+* item[=].item[=].code[+] = http://loinc.org#76689-9 "Sexe"
+// ajouté jdv-hl7-v3-AdministrativeGender-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis"
+// * item[=].item[=].answerOption[+].valueString = "F"
+// * item[=].item[=].answerOption[+].valueString = "M"
+// * item[=].item[=].answerOption[+].valueString = "I"
+// * item[=].item[=].required = true
 
 // ne pas demander année de naissance, âge dans le formulaire dématérialisé
 // * item[1].item[6].linkId = "patient-annee-naissance"
