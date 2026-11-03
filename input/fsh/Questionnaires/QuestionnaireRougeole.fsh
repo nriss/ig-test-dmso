@@ -781,7 +781,7 @@ Usage: #definition
 * item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
 * item[=].item[=].type = #choice
 // Ajout jdv-origine-information-vaccin-rougeole-cisis
-* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
 // * item[=].item[=].answerOption[+].valueString = "interrogatoire"
 // * item[=].item[=].answerOption[+].valueString = "carnet de santé ou de vaccination/dossier médical"
 
