@@ -119,11 +119,15 @@ Usage: #definition
 // * item[1].item[13].text = "Code d'anonymat (à remplir par l'ARS)"
 // * item[1].item[13].type = #string
 
-// la date du signalement peut-elle être générée à partir de la date du jour et non modifiable ?
+// date du signalement : date du jour, calculée et non modifiable
 * item[=].item[+].linkId = "date-signalement"
 * item[=].item[=].text = "Date de signalement"
 * item[=].item[=].type = #date
 * item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+* item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].item[=].extension[=].valueExpression.expression = "today()"
 
 // remplacer item[2] et la question "type de tierce personne" par 2 rubriques séparées : 
 // - représentant légal (obligatoire pour les mineurs) [1..*] 
