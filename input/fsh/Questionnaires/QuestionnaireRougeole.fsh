@@ -619,21 +619,24 @@ Usage: #definition
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-* item[=].item[+].linkId = "lieux-exposition"
-* item[=].item[=].text = "Lieux et circonstances de l'exposition dans les 7 à 18 jours avant la date de l'éruption"
-* item[=].item[=].type = #group
+* item[+].linkId = "lieux-exposition"
+* item[=].text = "Lieux et circonstances de l'exposition dans les 7 à 18 jours avant la date de l'éruption"
+* item[=].type = #group
+
 * item[=].item[=].item[+].linkId = "sejour-etranger"
 * item[=].item[=].item[=].text = "Séjour à l'étranger"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].required = true
+* item[=].item[=].code[+] = http://snomed.info/sct#276030007 "voyage à l'étranger ou en territoire ultramarin"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "sejour-etranger-pays"
 * item[=].item[=].item[=].text = "Pays du séjour"
+// Code LOINC à vérifier par Melissa
+* item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du séjour"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Country of travel [Location]"
 * item[=].item[=].item[=].enableWhen[+].question = "sejour-etranger"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
@@ -641,6 +644,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "contact-rougeole"
 * item[=].item[=].item[=].text = "Contact avec un cas de rougeole"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-419 "Contact avec un cas de rougeole"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -648,6 +652,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-lieu"
 * item[=].item[=].item[=].text = "Lieu du contact"
+* item[=].item[=].item[=].code[+] = http://loinc.org#81267-7 "Contexte d'exposition à la maladie"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].enableWhen[+].question = "contact-rougeole"
@@ -657,6 +662,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-precision"
 * item[=].item[=].item[=].text = "Précisez"
+// Trouver un code ?
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "contact-rougeole"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -664,6 +670,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "autres-cas-entourage"
 * item[=].item[=].item[=].text = "Existence d'autres cas dans l'entourage"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-420 "Existence d'autres cas dans l'entourage"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -671,6 +678,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "autres-cas-lieu"
 * item[=].item[=].item[=].text = "Lieu"
+* item[=].item[=].item[=].code[+] = http://loinc.org#81267-7 "Contexte d'exposition à la maladie"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
@@ -680,6 +688,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "autres-cas-precision"
 * item[=].item[=].item[=].text = "Précisez"
+// Trouver un code ?
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -687,6 +696,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "autres-cas-sejour-etranger"
 * item[=].item[=].item[=].text = "Notion de séjour à l'étranger pour les autres cas"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-430 "Séjour à l’étranger pour les autres cas de rougeole dans l'entourage"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -697,12 +707,13 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "autres-cas-pays"
 * item[=].item[=].item[=].text = "Pays du séjour des autres cas"
+// Code LOINC à vérifier par Melissa
+* item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du séjour"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-sejour-etranger"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
-
 
 
 * item[+].linkId = "statut-vaccinal"
