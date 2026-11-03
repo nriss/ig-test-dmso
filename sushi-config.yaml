@@ -45,6 +45,8 @@ parameters: #Parameters list - https://build.fhir.org/ig/FHIR/fhir-tools-ig/Code
 pages:
     index.md:
         title: Accueil
+    architecture.md:
+        title: Architecture
     spec-fonctionnelle-intro.md:
         title: Vue d'ensemble
         spec-fonctionnelle-alimentation.md:
@@ -70,6 +72,7 @@ pages:
 
 menu:
     Accueil: index.html
+    Architecture: architecture.html
     Vol. 1 - Etude fonctionnelle: 
         Introduction: spec-fonctionnelle-intro.html
         Alimentation: spec-fonctionnelle-alimentation.html
