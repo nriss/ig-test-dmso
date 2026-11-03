@@ -241,12 +241,13 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "nourrisson < 1 an"
 // * item[=].item[=].answerOption[+].valueString = "Autre"
 
+// si je sélectionne "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque" alors je dois pouvoir saisir un texte libre pour préciser
 * item[=].item[+].linkId = "facteurs-risque-autre"
 * item[=].item[=].text = "Facteur de risque : précisez"
 * item[=].item[=].type = #string
 * item[=].item[=].enableWhen[+].question = "facteurs-risque"
 * item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerString = "Autre"
+* item[=].item[=].enableWhen[=].answerCoding = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.01.27 "Autre facteur de risque"
 
 * item[=].item[+].linkId = "gravite-complications"
 * item[=].item[=].text = "Critères de gravité : complications"
@@ -259,16 +260,18 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "Pneumopathie"
 // * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
+// si je sélectionne "B05.8" (Rougeole avec autres complications) dans la question précédente "gravite-complications" alors je dois pouvoir saisir un texte libre pour préciser
 * item[=].item[+].linkId = "gravite-complications-autre"
 * item[=].item[=].text = "Complication : précisez"
 * item[=].item[=].type = #string
 * item[=].item[=].enableWhen[+].question = "gravite-complications"
 * item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerString = "Autre, précisez"
+* item[=].item[=].enableWhen[=].answerCoding = http://hl7.org/fhir/sid/icd-10#B05.8 "Rougeole avec autres complications"
 
 * item[=].item[+].linkId = "hospitalisation"
 * item[=].item[=].text = "Hospitalisation"
 * item[=].item[=].type = #choice
+// code LOINC à vérifier avec Melissa
 * item[=].item[=].code[+] = http://loinc.org#77974-4 "Whether the patient was hospitalized for condition of interest"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -289,6 +292,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "reanimation"
 * item[=].item[=].text = "Réanimation"
+* item[=].item[=].code[+] = http://snomed.info/sct#305351004 "admission aux soins intensifs"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -300,13 +304,15 @@ Usage: #definition
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-* item[=].item[+].linkId = "evolution"
-* item[=].item[=].text = "Évolution"
+* item[=].item[+].linkId = "statut-clinique-du-patient"
+* item[=].item[=].text = "Statut clinique du patient"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].answerOption[+].valueString = "Guérison"
-* item[=].item[=].answerOption[+].valueString = "Encore malade"
-* item[=].item[=].answerOption[+].valueString = "Décès"
+// ajouté jdv-complication-rougeole-cisis
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-rougeole-cisis"
+//* item[=].item[=].answerOption[+].valueString = "Guérison"
+//* item[=].item[=].answerOption[+].valueString = "Encore malade"
+//* item[=].item[=].answerOption[+].valueString = "Décès"
 
 * item[=].item[+].linkId = "deces-date"
 * item[=].item[=].text = "Date du décès"
@@ -315,6 +321,7 @@ Usage: #definition
 * item[=].item[=].enableWhen[+].question = "evolution"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "Décès"
+* item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
 
 
 * item[+].linkId = "biologie"
