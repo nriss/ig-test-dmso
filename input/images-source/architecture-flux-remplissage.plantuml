@@ -6,7 +6,6 @@ actor "Médecin déclarant" as PS
 participant "Form Filler\n(outil d'affichage graphique)" as FF
 participant "Form Manager\n(repo de formulaires)" as FM
 participant "Annuaire Santé" as ANN
-participant "Téléservice INSi\n(à instruire)" as INSI
 participant "SMT" as SMT
 
 PS -> FF : Ouvre le formulaire
@@ -17,8 +16,6 @@ note over FM : Form Manager ou Form Fill Manager ?\nRôle du Form Fill Manager �
 == Pré-remplissage (à instruire) ==
 FF -> ANN : Données du professionnel de santé
 ANN --> FF : Données du professionnel
-FF -> INSI : Identité du patient (droit d'usage à vérifier)
-INSI --> FF : Identité
 
 == Terminologies ==
 FF -> SMT : ValueSet/$expand (dont communes)
