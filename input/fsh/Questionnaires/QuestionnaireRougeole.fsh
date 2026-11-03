@@ -509,6 +509,14 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
+// Ajouté une date d'envoi Kit salivaire (Oracol©) au CNR
+* item[=].item[=].item[+].linkId = "cnr-kit-salivaire-date-envoi"
+* item[=].item[=].item[=].text = "Date d'envoi"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen[+].question = "cnr-kit-salivaire"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+
 // ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
 * item[=].item[=].item[=].text = "Autres prélèvements"
@@ -521,9 +529,12 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-* item[=].item[=].item[+].linkId = "cnr-date-envoi"
+* item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
 * item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen[+].question = ""cnr-autres-prelevements"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[=].item[+].linkId = "cnr-souhait-kits"
 * item[=].item[=].item[=].text = "Souhaitez-vous recevoir des kits pour prélèvements et envois d'échantillons de salive au CNR (recherche d'IgM/PCR) ?"
