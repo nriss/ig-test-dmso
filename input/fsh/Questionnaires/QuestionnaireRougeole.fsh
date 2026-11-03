@@ -302,7 +302,7 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "reanimation-date"
-* item[=].item[=].text = "Date de réanimation"
+* item[=].item[=].text = "Date"
 * item[=].item[=].type = #date
 * item[=].item[=].enableWhen[+].question = "reanimation"
 * item[=].item[=].enableWhen[=].operator = #=
