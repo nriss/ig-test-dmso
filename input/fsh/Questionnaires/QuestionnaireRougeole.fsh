@@ -1,6 +1,6 @@
 Instance: QuestionnaireRougeole
 InstanceOf: Questionnaire
-Title: "Formulaire de signalement de la rougeole"
+Title: "Formulaire de signalement - Rougeole"
 Description: "Formulaire correspondant au cerfa n° 12554*04 (rougeole, maladie à signalement obligatoire) du 22/04/2026."
 Usage: #definition
 * url = "https://interop.esante.gouv.fr/ig/fhir/dmso/Questionnaire/QuestionnaireRougeole"
@@ -67,34 +67,39 @@ Usage: #definition
 * item[1].item[5].answerOption[0].valueString = "F"
 * item[1].item[5].answerOption[1].valueString = "M"
 * item[1].item[5].answerOption[2].valueString = "I"
+* item[1].item[5].required = true
 
-* item[1].item[6].linkId = "patient-annee-naissance"
-* item[1].item[6].text = "Année de naissance"
-* item[1].item[6].type = #integer
+# ne pas demander année de naissance, âge dans le formulaire dématérialisé
+# * item[1].item[6].linkId = "patient-annee-naissance"
+# * item[1].item[6].text = "Année de naissance"
+# * item[1].item[6].type = #integer
 
-* item[1].item[7].linkId = "patient-age"
-* item[1].item[7].text = "Âge"
-* item[1].item[7].type = #integer
+# * item[1].item[7].linkId = "patient-age"
+# * item[1].item[7].text = "Âge"
+# * item[1].item[7].type = #integer
 
-* item[1].item[8].linkId = "patient-age-unite"
-* item[1].item[8].text = "Précisez (âge)"
-* item[1].item[8].type = #choice
-* item[1].item[8].answerOption[0].valueString = "ans"
-* item[1].item[8].answerOption[1].valueString = "mois (si < 2 ans)"
-* item[1].item[8].answerOption[2].valueString = "jours (si < 1 mois)"
+# * item[1].item[8].linkId = "patient-age-unite"
+# * item[1].item[8].text = "Précisez (âge)"
+# * item[1].item[8].type = #choice
+# * item[1].item[8].answerOption[0].valueString = "ans"
+# * item[1].item[8].answerOption[1].valueString = "mois (si < 2 ans)"
+# * item[1].item[8].answerOption[2].valueString = "jours (si < 1 mois)"
 
+# PSIG est relié à un référentiel des codes postaux / communes 
+# Peut-on l'utiliser ? le déclarant saisi le code postal ou la commune et sélectionne dans la liste proposée. En sortie, il faudrait qu'on ait 2 zones séparées (code postal + commune)
 * item[1].item[9].linkId = "patient-code-postal"
 * item[1].item[9].text = "Code postal du domicile"
 * item[1].item[9].type = #string
+* item[1].item[9].required = true
 
 * item[1].item[10].linkId = "patient-pays"
-* item[1].item[10].text = "Pays si patient résidant à l'étranger"
+* item[1].item[10].text = "Pays (si patient résidant à l'étranger)"
 * item[1].item[10].type = #string
+* item[1].item[10].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[1].item[11].linkId = "patient-informe"
 * item[1].item[11].text = "Le patient (ou le tiers) est-il informé du diagnostic ?"
 * item[1].item[11].code[0] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1337 "Le patient (ou le tiers) est-il informé du diagnostic ?"
-
 * item[1].item[11].type = #choice
 * item[1].item[11].required = true
 * item[1].item[11].answerOption[0].valueCoding = http://loinc.org#LA33-6 "Yes"
@@ -104,19 +109,21 @@ Usage: #definition
 * item[1].item[12].linkId = "patient-peut-repondre"
 * item[1].item[12].text = "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
 * item[1].item[12].type = #choice
+* item[1].item[12].required = true
 * item[1].item[12].answerOption[0].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[1].item[12].answerOption[1].valueCoding = http://loinc.org#LA32-8 "No"
 * item[1].item[12].answerOption[2].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
-* item[1].item[13].linkId = "patient-code-anonymat"
-* item[1].item[13].text = "Code d'anonymat (à remplir par l'ARS)"
-* item[1].item[13].type = #string
+# ne pas demander le code anonymat
+# * item[1].item[13].linkId = "patient-code-anonymat"
+# * item[1].item[13].text = "Code d'anonymat (à remplir par l'ARS)"
+# * item[1].item[13].type = #string
 
+# la date du signalement peut-elle être générée à partir de la date du jour et non modifiable ?
 * item[1].item[14].linkId = "date-signalement"
 * item[1].item[14].text = "Date de signalement"
 * item[1].item[14].type = #date
 * item[1].item[14].required = true
-
 
 * item[2].linkId = "tierce-personne"
 * item[2].text = "Tierce personne"
