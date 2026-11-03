@@ -1,0 +1,28 @@
+@startuml
+' Version 0 - à améliorer
+title Remplissage du questionnaire (v0)
+
+actor "Médecin déclarant" as PS
+participant "Form Filler\n(outil d'affichage graphique)" as FF
+participant "Form Manager\n(repo de formulaires)" as FM
+participant "Annuaire Santé" as ANN
+participant "Téléservice INSi\n(à instruire)" as INSI
+participant "SMT" as SMT
+
+PS -> FF : Ouvre le formulaire
+FF -> FM : GET Questionnaire
+FM --> FF : Questionnaire
+note over FM : Form Manager ou Form Fill Manager ?\nRôle du Form Fill Manager à définir
+
+== Pré-remplissage (à instruire) ==
+FF -> ANN : Données du professionnel de santé
+ANN --> FF : Données du professionnel
+FF -> INSI : Identité du patient (droit d'usage à vérifier)
+INSI --> FF : Identité
+
+== Terminologies ==
+FF -> SMT : ValueSet/$expand (dont communes)
+SMT --> FF : Codes (risque de disponibilité)
+
+PS -> FF : Saisit les données
+@enduml

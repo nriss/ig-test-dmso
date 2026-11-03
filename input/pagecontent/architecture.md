@@ -4,15 +4,24 @@
 
 ### Architecture
 
-#### Diagramme des acteurs et des flux (version 0)
+#### Diagrammes des acteurs et des flux (version 0)
 
-Ce diagramme est une première version, destinée à être améliorée.
+Ces diagrammes sont une première version, destinée à être améliorée. Le flux est découpé en trois parties : conception, remplissage, puis transmission.
 
 <style>
-#architecture-flux svg { max-width: 100%; height: auto; }
+.architecture-flux svg { max-width: 100%; height: auto; }
 </style>
-<div id="architecture-flux" style="max-width: 100%; overflow-x: auto;">
-{% include architecture-flux.svg %}
+
+<div class="architecture-flux" style="max-width: 100%; overflow-x: auto;">
+{% include architecture-flux-conception.svg %}
+</div>
+
+<div class="architecture-flux" style="max-width: 100%; overflow-x: auto;">
+{% include architecture-flux-remplissage.svg %}
+</div>
+
+<div class="architecture-flux" style="max-width: 100%; overflow-x: auto;">
+{% include architecture-flux-transmission.svg %}
 </div>
 
 #### Rôle de chaque acteur SDC
