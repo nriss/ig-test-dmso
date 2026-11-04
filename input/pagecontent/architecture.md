@@ -4,6 +4,12 @@
 
 ### Architecture
 
+#### Flux de données simplifié : hypothèse FHIR Questionnaire et QuestionnaireResponse
+
+<div class="architecture-flux" style="max-width: 100%; overflow-x: auto;">
+{% include architecture-flux-donnees-simplifie.svg %}
+</div>
+
 #### Diagrammes des acteurs et des flux (version 0)
 
 Ces diagrammes sont une première version, destinée à être améliorée. Le flux est découpé en trois parties : conception, remplissage, puis transmission.

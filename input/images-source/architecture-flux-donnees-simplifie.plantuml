@@ -1,0 +1,30 @@
+@startuml
+' Version 0 - à améliorer
+title Flux de données simplifié (v0)
+
+left to right direction
+
+actor "Éditeur de formulaires" as ED
+actor "Médecin déclarant" as PS
+
+rectangle "Outil d'édition" as FD
+cloud "Repo de formulaires\nversionnés" as FM #LightYellow
+rectangle "Outil d'affichage\ngraphique" as FF
+cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
+rectangle "PSIG" as PSIG
+rectangle "DNUM" as DNUM
+rectangle "SPF" as SPF
+
+ED --> FD
+FD --> FM : Questionnaire
+FM --> FF : Questionnaire
+AC --> FF : listes de choix,\npré-remplissage
+PS --> FF : saisit la réponse\nau questionnaire
+FF --> PSIG : QuestionnaireResponse
+PSIG --> DNUM : QuestionnaireResponse
+DNUM --> SPF : données anonymisées
+
+legend right
+  <back:LightYellow>  Nuage  </back> : perspective d'amélioration
+endlegend
+@enduml
