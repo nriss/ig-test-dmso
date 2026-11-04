@@ -5,7 +5,7 @@ title Transmission, archivage et traçabilité (v0)
 participant "Form Filler" as FF
 participant "Form Response Manager" as FRM
 participant "Form Receiver" as FR
-participant "Form Archiver" as FA
+participant "Form Archiver\n(à instruire)" as FA
 database "AuditEvent" as AUD
 
 FF -> FRM : Sauvegarde du brouillon (reprise de saisie ?)

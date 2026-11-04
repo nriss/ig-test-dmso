@@ -60,12 +60,12 @@ Les acteurs et leur définition proviennent de la page [Basic SDC workflow](http
 | Acteur SDC | Définition SDC | Rôle dans le DMSO (hypothèse v0) |
 |---|---|---|
 | SDC Form Designer | Système responsable de la création et de l'édition des formulaires | Outil métier : il doit permettre à l'éditeur de formulaires de créer et d'éditer un formulaire sans compétences techniques |
-| SDC Form Filler | Système responsable de la saisie utilisateur pour produire des formulaires partiellement ou totalement remplis | Application de saisie du professionnel de santé.<br/><br/><b>Remplissage automatique</b><br/>Le Form Filler peut pré-remplir certains champs du questionnaire afin de limiter la saisie. Deux sources sont envisagées (version 0, à instruire) :<table><thead><tr><th>Sujet</th><th>Piste</th><th>Points à instruire</th></tr></thead><tbody><tr><td>Annuaire Santé</td><td>Pré-remplissage des données du professionnel de santé déclarant à partir de l'Annuaire Santé</td><td>API à retenir, données à reprendre, authentification du déclarant</td></tr><tr><td>Noms des communes</td><td>Liste de choix des communes (ValueSet) plutôt qu'une saisie libre</td><td>Terminologie source à retenir (référentiel des communes), disponibilité via le SMT</td></tr></tbody></table><b>Note :</b> le téléservice INSi n'est pas utilisé, car PSIG n'y a pas accès.<br/><br/><b>Risque de disponibilité des services d'autocomplétion</b><br/>Le risque de disponibilité concerne tous les services nécessaires à l'autocomplétion et au pré-remplissage des champs du questionnaire, notamment :<ul><li>le serveur multi-terminologies (SMT) national : <a href="https://smt.esante.gouv.fr/fhir">https://smt.esante.gouv.fr/fhir</a> (listes de choix, noms des communes, validation des codes) ;</li><li>l'Annuaire Santé (données du professionnel de santé) ;</li><li>d'autres services à identifier.</li></ul>Une indisponibilité de l'un de ces services constitue un risque pour le fonctionnement du service. Il faut prévoir un système de cache afin que les données d'autocomplétion (ex. expansions de ValueSets) restent disponibles même en cas d'indisponibilité du service source. Les autres mesures d'atténuation sont à compléter. |
-| SDC Form Fill Manager | Dépôt d'accès aux définitions de formulaires, pouvant aussi effectuer le pré-remplissage | À compléter |
+| SDC Form Filler | Système responsable de la saisie utilisateur pour produire des formulaires partiellement ou totalement remplis | Application de saisie du professionnel de santé.<br/><br/><b>Remplissage automatique</b><br/>Le Form Filler peut pré-remplir certains champs du questionnaire afin de limiter la saisie. Deux sources sont envisagées (version 0, à instruire) :<br/>• <b>Annuaire Santé</b> : pré-remplissage des données du professionnel de santé déclarant à partir de l'Annuaire Santé. À instruire : API à retenir, données à reprendre, authentification du déclarant.<br/>• <b>Noms des communes</b> : liste de choix des communes (ValueSet) plutôt qu'une saisie libre. À instruire : terminologie source à retenir (référentiel des communes), disponibilité via le SMT.<br/><br/><b>Note :</b> le téléservice INSi n'est pas utilisé, car PSIG n'y a pas accès.<br/><br/><b>Risque de disponibilité des services d'autocomplétion</b><br/>Le risque de disponibilité concerne tous les services nécessaires à l'autocomplétion et au pré-remplissage des champs du questionnaire, notamment :<br/>• le serveur multi-terminologies (SMT) national : <a href="https://smt.esante.gouv.fr/fhir">https://smt.esante.gouv.fr/fhir</a> (listes de choix, noms des communes, validation des codes) ;<br/>• l'Annuaire Santé (données du professionnel de santé) ;<br/>• d'autres services à identifier.<br/><br/>Une indisponibilité de l'un de ces services constitue un risque pour le fonctionnement du service. Il faut prévoir un système de cache afin que les données d'autocomplétion (ex. expansions de ValueSets) restent disponibles même en cas d'indisponibilité du service source. Les autres mesures d'atténuation sont à compléter. |
+| SDC Form Fill Manager | Dépôt d'accès aux définitions de formulaires, pouvant aussi effectuer le pré-remplissage | Pas de système distinct : l'accès aux `Questionnaire` par l'outil d'affichage est assuré par le repo de formulaires versionnés (même système que le Form Manager) |
 | SDC Form Manager | Dépôt de maintenance des définitions de formulaires (s'appuie sur le Form Fill Manager) | Héberge les `Questionnaire` du DMSO |
-| SDC Form Response Manager | Dépôt interrogeable pour le stockage et la récupération des formulaires complétés ou partiellement complétés | À compléter (reprise de saisie ?) |
+| SDC Form Response Manager | Dépôt interrogeable pour le stockage et la récupération des formulaires complétés ou partiellement complétés | Perspective d'amélioration : sauvegarde de brouillons de `QuestionnaireResponse` et reprise de saisie |
 | SDC Form Receiver | Destination en écriture seule vers laquelle les formulaires sont envoyés pour traitement | Reçoit les `QuestionnaireResponse` |
-| SDC Form Archiver | Système en écriture seule chargé d'archiver les formulaires complétés et les travaux en cours | À compléter |
+| SDC Form Archiver | Système en écriture seule chargé d'archiver les formulaires complétés et les travaux en cours | À instruire : archivage des `QuestionnaireResponse` reçues |
 
 Trois rôles sont par ailleurs cités par SDC comme **non définis par le guide** :
 
@@ -73,13 +73,7 @@ Trois rôles sont par ailleurs cités par SDC comme **non définis par le guide*
 |---|---|---|
 | Clinical or Administrative Data Source | Dossier patient ou système similaire qui répond aux requêtes pendant le pré-remplissage | Annuaire Santé |
 | Data Element Source | Dépôt de StructureDefinitions ou de CodeSystems pour retrouver définitions d'items ou codes | SMT |
-| Task Manager | Dépôt de `Task` représentant les demandes de remplissage d'un formulaire | À compléter |
-
-#### Exemple de QuestionnaireResponse
-
-Exemple fictif de `QuestionnaireResponse` produite par le Form Filler à partir du questionnaire de signalement de la rougeole et envoyée au Form Receiver. Les données sont fictives. Voir l'exemple complet : [QuestionnaireResponseRougeoleExemple]({{site.data.fhir.path}}QuestionnaireResponse-QuestionnaireResponseRougeoleExemple.html).
-
-{% include QuestionnaireResponse-QuestionnaireResponseRougeoleExemple-json-html.xhtml %}
+| Task Manager | Dépôt de `Task` représentant les demandes de remplissage d'un formulaire | Non utilisé dans la version 0 : le médecin ouvre lui-même le formulaire |
 
 #### Sécurité, traçabilité et imputabilité
 
@@ -88,3 +82,45 @@ Trois questions structurent les exigences de sécurité :
 * **Traçabilité** : les échanges sont tracés au moyen de la ressource **AuditEvent**.
 * **Intégrité** : est-ce que la donnée n'a pas été altérée ?
 * **Authentification et imputabilité** : qui a saisi la donnée ?
+
+#### Exemple de QuestionnaireResponse
+
+Exemple fictif de `QuestionnaireResponse` produite par le Form Filler à partir du questionnaire de signalement de la rougeole et envoyée au Form Receiver. Les données sont fictives. Voir l'exemple complet : [QuestionnaireResponseRougeoleExemple]({{site.data.fhir.path}}QuestionnaireResponse-QuestionnaireResponseRougeoleExemple.html).
+
+##### Exemple : définition d'une question et d'une réponse
+
+Une question est définie dans un `item` du `Questionnaire` (ici la question « Fièvre > 38,5° C » du questionnaire rougeole). La réponse correspondante est un `item` de la `QuestionnaireResponse` qui reprend le même `linkId`.
+
+**Définition de la question** (extrait du `Questionnaire`) :
+
+```json
+{
+  "linkId": "fievre",
+  "text": "Fièvre > 38,5° C",
+  "code": [
+    { "system": "http://hl7.org/fhir/sid/icd-10", "code": "R50.9", "display": "Fièvre, sans précision" }
+  ],
+  "type": "choice",
+  "answerOption": [
+    { "valueCoding": { "system": "http://loinc.org", "code": "LA33-6", "display": "Yes" } },
+    { "valueCoding": { "system": "http://loinc.org", "code": "LA32-8", "display": "No" } }
+  ]
+}
+```
+
+**Définition de la réponse** (extrait de la `QuestionnaireResponse`) :
+
+```json
+{
+  "linkId": "fievre",
+  "answer": [
+    { "valueCoding": { "system": "http://loinc.org", "code": "LA33-6", "display": "Yes" } }
+  ]
+}
+```
+
+La réponse ne reprend que le `linkId` et la valeur choisie, parmi les `answerOption` proposées par la question. Le texte et le type viennent du `Questionnaire`.
+
+##### Exemple complet
+
+{% include QuestionnaireResponse-QuestionnaireResponseRougeoleExemple-json-html.xhtml %}
