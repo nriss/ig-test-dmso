@@ -1,0 +1,11 @@
+@startuml
+' Version 0 - à améliorer
+title Conception du questionnaire (v0)
+
+actor "Éditeur de formulaires" as ED
+participant "Form Designer\n(outil d'édition)" as FD
+participant "Form Manager\n(repo de formulaires versionnés)" as FM
+
+ED -> FD : Conçoit le formulaire
+FD -> FM : Crée / met à jour le Questionnaire
+@enduml

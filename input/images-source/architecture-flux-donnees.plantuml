@@ -1,0 +1,33 @@
+@startuml
+' Version 0 - à améliorer
+title Flux de données (v0)
+
+left to right direction
+
+actor "Éditeur de formulaires" as ED
+actor "Médecin déclarant" as PS
+
+rectangle "Outil d'édition\n(Form Designer)" as FD
+rectangle "Repo de formulaires versionnés\n(Form Manager)" as FM
+rectangle "Outil d'affichage graphique\n(Form Filler)" as FF
+rectangle "Form Receiver" as FR
+rectangle "Form Response Manager\n(à instruire)" as FRM
+rectangle "Form Archiver\n(à instruire)" as FA
+database "AuditEvent" as AUD
+
+cloud "Services d'autocomplétion" as AC {
+  rectangle "SMT" as SMT
+  rectangle "Annuaire Santé" as ANN
+}
+
+ED --> FD : conception
+FD --> FM : Questionnaire
+FM --> FF : Questionnaire
+PS --> FF : saisie
+SMT --> FF : ValueSet expansé\n(listes de choix, communes)
+ANN --> FF : données du professionnel\n(pré-remplissage)
+FF --> FR : QuestionnaireResponse
+FF ..> FRM : brouillon\n(à instruire)
+FR --> FA : QuestionnaireResponse\n(archivage)
+FR --> AUD : AuditEvent
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+' Version 0 - à améliorer
+title Transmission, archivage et traçabilité (v0)
+
+participant "Form Filler" as FF
+participant "Form Response Manager" as FRM
+participant "Form Receiver" as FR
+participant "Form Archiver\n(à instruire)" as FA
+database "AuditEvent" as AUD
+
+FF -> FRM : Sauvegarde du brouillon (reprise de saisie ?)
+FF -> FF : Génère la QuestionnaireResponse
+FF -> FR : POST QuestionnaireResponse
+FR --> FF : Accusé de réception
+FR -> FA : Archivage (écriture seule)
+FR -> AUD : Crée AuditEvent\n(qui a saisi, quoi, quand)
+@enduml

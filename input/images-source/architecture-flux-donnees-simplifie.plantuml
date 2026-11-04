@@ -1,0 +1,36 @@
+@startuml
+' Version 0 - à améliorer
+title Flux de données simplifié : hypothèse FHIR Questionnaire et QuestionnaireResponse (v0)
+
+left to right direction
+
+actor "Éditeur de formulaires" as ED
+actor "Médecin déclarant" as PS
+
+rectangle "Outil d'édition" as FD
+cloud "Repo de formulaires\nversionnés" as FM #LightYellow
+rectangle "Outil d'affichage\ngraphique" as FF
+cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
+rectangle "PSIG" as PSIG
+rectangle "DNUM" as DNUM
+rectangle "Labo\n(à confirmer)" as DMP
+rectangle "Consommateurs" as DEST {
+  rectangle "SPF" as SPF
+  rectangle "SI VSS" as VSS
+}
+
+ED --> FD
+FD --> FM : Questionnaire
+FM --> FF : Questionnaire
+AC --> FF : listes de choix,\npré-remplissage
+PS --> FF : saisit la réponse\nau questionnaire
+FF --> PSIG : QuestionnaireResponse
+PSIG --> DNUM : QuestionnaireResponse
+DMP ..> DNUM : CR-BIO\nCDA via MSS\nHL7 v2 via S/MIME
+DNUM --> VSS : données consolidées
+DNUM --> SPF : données consolidées\net anonymisées
+
+legend right
+  <back:LightYellow>  Nuage  </back> : perspective d'amélioration
+endlegend
+@enduml
