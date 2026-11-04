@@ -265,9 +265,10 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "nourrisson < 1 an"
 // * item[=].item[=].answerOption[+].valueString = "Autre"
 
-// si je sélectionne "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque" alors je dois pouvoir saisir un texte libre pour préciser
+// il ne faudrait faire apparaître cette question si réponse "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque"
 * item[=].item[=].item[+].linkId = "facteurs-risque-autre"
 * item[=].item[=].item[=].text = "Facteur de risque : précisez"
+// trouver un code ?
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "facteurs-risque"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -618,7 +619,7 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[+].linkId = "immunoglobulines-nombre"
-* item[=].item[=].item[=].text = "Nombre de personnes (immunoglobulines)"
+* item[=].item[=].item[=].text = "Nombre de personnes"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-425 "Nombre d'admministration d'immunoglobines aux contacts àrisque de rougeole grave"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "immunoglobulines"
@@ -633,7 +634,7 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[+].linkId = "ror-72h-nombre"
-* item[=].item[=].item[=].text = "Nombre de personnes (vaccin ROR)"
+* item[=].item[=].item[=].text = "Nombre de personnes"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-427 "Nombre d'administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "ror-72h"
