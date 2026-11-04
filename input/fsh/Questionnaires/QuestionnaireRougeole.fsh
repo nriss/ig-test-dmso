@@ -383,7 +383,7 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#91077-8 "Rougeole virus ARN [Présence/Seuil] Échantillon du système respiratoire supérieur ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
@@ -407,7 +407,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
@@ -432,7 +432,7 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
@@ -450,7 +450,7 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#35276-5 "Rougeole virus Ac IgM [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
@@ -511,7 +511,7 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Rougeole virus Ac IgG [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
