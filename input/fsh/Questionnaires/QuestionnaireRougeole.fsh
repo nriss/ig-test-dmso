@@ -288,7 +288,7 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "complications-autre"
 * item[=].item[=].item[=].text = "Complication : précisez"
 * item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].enableWhen[+].question = "gravite-complications"
+* item[=].item[=].item[=].enableWhen[+].question = "complications"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://hl7.org/fhir/sid/icd-10#B05.8 "Rougeole avec autres complications"
 
@@ -331,6 +331,8 @@ Usage: #definition
 // Remplacé "Evolution" par "Statut clinique du patient"
 * item[=].item[+].linkId = "statut-clinique-du-patient"
 * item[=].item[=].text = "Statut clinique du patient"
+// code LOINC à vérifier avec Melissa
+* item[=].item[=].code[+] = http://loinc.org#11323-3 "Statut clinique du patient"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 // ajouté jdv-evolution-rougeole-cisis
@@ -341,8 +343,9 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "deces-date"
 * item[=].item[=].item[=].text = "Date du décès"
+// code LOINC à vérifier avec Melissa
+* item[=].item[=].code[+] = http://loinc.org#81954-0 "Date du décès [Date] Patient ; Numérique"
 * item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].code[+] = http://loinc.org#81954-0 "Date of death [Date]"
 * item[=].item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
@@ -564,6 +567,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "cnr-souhait-kits"
 * item[=].item[=].item[=].text = "Souhaitez-vous recevoir des kits pour prélèvements et envois d'échantillons de salive au CNR (recherche d'IgM/PCR) ?"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1359 "Souhaitez-vous recevoir des kits pour prélèvements et envois d’échantillons de salive au CNR (recherche d’IgM/PCR) ?"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
@@ -643,9 +647,9 @@ Usage: #definition
 
 * item[=].item[+].linkId = "sejour-etranger"
 * item[=].item[=].text = "Séjour à l'étranger"
+* item[=].item[=].code[+] = http://snomed.info/sct#276030007 "voyage à l'étranger ou en territoire ultramarin"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].code[+] = http://snomed.info/sct#276030007 "voyage à l'étranger ou en territoire ultramarin"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
@@ -653,7 +657,7 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "sejour-etranger-pays"
 * item[=].item[=].item[=].text = "Pays du séjour"
 // Code LOINC à vérifier par Melissa
-* item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du séjour"
+* item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du voyage [Localisation] Patient"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "sejour-etranger"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -726,7 +730,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[+].linkId = "autres-cas-pays"
 * item[=].item[=].item[=].item[=].text = "Pays du séjour des autres cas"
 // Code LOINC à vérifier par Melissa
-* item[=].item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du séjour"
+* item[=].item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du voyage [Localisation] Patient ; Résultat nominal"
 * item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "autres-cas-sejour-etranger"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
