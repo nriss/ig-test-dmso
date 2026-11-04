@@ -213,16 +213,16 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-// il ne faudrait faire apparaître cette question si réponse oui à la question précédente ""Exanthème maculo papuleux"
-* item[=].item[+].linkId = "exantheme-generalise"
-* item[=].item[=].text = "Exanthème maculo papuleux généralisé"
-* item[=].item[=].code[+] = http://snomed.info/sct#725119006 "éruption cutanée généralisée"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
-* item[=].item[=].enableWhen[+].question = "exantheme"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+// il ne faudrait faire apparaître cette question si réponse oui à la question précédente "Exanthème maculo papuleux"
+* item[=].item[=].item[+].linkId = "exantheme-generalise"
+* item[=].item[=].item[=].text = "Exanthème maculo papuleux généralisé"
+* item[=].item[=].item[=].code[+] = http://snomed.info/sct#725119006 "éruption cutanée généralisée"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].enableWhen[+].question = "exantheme"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "toux"
 * item[=].item[=].text = "Toux"
