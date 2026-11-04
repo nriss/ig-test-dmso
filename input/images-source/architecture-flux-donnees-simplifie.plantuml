@@ -13,6 +13,7 @@ rectangle "Outil d'affichage\ngraphique" as FF
 cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
 rectangle "PSIG" as PSIG
 rectangle "DNUM" as DNUM
+rectangle "DMP" as DMP
 rectangle "SPF" as SPF
 rectangle "SI VSS" as VSS
 
@@ -23,6 +24,7 @@ AC --> FF : listes de choix,\npré-remplissage
 PS --> FF : saisit la réponse\nau questionnaire
 FF --> PSIG : QuestionnaireResponse
 PSIG --> DNUM : QuestionnaireResponse
+DMP ..> DNUM : CR BIO\n(à confirmer)
 DNUM --> SPF : données anonymisées
 DNUM --> VSS : données
 
