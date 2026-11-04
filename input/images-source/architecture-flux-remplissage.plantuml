@@ -11,13 +11,12 @@ participant "SMT" as SMT
 PS -> FF : Ouvre le formulaire
 FF -> FM : GET Questionnaire
 FM --> FF : Questionnaire
-note over FM : Form Manager ou Form Fill Manager ?\nRôle du Form Fill Manager à définir
 
-== Pré-remplissage (à instruire) ==
+== Pré-remplissage (perspective d'amélioration) ==
 FF -> ANN : Données du professionnel de santé
 ANN --> FF : Données du professionnel
 
-== Terminologies ==
+== Terminologies (perspective d'amélioration) ==
 FF -> SMT : ValueSet/$expand (dont communes)
 SMT --> FF : Codes (risque de disponibilité)
 
