@@ -69,6 +69,12 @@ Trois rôles sont par ailleurs cités par SDC comme **non définis par le guide*
 | Data Element Source | Dépôt de StructureDefinitions ou de CodeSystems pour retrouver définitions d'items ou codes | SMT |
 | Task Manager | Dépôt de `Task` représentant les demandes de remplissage d'un formulaire | À compléter |
 
+#### Exemple de QuestionnaireResponse
+
+Exemple fictif de `QuestionnaireResponse` produite par le Form Filler à partir du questionnaire de signalement de la rougeole et envoyée au Form Receiver. Les données sont fictives. Voir l'exemple complet : [QuestionnaireResponseRougeoleExemple]({{site.data.fhir.path}}QuestionnaireResponse-QuestionnaireResponseRougeoleExemple.html).
+
+{% include QuestionnaireResponse-QuestionnaireResponseRougeoleExemple-json-html.xhtml %}
+
 #### Sécurité, traçabilité et imputabilité
 
 Trois questions structurent les exigences de sécurité :
