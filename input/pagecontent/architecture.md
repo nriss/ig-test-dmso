@@ -1,6 +1,25 @@
 <style>
-.architecture-flux svg { max-width: 100% !important; height: auto !important; }
+.architecture-flux { text-align: center; }
+.architecture-flux svg { max-width: 100% !important; height: auto !important; display: inline-block; }
+.architecture-flux-bouton { display: block; margin: 0 auto 4px auto; cursor: pointer; }
+.architecture-flux:fullscreen { background: #fff; padding: 20px; overflow: auto; }
+.architecture-flux:-webkit-full-screen { background: #fff; padding: 20px; overflow: auto; }
 </style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.architecture-flux').forEach(function (bloc) {
+    if (!(bloc.requestFullscreen || bloc.webkitRequestFullscreen)) { return; }
+    var bouton = document.createElement('button');
+    bouton.type = 'button';
+    bouton.className = 'architecture-flux-bouton btn btn-default btn-sm';
+    bouton.textContent = 'Plein écran (Échap pour quitter)';
+    bouton.addEventListener('click', function () {
+      (bloc.requestFullscreen || bloc.webkitRequestFullscreen).call(bloc);
+    });
+    bloc.parentNode.insertBefore(bouton, bloc);
+  });
+});
+</script>
 
 <div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 10px 15px; margin-bottom: 15px;">
 <b>Page transversale</b> : cette page s'adresse à la fois aux profils métier et aux profils techniques.
