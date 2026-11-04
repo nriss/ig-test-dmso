@@ -377,8 +377,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "rtpcr-oropharynx-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "rtpcr-oropharynx-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#91077-8 "Rougeole virus ARN [Présence/Seuil] Échantillon du système respiratoire supérieur ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
@@ -400,8 +401,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
@@ -424,8 +426,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "rtpcr-autre-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "rtpcr-autre-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
@@ -441,8 +444,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igm-sang-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "igm-sang-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35276-5 "Rougeole virus Ac IgM [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
@@ -459,8 +463,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igm-salive-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "igm-salive-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Rougeole virus Ac IgM [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
@@ -476,8 +481,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igg-sang-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "igg-sang-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Rougeole virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-4-cisis
@@ -499,8 +505,9 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "igg-salive-resultat"
-* item[=].item[=].item[=].text = "Résultat"
+// remplacé "résultat" par "interpretation"
+* item[=].item[=].item[+].linkId = "igg-salive-interpretation"
+* item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Rougeole virus Ac IgG [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
