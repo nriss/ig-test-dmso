@@ -1,6 +1,6 @@
 @startuml
 ' Version 0 - à améliorer
-title Flux de données simplifié (v0)
+title Flux de données simplifié : hypothèse FHIR Questionnaire et QuestionnaireResponse (v0)
 
 left to right direction
 
