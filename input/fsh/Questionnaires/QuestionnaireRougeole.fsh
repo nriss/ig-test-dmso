@@ -833,6 +833,12 @@ Usage: #definition
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
+// Commune du signalant est récupéré de la CPS (à voir comment) => obligatoire
+* item[=].item[+].linkId = "prescripteur-commune"
+* item[=].item[=].text = "Commune"
+* item[=].item[=].required = true
+* item[=].item[=].type = #string
+
 // N° FINESS de l'établissement du signalant est récupéré de la CPS (à voir comment)  => obligatoire ? à vérifier pour les libéraux ?
 * item[=].item[+].linkId = "prescripteur-es-finess"
 * item[=].item[=].text = "N° FINESS de l'établissement"
@@ -888,6 +894,11 @@ Usage: #definition
 // Code postal du biologiste
 * item[=].item[+].linkId = "biologiste-code-postal"
 * item[=].item[=].text = "Code postal"
+* item[=].item[=].type = #string
+
+// Commune du biologiste
+* item[=].item[+].linkId = "biologiste-commune"
+* item[=].item[=].text = "Commune"
 * item[=].item[=].type = #string
 
 // N° FINESS du laboratoire
