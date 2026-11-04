@@ -27,7 +27,8 @@ PS --> FF : saisit la réponse\nau questionnaire
 FF --> PSIG : QuestionnaireResponse
 PSIG --> DNUM : QuestionnaireResponse
 DMP ..> DNUM : CR-BIO\nCDA via MSS\nHL7 v2 via S/MIME
-DNUM --> DEST : données consolidées\net anonymisées
+DNUM --> VSS : données consolidées
+DNUM --> SPF : données consolidées\net anonymisées
 
 legend right
   <back:LightYellow>  Nuage  </back> : perspective d'amélioration
