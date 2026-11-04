@@ -14,6 +14,7 @@ cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
 rectangle "PSIG" as PSIG
 rectangle "DNUM" as DNUM
 rectangle "SPF" as SPF
+rectangle "SI VSS" as VSS
 
 ED --> FD
 FD --> FM : Questionnaire
@@ -23,6 +24,7 @@ PS --> FF : saisit la réponse\nau questionnaire
 FF --> PSIG : QuestionnaireResponse
 PSIG --> DNUM : QuestionnaireResponse
 DNUM --> SPF : données anonymisées
+DNUM --> VSS : données
 
 legend right
   <back:LightYellow>  Nuage  </back> : perspective d'amélioration
