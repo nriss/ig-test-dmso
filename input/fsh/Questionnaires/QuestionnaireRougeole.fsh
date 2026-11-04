@@ -454,7 +454,7 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Rougeole virus Ac IgM [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-2-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 // * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
@@ -462,7 +462,6 @@ Usage: #definition
 * item[=].item[=].text = "IgG : sang"
 * item[=].item[=].type = #group
 
-// Ajouté date du 1er prélèvement
 * item[=].item[=].item[+].linkId = "igg-sang-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
@@ -472,11 +471,12 @@ Usage: #definition
 * item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Rougeole virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
 // Ajouté jdv-mso-resultat-qualitatif-4-cisis
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
+* item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-* item[=].item[+].item[+].linkId = "igg-date-premier"
+// Ajouté date du 1er prélèvement
+* item[=].item[=].item[+].linkId = "igg-date-premier"
 * item[=].item[=].item[=].text = "Date du 1er prélèvement"
 * item[=].item[=].item[=].type = #date
 
@@ -527,7 +527,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-// Ajouté une date d'envoi Kit salivaire (Oracol©) au CNR
+// Ajouté une date d'envoi Kit salivaire (Oracol©) au CNR si réponse oui à la question "cnr-kit-salivaire"
 * item[=].item[=].item[+].linkId = "cnr-kit-salivaire-date-envoi"
 * item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].type = #date
@@ -548,6 +548,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
+// Ajouté une date d'envoi autre prélèvement au CNR si réponse oui à la question "cnr-autres-prelevements"
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
 * item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].type = #date
