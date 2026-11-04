@@ -266,15 +266,15 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "Autre"
 
 // si je sélectionne "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque" alors je dois pouvoir saisir un texte libre pour préciser
-* item[=].item[+].linkId = "facteurs-risque-autre"
-* item[=].item[=].text = "Facteur de risque : précisez"
-* item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "facteurs-risque"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.01.27 "Autre facteur de risque"
+* item[=].item[=].item[+].linkId = "facteurs-risque-autre"
+* item[=].item[=].item[=].text = "Facteur de risque : précisez"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[+].question = "facteurs-risque"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.01.27 "Autre facteur de risque"
 
-* item[=].item[+].linkId = "gravite-complications"
-* item[=].item[=].text = "Critères de gravité : complications"
+* item[=].item[+].linkId = "complications"
+* item[=].item[=].text = "Complications"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
 // ajouté jdv-complication-rougeole-cisis
@@ -285,12 +285,12 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 // si je sélectionne "B05.8" (Rougeole avec autres complications) dans la question précédente "gravite-complications" alors je dois pouvoir saisir un texte libre pour préciser
-* item[=].item[+].linkId = "gravite-complications-autre"
-* item[=].item[=].text = "Complication : précisez"
-* item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "gravite-complications"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://hl7.org/fhir/sid/icd-10#B05.8 "Rougeole avec autres complications"
+* item[=].item[=].item[+].linkId = "complications-autre"
+* item[=].item[=].item[=].text = "Complication : précisez"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[+].question = "gravite-complications"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://hl7.org/fhir/sid/icd-10#B05.8 "Rougeole avec autres complications"
 
 * item[=].item[+].linkId = "hospitalisation"
 * item[=].item[=].text = "Hospitalisation"
@@ -300,19 +300,19 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "hospitalisation-date"
-* item[=].item[=].text = "Date d'hospitalisation"
-* item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "hospitalisation"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[+].linkId = "hospitalisation-date"
+* item[=].item[=].item[=].text = "Date d'hospitalisation"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-* item[=].item[+].linkId = "hospitalisation-lieu"
-* item[=].item[=].text = "Lieu de l'hospitalisation"
-* item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "hospitalisation"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[+].linkId = "hospitalisation-lieu"
+* item[=].item[=].item[=].text = "Lieu de l'hospitalisation"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "reanimation"
 * item[=].item[=].text = "Réanimation"
@@ -321,12 +321,12 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "reanimation-date"
-* item[=].item[=].text = "Date"
-* item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "reanimation"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[+].linkId = "reanimation-date"
+* item[=].item[=].item[=].text = "Date"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].enableWhen[+].question = "reanimation"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 // Remplacé "Evolution" par "Statut clinique du patient"
 * item[=].item[+].linkId = "statut-clinique-du-patient"
@@ -339,13 +339,13 @@ Usage: #definition
 //* item[=].item[=].answerOption[+].valueString = "Encore malade"
 //* item[=].item[=].answerOption[+].valueString = "Décès"
 
-* item[=].item[+].linkId = "deces-date"
-* item[=].item[=].text = "Date du décès"
-* item[=].item[=].type = #date
-* item[=].item[=].code[+] = http://loinc.org#81954-0 "Date of death [Date]"
-* item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
+* item[=].item[=].item[+].linkId = "deces-date"
+* item[=].item[=].item[=].text = "Date du décès"
+* item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].code[+] = http://loinc.org#81954-0 "Date of death [Date]"
+* item[=].item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#419620001 "décès"
 
 * item[+].linkId = "biologie"
 * item[=].text = "Biologie"
@@ -534,12 +534,12 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 // Ajouté une date d'envoi Kit salivaire (Oracol©) au CNR si réponse oui à la question "cnr-kit-salivaire"
-* item[=].item[=].item[+].linkId = "cnr-kit-salivaire-date-envoi"
-* item[=].item[=].item[=].text = "Date d'envoi"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen[+].question = "cnr-kit-salivaire"
-* item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[+].linkId = "cnr-kit-salivaire-date-envoi"
+* item[=].item[=].item[=].item[=].text = "Date d'envoi"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-kit-salivaire"
+* item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 // ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
@@ -555,12 +555,12 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 // Ajouté une date d'envoi autre prélèvement au CNR si réponse oui à la question "cnr-autres-prelevements"
-* item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
-* item[=].item[=].item[=].text = "Date d'envoi"
-* item[=].item[=].item[=].type = #date
-* item[=].item[=].item[=].enableWhen[+].question = "cnr-autres-prelevements"
-* item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
+* item[=].item[=].item[=].item[=].text = "Date d'envoi"
+* item[=].item[=].item[=].item[=].type = #date
+* item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-autres-prelevements"
+* item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[=].item[+].linkId = "cnr-souhait-kits"
 * item[=].item[=].item[=].text = "Souhaitez-vous recevoir des kits pour prélèvements et envois d'échantillons de salive au CNR (recherche d'IgM/PCR) ?"
@@ -568,13 +568,13 @@ Usage: #definition
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[=].item[+].linkId = "cnr-nombre-kits"
-* item[=].item[=].item[=].text = "Nombre de kits pour prélèvements souhaité ?"
-* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-429 "Nombre de kits"
-* item[=].item[=].item[=].type = #integer
-* item[=].item[=].item[=].enableWhen[+].question = "cnr-souhait-kits"
-* item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[+].linkId = "cnr-nombre-kits"
+* item[=].item[=].item[=].item[=].text = "Nombre de kits pour prélèvements souhaité ?"
+* item[=].item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-429 "Nombre de kits"
+* item[=].item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-souhait-kits"
+* item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 
 * item[+].linkId = "exposition"
@@ -592,12 +592,12 @@ Usage: #definition
 // * item[=].item[=].answerOption[+].valueString = "Milieu de soin"
 // * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
-* item[=].item[+].linkId = "collectivite-risque-autre"
-* item[=].item[=].text = "Collectivité : précisez"
-* item[=].item[=].type = #string
-* item[=].item[=].enableWhen[+].question = "collectivite-risque"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerString = "Autre, précisez"
+* item[=].item[=].item[+].linkId = "collectivite-risque-autre"
+* item[=].item[=].item[=].text = "Collectivité : précisez"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].enableWhen[+].question = "collectivite-risque"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.06.11 "Autre collectivité"
 
 * item[=].item[+].linkId = "sujet-risque-entourage"
 * item[=].item[=].text = "Présence de sujet à risque de rougeole grave dans l'entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
@@ -613,13 +613,13 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "immunoglobulines-nombre"
-* item[=].item[=].text = "Nombre de personnes (immunoglobulines)"
-* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-425 "Nombre d'admministration d'immunoglobines aux contacts àrisque de rougeole grave"
-* item[=].item[=].type = #integer
-* item[=].item[=].enableWhen[+].question = "immunoglobulines"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[+].linkId = "immunoglobulines-nombre"
+* item[=].item[=].item[=].text = "Nombre de personnes (immunoglobulines)"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-425 "Nombre d'admministration d'immunoglobines aux contacts àrisque de rougeole grave"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].enableWhen[+].question = "immunoglobulines"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "ror-72h"
 * item[=].item[=].text = "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
@@ -628,13 +628,13 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-* item[=].item[+].linkId = "ror-72h-nombre"
-* item[=].item[=].text = "Nombre de personnes (vaccin ROR)"
-* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-427 "Nombre d'administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
-* item[=].item[=].type = #integer
-* item[=].item[=].enableWhen[+].question = "ror-72h"
-* item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[+].linkId = "ror-72h-nombre"
+* item[=].item[=].item[=].text = "Nombre de personnes (vaccin ROR)"
+* item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-427 "Nombre d'administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
+* item[=].item[=].item[=].type = #integer
+* item[=].item[=].item[=].enableWhen[+].question = "ror-72h"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 
 * item[+].linkId = "lieux-exposition"
