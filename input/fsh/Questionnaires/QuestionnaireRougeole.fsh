@@ -31,6 +31,12 @@ Usage: #definition
 * item[=].item[=].text.extension[=].valueString = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Important :</b> cette maladie peut justifier une intervention urgente locale, nationale ou internationale. Tout cas répondant aux critères de signalement doit être signalé immédiatement, sans attendre une confirmation biologique, par tout moyen approprié (téléphone, télécopie, email…) aux personnels habilités de l'agence régionale de santé. <b>Cette maladie visant à être éliminée en France, toute forme clinique doit bénéficier d'une confirmation biologique</b></p></div>"
 * item[=].item[=].type = #display
 
+* item[=].item[+].linkId = "donnees-obligatoires"
+* item[=].item[=].text = "* données obligatoires"
+* item[=].item[=].text.extension[+].url = "http://hl7.org/fhir/StructureDefinition/rendering-xhtml"
+* item[=].item[=].text.extension[=].valueString = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>* données obligatoires</b></p></div>"
+* item[=].item[=].type = #display
+
 * item[+].linkId = "patient"
 * item[=].text = "Patient"
 * item[=].type = #group
