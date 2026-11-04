@@ -1,5 +1,5 @@
 <style>
-.architecture-flux svg { max-width: 100%; height: auto; }
+.architecture-flux svg { max-width: 100% !important; height: auto !important; }
 </style>
 
 <div style="background-color: #fff9e6; border-left: 4px solid #ff9800; padding: 10px 15px; margin-bottom: 15px;">
