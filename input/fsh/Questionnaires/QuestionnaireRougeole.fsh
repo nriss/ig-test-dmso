@@ -74,7 +74,7 @@ Usage: #definition
 * item[=].item[=].text = "Sexe"
 * item[=].item[=].type = #choice
 // code LOINC à vérifier par Melissa
-* item[=].item[=].code[+] = http://loinc.org#76689-9 "Sexe"
+* item[=].item[=].code[+] = http://loinc.org#107454-1 "Sexe administratif"
 // ajouté jdv-hl7-v3-AdministrativeGender-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis"
 // * item[=].item[=].answerOption[+].valueString = "F"
