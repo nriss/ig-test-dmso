@@ -1,0 +1,14 @@
+[{
+  "id" : "ans.fhir.fr.dmso",
+  "type" : "ImplementationGuide",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/ImplementationGuide/ans.fhir.fr.dmso",
+  "version" : "0.1.0",
+  "name" : "DMSO"
+},
+{
+  "id" : "QuestionnaireRougeole",
+  "type" : "Questionnaire",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/Questionnaire/QuestionnaireRougeole",
+  "version" : "0.1.0",
+  "name" : "QuestionnaireRougeole"
+}]

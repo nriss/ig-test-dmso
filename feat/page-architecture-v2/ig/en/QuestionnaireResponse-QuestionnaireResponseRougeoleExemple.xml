@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+  <id value="QuestionnaireResponseRougeoleExemple"/>
+  <language value="en"/>
+  <text>
+    <status value="generated"/><div xml:lang="en" lang="en"><hr/><p><b>English</b></p><hr/><p class="res-header-id"><b>Generated Narrative: QuestionnaireResponse QuestionnaireResponseRougeoleExemple</b></p><a name="en-QuestionnaireResponseRougeoleExemple"> </a><a name="en-hcQuestionnaireResponseRougeoleExemple"> </a><table border="1" cellpadding="0" cellspacing="0" class="xhtTableBorder1"><tr class="xhtRowBorder2"><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The linkID for the item">LinkID</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Text for the item">Text</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Minimum and Maximum # of times the item can appear in the instance">Definition</a></th><th scope="col" style="" class="hierarchy xhtCellBorder1"><a href="https://hl7.org/fhir/R4/formats.html#table" title="The type of the item">Answer</a><span style="float: right"><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon_q_root.gif" alt="" style="background-color: white; background-color: inherit" title="QuestionnaireResponseRoot" class="hierarchy"/> QuestionnaireResponseRougeoleExemple</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1">Questionnaire:<a href="Questionnaire-QuestionnaireRougeole.html">Rougeole - cerfa n° 12554*04</a></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>patient</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-nom</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">EXEMPLE</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-prenom</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Camille</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-naissance</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2019-03-14</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-telephone</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">0102030405</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-courriel</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">parent.exemple@example.org</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-sexe</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">F</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-annee-naissance</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2019</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-age</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">7</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-age-unite</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">ans</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-code-postal</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">75015</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-informe</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>patient-peut-repondre</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / patient / </span>date-signalement</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-20</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>tierce-personne</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / tierce-personne / </span>tierce-type</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Représentant légal (obligatoire pour les mineurs)</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / tierce-personne / </span>tierce-nom</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">EXEMPLE</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / tierce-personne / </span>tierce-prenom</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Dominique</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / tierce-personne / </span>tierce-telephone</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">0102030405</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / tierce-personne / </span>tierce-courriel</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">parent.exemple@example.org</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>clinique</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>debut-eruption</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-15</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>fievre</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>exantheme</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>generalise</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>toux</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>conjonctivite</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>coryza</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>koplik</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>facteurs-risque</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">non</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>gravite-complications</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Pneumopathie</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>hospitalisation</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>hospitalisation-date</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-17</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>hospitalisation-lieu</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Hôpital exemple</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>reanimation</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / clinique / </span>evolution</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Guérison</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>biologie</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / </span>biologie-statut</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">En cours</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck111.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / </span>rtpcr-oropharynx</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / rtpcr-oropharynx / </span>rtpcr-oropharynx-date</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-18</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / rtpcr-oropharynx / </span>rtpcr-oropharynx-resultat</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA6576-8">LOINC: LA6576-8</a> (Positive)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck111.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / </span>igm-sang</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / igm-sang / </span>igm-sang-date</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-18</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / igm-sang / </span>igm-sang-resultat</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA6576-8">LOINC: LA6576-8</a> (Positive)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / </span>seroconversion-igg</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck101.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / </span>envoi-cnr</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / envoi-cnr / </span>cnr-kit-salivaire</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / envoi-cnr / </span>cnr-autres-prelevements</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / envoi-cnr / </span>cnr-date-envoi</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2026-10-19</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / envoi-cnr / </span>cnr-souhait-kits</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1000.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / biologie / envoi-cnr / </span>cnr-nombre-kits</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>exposition</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>collectivite-risque</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Accueil petite enfance</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>sujet-risque-entourage</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>immunoglobulines</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>ror-72h</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>ror-72h-nombre</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">3</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck101.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / </span>lieux-exposition</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / lieux-exposition / </span>sejour-etranger</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / lieux-exposition / </span>contact-rougeole</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA33-6">LOINC: LA33-6</a> (Yes)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / lieux-exposition / </span>contact-rougeole-lieu</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="http://snomed.info/id/285202004">SNOMED CT: 285202004</a> (environnement en collectivité)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck1010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / lieux-exposition / </span>contact-rougeole-precision</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">École élémentaire</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck1000.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / exposition / lieux-exposition / </span>autres-cas-entourage</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"><span><span><a href="https://loinc.org/LA32-8">LOINC: LA32-8</a> (No)</span></span></td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck11.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>statut-vaccinal</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / statut-vaccinal / </span>vaccin-nombre-doses</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">1</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck110.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / statut-vaccinal / </span>vaccin-date-dose-1</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">2020-04-02</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck100.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vline.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / statut-vaccinal / </span>vaccin-source</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">carnet de santé ou de vaccination/dossier médical</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck01.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-group.png" alt="" style="background-color: white; background-color: inherit" title="Group" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / </span>prescripteur</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1"/></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / prescripteur / </span>prescripteur-nom-rpps</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Dr EXEMPLE Alex / 10000000000</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / prescripteur / </span>prescripteur-lieu</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">Hôpital exemple</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / prescripteur / </span>prescripteur-adresse</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">1 rue de l'Exemple, 75015 Paris</td></tr>
+<tr class="xhtRowBorder1 xhtRowEven"><td style="background-image: url(tbl_bck010.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: white; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / prescripteur / </span>prescripteur-telephone</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">0102030406</td></tr>
+<tr class="xhtRowBorder1 xhtRowOdd"><td style="background-image: url(tbl_bck000.png)" class="hierarchy xhtCellBorder1 xhtCellNoWrap"><img src="tbl_spacer.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_blank.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="" style="background-color: inherit" class="hierarchy"/><img src="icon-q-string.png" alt="" style="background-color: #F7F7F7; background-color: inherit" title="Item" class="hierarchy"/> <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0" class="sr-only">QuestionnaireResponseRougeoleExemple / prescripteur / </span>prescripteur-courriel</td><td style="" class="hierarchy xhtCellBorder1"></td><td style="" class="hierarchy xhtCellBorder1"/><td style="" class="hierarchy xhtCellBorder1">medecin.exemple@example.org</td></tr>
+<tr><td colspan="4" class="hierarchy"><br/><a href="https://hl7.org/fhir/R4/formats.html#table" title="Legend for this format"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3goXBCwdPqAP0wAAAldJREFUOMuNk0tIlFEYhp9z/vE2jHkhxXA0zJCMitrUQlq4lnSltEqCFhFG2MJFhIvIFpkEWaTQqjaWZRkp0g26URZkTpbaaOJkDqk10szoODP//7XIMUe0elcfnPd9zsfLOYplGrpRwZaqTtw3K7PtGem7Q6FoidbGgqHVy/HRb669R+56zx7eRV1L31JGxYbBtjKK93cxeqfyQHbehkZbUkK20goELEuIzEd+dHS+qz/Y8PTSif0FnGkbiwcAjHaU1+QWOptFiyCLp/LnKptpqIuXHx6rbR26kJcBX3yLgBfnd7CxwJmflpP2wUg0HIAoUUpZBmKzELGWcN8nAr6Gpu7tLU/CkwAaoKTWRSQyt89Q8w6J+oVQkKnBoblH7V0PPvUOvDYXfopE/SJmALsxnVm6LbkotrUtNowMeIrVrBcBpaMmdS0j9df7abpSuy7HWehwJdt1lhVwi/J58U5beXGAF6c3UXLycw1wdFklArBn87xdh0ZsZtArghBdAA3+OEDVubG4UEzP6x1FOWneHh2VDAHBAt80IbdXDcesNoCvs3E5AFyNSU5nbrDPZpcUEQQTFZiEVx+51fxMhhyJEAgvlriadIJZZksRuwBYMOPBbO3hePVVqgEJhFeUuFLhIPkRP6BQLIBrmMenujm/3g4zc398awIe90Zb5A1vREALqneMcYgP/xVQWlG+Ncu5vgwwlaUNx+3799rfe96u9K0JSDXcOzOTJg4B6IgmXfsygc7/Bvg9g9E58/cDVmGIBOP/zT8Bz1zqWqpbXIsd0O9hajXfL6u4BaOS6SeWAAAAAElFTkSuQmCC" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <questionnaire value="https://interop.esante.gouv.fr/ig/fhir/dmso/Questionnaire/QuestionnaireRougeole"/>
+  <status value="completed"/>
+  <authored value="2026-10-20T10:00:00+02:00"/>
+  <item>
+    <linkId value="patient"/>
+    <item>
+      <linkId value="patient-nom"/>
+      <answer>
+        <valueString value="EXEMPLE"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-prenom"/>
+      <answer>
+        <valueString value="Camille"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-naissance"/>
+      <answer>
+        <valueDate value="2019-03-14"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-telephone"/>
+      <answer>
+        <valueString value="0102030405"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-courriel"/>
+      <answer>
+        <valueString value="parent.exemple@example.org"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-sexe"/>
+      <answer>
+        <valueString value="F"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-annee-naissance"/>
+      <answer>
+        <valueInteger value="2019"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-age"/>
+      <answer>
+        <valueInteger value="7"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-age-unite"/>
+      <answer>
+        <valueString value="ans"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-code-postal"/>
+      <answer>
+        <valueString value="75015"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-informe"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="patient-peut-repondre"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="date-signalement"/>
+      <answer>
+        <valueDate value="2026-10-20"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="tierce-personne"/>
+    <item>
+      <linkId value="tierce-type"/>
+      <answer>
+        <valueString value="Représentant légal (obligatoire pour les mineurs)"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="tierce-nom"/>
+      <answer>
+        <valueString value="EXEMPLE"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="tierce-prenom"/>
+      <answer>
+        <valueString value="Dominique"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="tierce-telephone"/>
+      <answer>
+        <valueString value="0102030405"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="tierce-courriel"/>
+      <answer>
+        <valueString value="parent.exemple@example.org"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="clinique"/>
+    <item>
+      <linkId value="debut-eruption"/>
+      <answer>
+        <valueDate value="2026-10-15"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="fievre"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="exantheme"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="generalise"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="toux"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="conjonctivite"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="coryza"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA32-8"/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="koplik"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="facteurs-risque"/>
+      <answer>
+        <valueString value="non"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="gravite-complications"/>
+      <answer>
+        <valueString value="Pneumopathie"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="hospitalisation"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="hospitalisation-date"/>
+      <answer>
+        <valueDate value="2026-10-17"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="hospitalisation-lieu"/>
+      <answer>
+        <valueString value="Hôpital exemple"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="reanimation"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA32-8"/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="evolution"/>
+      <answer>
+        <valueString value="Guérison"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="biologie"/>
+    <item>
+      <linkId value="biologie-statut"/>
+      <answer>
+        <valueString value="En cours"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="rtpcr-oropharynx"/>
+      <item>
+        <linkId value="rtpcr-oropharynx-date"/>
+        <answer>
+          <valueDate value="2026-10-18"/>
+        </answer>
+      </item>
+      <item>
+        <linkId value="rtpcr-oropharynx-resultat"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA6576-8"/>
+            <display value="Positive"/>
+          </valueCoding>
+        </answer>
+      </item>
+    </item>
+    <item>
+      <linkId value="igm-sang"/>
+      <item>
+        <linkId value="igm-sang-date"/>
+        <answer>
+          <valueDate value="2026-10-18"/>
+        </answer>
+      </item>
+      <item>
+        <linkId value="igm-sang-resultat"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA6576-8"/>
+            <display value="Positive"/>
+          </valueCoding>
+        </answer>
+      </item>
+    </item>
+    <item>
+      <linkId value="seroconversion-igg"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA32-8"/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="envoi-cnr"/>
+      <item>
+        <linkId value="cnr-kit-salivaire"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA32-8"/>
+            <display value="No"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="cnr-autres-prelevements"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA33-6"/>
+            <display value="Yes"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="cnr-date-envoi"/>
+        <answer>
+          <valueDate value="2026-10-19"/>
+        </answer>
+      </item>
+      <item>
+        <linkId value="cnr-souhait-kits"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA33-6"/>
+            <display value="Yes"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="cnr-nombre-kits"/>
+        <answer>
+          <valueInteger value="2"/>
+        </answer>
+      </item>
+    </item>
+  </item>
+  <item>
+    <linkId value="exposition"/>
+    <item>
+      <linkId value="collectivite-risque"/>
+      <answer>
+        <valueString value="Accueil petite enfance"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="sujet-risque-entourage"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA32-8"/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="immunoglobulines"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA32-8"/>
+          <display value="No"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="ror-72h"/>
+      <answer>
+        <valueCoding>
+          <system value="http://loinc.org"/>
+          <code value="LA33-6"/>
+          <display value="Yes"/>
+        </valueCoding>
+      </answer>
+    </item>
+    <item>
+      <linkId value="ror-72h-nombre"/>
+      <answer>
+        <valueInteger value="3"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="lieux-exposition"/>
+      <item>
+        <linkId value="sejour-etranger"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA32-8"/>
+            <display value="No"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="contact-rougeole"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA33-6"/>
+            <display value="Yes"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="contact-rougeole-lieu"/>
+        <answer>
+          <valueCoding>
+            <system value="http://snomed.info/sct"/>
+            <code value="285202004"/>
+            <display value="environnement en collectivité"/>
+          </valueCoding>
+        </answer>
+      </item>
+      <item>
+        <linkId value="contact-rougeole-precision"/>
+        <answer>
+          <valueString value="École élémentaire"/>
+        </answer>
+      </item>
+      <item>
+        <linkId value="autres-cas-entourage"/>
+        <answer>
+          <valueCoding>
+            <system value="http://loinc.org"/>
+            <code value="LA32-8"/>
+            <display value="No"/>
+          </valueCoding>
+        </answer>
+      </item>
+    </item>
+  </item>
+  <item>
+    <linkId value="statut-vaccinal"/>
+    <item>
+      <linkId value="vaccin-nombre-doses"/>
+      <answer>
+        <valueString value="1"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="vaccin-date-dose-1"/>
+      <answer>
+        <valueDate value="2020-04-02"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="vaccin-source"/>
+      <answer>
+        <valueString value="carnet de santé ou de vaccination/dossier médical"/>
+      </answer>
+    </item>
+  </item>
+  <item>
+    <linkId value="prescripteur"/>
+    <item>
+      <linkId value="prescripteur-nom-rpps"/>
+      <answer>
+        <valueString value="Dr EXEMPLE Alex / 10000000000"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="prescripteur-lieu"/>
+      <answer>
+        <valueString value="Hôpital exemple"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="prescripteur-adresse"/>
+      <answer>
+        <valueString value="1 rue de l'Exemple, 75015 Paris"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="prescripteur-telephone"/>
+      <answer>
+        <valueString value="0102030406"/>
+      </answer>
+    </item>
+    <item>
+      <linkId value="prescripteur-courriel"/>
+      <answer>
+        <valueString value="medecin.exemple@example.org"/>
+      </answer>
+    </item>
+  </item>
+</QuestionnaireResponse>

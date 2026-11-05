@@ -1,0 +1,101 @@
+{
+  "codeSystems" : [{
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-complication-rougeole-cisis",
+    "version" : "20260928134051",
+    "status" : "active",
+    "name" : "JdvComplicationRougeoleCisis",
+    "title" : "Jdv Complication Rougeole CISIS",
+    "description" : "Jdv Complication Rougeole CISIS",
+    "systems" : ["http://hl7.org/fhir/sid/icd-10"],
+    "oids" : ["1.2.250.1.213.1.1.5.847"],
+    "sources" : ["1.2.250.1.213.1.1.5.847"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-rougeole-cisis",
+    "version" : "20260928134050",
+    "status" : "active",
+    "name" : "JdvEvolutionRougeoleCisis",
+    "title" : "JDV Evolution Rougeole CISIS",
+    "description" : "JDV Evolution Rougeole CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.848"],
+    "sources" : ["1.2.250.1.213.1.1.5.848"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis",
+    "version" : "20260928134051",
+    "status" : "active",
+    "name" : "JdvFacteurRisqueRougeoleCisis",
+    "title" : "JDV Facteur Risque Rougeole CISIS",
+    "description" : "JDV Facteur Risque Rougeole CISIS",
+    "systems" : ["https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis",
+    "http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.846"],
+    "sources" : ["1.2.250.1.213.1.1.5.846"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis",
+    "version" : "20260916095457",
+    "status" : "active",
+    "name" : "Iso316612",
+    "title" : "Iso 3166 Part 1: 2 Letter Codes",
+    "description" : "Iso 3166 Part 1: 2 Letter Codes",
+    "systems" : ["urn:iso:std:iso:3166"],
+    "oids" : ["1.0.3166.1"],
+    "sources" : ["1.0.3166.1"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis",
+    "version" : "20260928134051",
+    "status" : "active",
+    "name" : "JdvLieuContactRougeoleCisis",
+    "title" : "JDV Lieu Contact Rougeole CISIS",
+    "description" : "JDV Lieu Contact Rougeole CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.850"],
+    "sources" : ["1.2.250.1.213.1.1.5.850"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis",
+    "version" : "20260928134051",
+    "status" : "active",
+    "name" : "JdvMsoResultatQualitatif2Cisis",
+    "title" : "Jdv MSO Resultat Qualitatif 2 CISIS",
+    "description" : "Jdv MSO Resultat Qualitatif 2 CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.857"],
+    "sources" : ["1.2.250.1.213.1.1.5.857"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  },
+  {
+    "url" : "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis",
+    "version" : "20260928134051",
+    "status" : "active",
+    "name" : "JdvMsoResultatQualitatif4Cisis",
+    "title" : "Jdv MSO Resultat Qualitatif 4 CISIS",
+    "description" : "Jdv MSO Resultat Qualitatif 4 CISIS",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["1.2.250.1.213.1.1.5.858"],
+    "sources" : ["1.2.250.1.213.1.1.5.858"],
+    "uses" : {
+    },
+    "Questionnaire-QuestionnaireRougeole.html" : "Rougeole - cerfa n° 12554*04"
+  }]
+}
