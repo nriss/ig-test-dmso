@@ -282,6 +282,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "complications"
 * item[=].item[=].text = "Complications"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1339 "Complication"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
 // ajouté jdv-complication-rougeole-cisis
@@ -303,7 +304,7 @@ Usage: #definition
 * item[=].item[=].text = "Hospitalisation"
 * item[=].item[=].type = #choice
 // code LOINC à vérifier avec Melissa
-* item[=].item[=].code[+] = http://loinc.org#77974-4 "Whether the patient was hospitalized for condition of interest"
+* item[=].item[=].code[+] = http://loinc.org#77974-4 "Hospitalisation"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
@@ -364,7 +365,7 @@ Usage: #definition
 // remplacé biologie (en cours/non fait) par Demande de confirmation biologique (oui / non)
 * item[=].item[+].linkId = "confirmation-biologique"
 * item[=].item[=].text = "Demande de confirmation biologique"
-* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1360 "Demande de confirmation biologique "
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1360 "Demande de confirmation biologique"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
