@@ -753,11 +753,11 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 
-* item[+].linkId = "statut-vaccinal"
+* item[+].linkId = "vaccin-rougeole"
 * item[=].text = "Statut vaccinal Rougeole"
 * item[=].type = #group
 
-* item[=].item[+].linkId = "vaccin-nombre-doses"
+* item[=].item[+].linkId = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].text = "Nombre total de doses reçues"
 * item[=].item[=].code[+] = http://loinc.org#30973-2 "Nombre de doses"
 * item[=].item[=].type = #choice
@@ -771,13 +771,13 @@ Usage: #definition
 * item[=].item[=].text = "Date de la 1ère dose"
 // code à trouver ?
 * item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "1"
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "2"
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "3"
 * item[=].item[=].enableBehavior = #any
@@ -786,10 +786,10 @@ Usage: #definition
 * item[=].item[=].text = "Date de la 2ème dose"
 // code à trouver ?
 * item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "2"
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "3"
 * item[=].item[=].enableBehavior = #any
@@ -798,7 +798,7 @@ Usage: #definition
 * item[=].item[=].text = "Date de la 3ème dose"
 // code à trouver ?
 * item[=].item[=].type = #date
-* item[=].item[=].enableWhen[+].question = "vaccin-nombre-doses"
+* item[=].item[=].enableWhen[+].question = "vaccin-rougeole-nombre-doses"
 * item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].enableWhen[=].answerString = "3"
 
