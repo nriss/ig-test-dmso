@@ -121,6 +121,7 @@ Usage: #definition
 
 * item[=].item[+].linkId = "patient-peut-repondre"
 * item[=].item[=].text = "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
+* item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1338 "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
@@ -170,6 +171,11 @@ Usage: #definition
 * item[+].linkId = "personne-de-confiance"
 * item[=].text = "Personne de confiance (si l'état clinique du patient ne lui permet pas de répondre à l'investigation de l'ARS)"
 * item[=].type = #group
+
+* item[=].item[+].linkId = "personne-de-confiance-qualite"
+* item[=].item[=].text = "Nom"
+* item[=].item[=].type = #string
+* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[=].item[+].linkId = "personne-de-confiance-nom"
 * item[=].item[=].text = "Nom"
