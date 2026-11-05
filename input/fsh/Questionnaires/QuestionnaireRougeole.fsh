@@ -816,65 +816,65 @@ Usage: #definition
 * item[=].type = #group
 
 // Identifiant RPPS du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
-* item[=].item[+].linkId = "prescripteur-rpps"
+* item[=].item[+].linkId = "signalant-rpps"
 * item[=].item[=].text = "Numéro RPPS"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // la profession du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
-* item[=].item[+].linkId = "prescripteur-profession"
+* item[=].item[+].linkId = "signalant-profession"
 * item[=].item[=].text = "Profession"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // le nom du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
-* item[=].item[+].linkId = "prescripteur-nom"
+* item[=].item[+].linkId = "signalant-nom"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // le prénom du signalant est récupéré de la CPS (à voir comment) => obligatoire non modifiable
-* item[=].item[+].linkId = "prescripteur-prenom"
+* item[=].item[+].linkId = "signalant-prenom"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // Adresse du signalant est récupéré de la CPS (à voir comment) => obligatoire 
-* item[=].item[+].linkId = "prescripteur-adresse"
+* item[=].item[+].linkId = "signalant-adresse"
 * item[=].item[=].text = "Adresse"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // Code postal du signalant est récupéré de la CPS (à voir comment) => obligatoire
-* item[=].item[+].linkId = "prescripteur-code-postal"
+* item[=].item[+].linkId = "signalant-code-postal"
 * item[=].item[=].text = "Code postal"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // Commune du signalant est récupéré de la CPS (à voir comment) => obligatoire
-* item[=].item[+].linkId = "prescripteur-commune"
+* item[=].item[+].linkId = "signalant-commune"
 * item[=].item[=].text = "Commune"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // N° FINESS de l'établissement du signalant est récupéré de la CPS (à voir comment)  => obligatoire ? à vérifier pour les libéraux ?
-* item[=].item[+].linkId = "prescripteur-es-finess"
+* item[=].item[+].linkId = "signalant-es-finess"
 * item[=].item[=].text = "N° FINESS de l'établissement"
 * item[=].item[=].type = #string
 
 // Nom de l'établissement du signalant est récupéré de la CPS (à voir comment) => obligatoire ? à vérifier pour les libéraux ?
-* item[=].item[+].linkId = "prescripteur-es-nom"
+* item[=].item[+].linkId = "signalant-es-nom"
 * item[=].item[=].text = "Nom de l'établissement"
 * item[=].item[=].type = #string
 
 // Téléphone du signalant => obligatoire
-* item[=].item[+].linkId = "prescripteur-telephone"
+* item[=].item[+].linkId = "signalant-telephone"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
 
 // Courriel du signalant => obligatoire
-* item[=].item[+].linkId = "prescripteur-courriel"
+* item[=].item[+].linkId = "signalant-courriel"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].required = true
 * item[=].item[=].type = #string
