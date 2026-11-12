@@ -133,16 +133,6 @@ Usage: #definition
 // * item[1].item[13].text = "Code d'anonymat (à remplir par l'ARS)"
 // * item[1].item[13].type = #string
 
-// date et heure du signalement : calculées (maintenant) et non modifiables
-* item[=].item[+].linkId = "date-signalement"
-* item[=].item[=].text = "Date de signalement"
-* item[=].item[=].type = #dateTime
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
-* item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
-* item[=].item[=].extension[=].valueExpression.expression = "now()"
-
 // supprimé la question "type de tierce personne" et remplacé par 2 rubriques séparées : 
 // - représentant légal (obligatoire pour les mineurs) [1..*] 
 // - Personne à contacter (si l’état clinique du patient ne lui permet pas de répondre à l’investigation de l’ARS) [0..1] 
@@ -939,6 +929,16 @@ Usage: #definition
 * item[=].item[+].linkId = "biologiste-courriel"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
+
+// date et heure du signalement : calculées (maintenant) et non modifiables
+* item[+].linkId = "date-signalement"
+* item[=].text = "Date de signalement"
+* item[=].type = #dateTime
+* item[=].required = true
+* item[=].readOnly = true
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "now()"
 
 
 
