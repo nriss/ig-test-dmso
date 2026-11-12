@@ -379,10 +379,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#91077-8 "Rougeole virus ARN [Présence/Seuil] Échantillon du système respiratoire supérieur ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 // remplacé "RT-PCR : kit salivaire (Oracol©)" par "RT-PCR : Salive" + infobulle
 * item[=].item[+].linkId = "rtpcr-kit-salivaire"
@@ -403,10 +400,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "rtpcr-autre"
 * item[=].item[=].text = "RT-PCR : autre"
@@ -428,10 +422,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igm-sang"
 * item[=].item[=].text = "IgM : sang"
@@ -446,10 +437,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35276-5 "Rougeole virus Ac IgM [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 // Remplacé "IgM : kit salivaire (Oracol©)" par "IgM : salive"
 * item[=].item[+].linkId = "igm-salive"
@@ -465,10 +453,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Rougeole virus Ac IgM [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igg-sang"
 * item[=].item[=].text = "IgG : sang"
@@ -483,10 +468,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Rougeole virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-4-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 // Ajouté date du 1er prélèvement
 * item[=].item[=].item[+].linkId = "igg-date-premier"
@@ -507,22 +489,7 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Rougeole virus Ac IgG [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
-
-// supprimé car considéré comme un résultat IgG sang
-// * item[=].item[+].linkId = "seroconversion-igg"
-// * item[=].item[=].text = "Séroconversion, ascension des IgG"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
-
-// supprimé car idem date du prélèvement
-// * item[=].item[+].linkId = "igg-date-dernier"
-// * item[=].item[=].text = "Date du dernier prélèvement"
-// * item[=].item[=].type = #date
 
 * item[=].item[+].linkId = "envoi-cnr"
 * item[=].item[=].text = "Envoi de prélèvements au CNR"
@@ -595,11 +562,7 @@ Usage: #definition
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-421 "Fréquentation d'une collectivité accueillant des sujets à risque de rougeole grave"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-// Ajouté jdv-collectivite-sujets-a-risque-rougeole-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-collectivite-sujets-a-risque-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "Accueil petite enfance"
-// * item[=].item[=].answerOption[+].valueString = "Milieu de soin"
-// * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 * item[=].item[=].item[+].linkId = "collectivite-risque-autre"
 * item[=].item[=].item[=].text = "Collectivité : précisez"
@@ -796,10 +759,7 @@ Usage: #definition
 * item[=].item[=].text = "Informations recueillies d'après"
 * item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
 * item[=].item[=].type = #choice
-// Ajout jdv-origine-information-vaccin-rougeole-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "interrogatoire"
-// * item[=].item[=].answerOption[+].valueString = "carnet de santé ou de vaccination/dossier médical"
 
 // "Prescripteur" remplacé par "Signalant" 
 * item[+].linkId = "signalant"
