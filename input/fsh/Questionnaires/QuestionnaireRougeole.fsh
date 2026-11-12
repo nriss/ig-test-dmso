@@ -163,7 +163,7 @@ Usage: #definition
 * item[=].type = #group
 
 * item[=].item[+].linkId = "personne-de-confiance-qualite"
-* item[=].item[=].text = "Nom"
+* item[=].item[=].text = "Qualité"
 * item[=].item[=].type = #string
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
