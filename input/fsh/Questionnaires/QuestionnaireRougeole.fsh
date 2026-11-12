@@ -165,7 +165,7 @@ Usage: #definition
 * item[=].item[+].linkId = "personne-de-confiance-qualite"
 * item[=].item[=].text = "Qualité"
 * item[=].item[=].type = #string
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"
 
 * item[=].item[+].linkId = "personne-de-confiance-nom"
 * item[=].item[=].text = "Nom"
