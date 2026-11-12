@@ -83,26 +83,15 @@ Usage: #definition
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis"
 
-// ne pas demander année de naissance, âge dans le formulaire dématérialisé
-// * item[1].item[6].linkId = "patient-annee-naissance"
-// * item[1].item[6].text = "Année de naissance"
-//* item[1].item[6].type = #integer
-
-// * item[1].item[7].linkId = "patient-age"
-// * item[1].item[7].text = "Âge"
-// * item[1].item[7].type = #integer
-
-// * item[1].item[8].linkId = "patient-age-unite"
-// * item[1].item[8].text = "Précisez (âge)"
-// * item[1].item[8].type = #choice
-// * item[1].item[8].answerOption[0].valueString = "ans"
-// * item[1].item[8].answerOption[1].valueString = "mois (si < 2 ans)"
-// * item[1].item[8].answerOption[2].valueString = "jours (si < 1 mois)"
-
 // PSIG a un référentiel des codes postaux / communes 
 // Peut-on l'utiliser ? le déclarant saisi le code postal ou la commune et sélectionne dans la liste proposée. En sortie, il faudrait qu'on ait 2 zones séparées (code postal + commune)
 * item[=].item[+].linkId = "patient-code-postal"
 * item[=].item[=].text = "Code postal du domicile"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+
+* item[=].item[+].linkId = "patient-commune"
+* item[=].item[=].text = "Commune"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
@@ -354,21 +343,21 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
 
-* item[=].item[+].linkId = "rtpcr-kit-salivaire"
+* item[=].item[+].linkId = "rtpcr-salive"
 * item[=].item[=].text = "RT-PCR : Salive"
 * item[=].item[=].type = #group
 // infobulle
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-definition"
+* item[=].item[=].item[+].linkId = "rtpcr-salive-definition"
 * item[=].item[=].item[=].text = "Prélèvement à privilégier : recueil du liquide buccal sur Kit salivaire (Oracol©)."
 * item[=].item[=].item[=].type = #display
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-date"
+* item[=].item[=].item[+].linkId = "rtpcr-salive-date"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-interpretation"
+* item[=].item[=].item[+].linkId = "rtpcr-salive-interpretation"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
@@ -436,7 +425,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
 
-* item[=].item[=].item[+].linkId = "igg-date-premier"
+* item[=].item[=].item[+].linkId = "igg-sang-date-premier-prelevement"
 * item[=].item[=].item[=].text = "Date du 1er prélèvement"
 * item[=].item[=].item[=].type = #date
 
