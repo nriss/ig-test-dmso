@@ -172,9 +172,3 @@ Une question est définie dans un `item` du `Questionnaire` (ici la question « 
 ```
 
 La réponse ne reprend que le `linkId` et la valeur choisie, parmi les `answerOption` proposées par la question. Le texte et le type viennent du `Questionnaire`. Les libellés « Yes » et « No » sont ceux des codes LOINC (en anglais).
-
-##### Exemple complet
-
-Voir aussi la page de l'exemple : [QuestionnaireResponseRougeoleExemple]({{site.data.fhir.path}}QuestionnaireResponse-QuestionnaireResponseRougeoleExemple.html).
-
-{% include QuestionnaireResponse-QuestionnaireResponseRougeoleExemple-json-html.xhtml %}
