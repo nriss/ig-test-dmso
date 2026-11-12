@@ -99,6 +99,8 @@ Usage: #definition
 * item[=].item[=].required = true
 
 * item[=].item[+].linkId = "patient-commune"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/addr/city"
 * item[=].item[=].text = "Commune"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
