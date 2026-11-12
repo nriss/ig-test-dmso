@@ -47,6 +47,8 @@ Usage: #definition
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#45394-4 "Nom du patient"
 * item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/name/family"
 
 * item[=].item[+].linkId = "patient-prenom"
 * item[=].item[=].text = "Prénom"
@@ -54,6 +56,8 @@ Usage: #definition
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#45392-8 "Prénom du patient"
 * item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/name/given"
 
 * item[=].item[+].linkId = "patient-date-naissance"
 * item[=].item[=].text = "Date de naissance"
@@ -61,6 +65,8 @@ Usage: #definition
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#21112-8 "Date de naissance"
 * item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/birthTime/@value"
 
 * item[=].item[+].linkId = "patient-telephone"
 * item[=].item[=].text = "Téléphone"
