@@ -77,8 +77,8 @@ Trois systèmes d'information sont identifiés (hypothèses de la version 0) :
 | Système d'information | Description | Acteur SDC correspondant |
 |---|---|---|
 | Repo de formulaires versionnés | Dépôt qui stocke et versionne les définitions de formulaires (`Questionnaire`) | SDC Form Manager |
-| Outil d'édition de formulaire | Outil utilisé par l'éditeur de formulaires pour concevoir les questionnaires | SDC Form Designer |
-| Outil d'affichage graphique du formulaire | Outil qui affiche le formulaire au médecin et génère la `QuestionnaireResponse` à partir de sa saisie | SDC Form Filler |
+| Outil d'édition de questionnaire | Outil utilisé par l'éditeur de formulaires pour créer et modifier les questionnaires (`Questionnaire`) | SDC Form Designer |
+| Outil de remplissage de questionnaire | Outil qui affiche le formulaire au médecin et crée la `QuestionnaireResponse` à partir de sa saisie. Il produit aussi des logs (`AuditEvent`) qui tracent la création et l'accès aux `QuestionnaireResponse` | SDC Form Filler |
 
 #### Acteurs SDC
 
@@ -90,7 +90,7 @@ Les acteurs et leur définition proviennent de la page [Basic SDC workflow](http
 |---|---|---|
 | SDC Form Designer | Système responsable de la création et de l'édition des formulaires | Outil métier : il doit permettre à l'éditeur de formulaires de créer et d'éditer un formulaire sans compétences techniques |
 | SDC Form Filler | Système responsable de la saisie utilisateur pour produire des formulaires partiellement ou totalement remplis | Application de saisie du professionnel de santé, avec remplissage automatique (voir [Remplissage automatique du formulaire](#remplissage-automatique-du-formulaire)) |
-| SDC Form Fill Manager | Dépôt d'accès aux définitions de formulaires, pouvant aussi effectuer le pré-remplissage | Pas de système distinct : l'accès aux `Questionnaire` par l'outil d'affichage est assuré par le repo de formulaires versionnés (même système que le Form Manager) |
+| SDC Form Fill Manager | Dépôt d'accès aux définitions de formulaires, pouvant aussi effectuer le pré-remplissage | Pas de système distinct : l'accès aux `Questionnaire` par l'outil de remplissage est assuré par le repo de formulaires versionnés (même système que le Form Manager) |
 | SDC Form Manager | Dépôt de maintenance des définitions de formulaires (s'appuie sur le Form Fill Manager) | Héberge les `Questionnaire` du DMSO |
 | SDC Form Response Manager | Dépôt interrogeable pour le stockage et la récupération des formulaires complétés ou partiellement complétés | Perspective d'amélioration : sauvegarde de brouillons de `QuestionnaireResponse` et reprise de saisie |
 | SDC Form Receiver | Destination en écriture seule vers laquelle les formulaires sont envoyés pour traitement | Reçoit les `QuestionnaireResponse` |
@@ -172,9 +172,3 @@ Une question est définie dans un `item` du `Questionnaire` (ici la question « 
 ```
 
 La réponse ne reprend que le `linkId` et la valeur choisie, parmi les `answerOption` proposées par la question. Le texte et le type viennent du `Questionnaire`. Les libellés « Yes » et « No » sont ceux des codes LOINC (en anglais).
-
-##### Exemple complet
-
-Voir aussi la page de l'exemple : [QuestionnaireResponseRougeoleExemple]({{site.data.fhir.path}}QuestionnaireResponse-QuestionnaireResponseRougeoleExemple.html).
-
-{% include QuestionnaireResponse-QuestionnaireResponseRougeoleExemple-json-html.xhtml %}

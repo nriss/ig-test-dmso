@@ -3,7 +3,7 @@
 title Remplissage du questionnaire (v0)
 
 actor "Médecin déclarant" as PS
-participant "Form Filler\n(outil d'affichage graphique)" as FF
+participant "Form Filler\n(outil de remplissage\nde questionnaire)" as FF
 participant "Form Manager\n(repo de formulaires)" as FM
 participant "Annuaire Santé" as ANN
 participant "SMT" as SMT

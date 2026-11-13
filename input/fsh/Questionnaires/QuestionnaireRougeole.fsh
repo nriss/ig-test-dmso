@@ -43,78 +43,80 @@ Usage: #definition
 
 * item[=].item[+].linkId = "patient-nom"
 * item[=].item[=].text = "Nom"
-* item[=].item[=].type = #string
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#45394-4 "Nom du patient"
 * item[=].item[=].required = true
+* item[=].item[=].type = #string
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/name/family"
 
 * item[=].item[+].linkId = "patient-prenom"
 * item[=].item[=].text = "Prénom"
-* item[=].item[=].type = #string
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#45392-8 "Prénom du patient"
+* item[=].item[=].type = #string
 * item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/name/given"
 
 * item[=].item[+].linkId = "patient-date-naissance"
 * item[=].item[=].text = "Date de naissance"
-* item[=].item[=].type = #date
 // code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#21112-8 "Date de naissance"
+* item[=].item[=].type = #date
 * item[=].item[=].required = true
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/birthTime/@value"
 
 * item[=].item[+].linkId = "patient-telephone"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/telecom[starts-with(@value,'tel:')]/@value"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "patient-courriel"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/telecom[starts-with(@value,'mailto:')]/@value"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "patient-sexe"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/administrativeGenderCode/@code"
 * item[=].item[=].text = "Sexe"
-* item[=].item[=].type = #choice
-// code LOINC à vérifier par Melissa
 * item[=].item[=].code[+] = http://loinc.org#107454-1 "Sexe administratif"
-// ajouté jdv-hl7-v3-AdministrativeGender-cisis
+* item[=].item[=].required = true
+* item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis"
-// * item[=].item[=].answerOption[+].valueString = "F"
-// * item[=].item[=].answerOption[+].valueString = "M"
-// * item[=].item[=].answerOption[+].valueString = "I"
-// * item[=].item[=].required = true
-
-// ne pas demander année de naissance, âge dans le formulaire dématérialisé
-// * item[1].item[6].linkId = "patient-annee-naissance"
-// * item[1].item[6].text = "Année de naissance"
-//* item[1].item[6].type = #integer
-
-// * item[1].item[7].linkId = "patient-age"
-// * item[1].item[7].text = "Âge"
-// * item[1].item[7].type = #integer
-
-// * item[1].item[8].linkId = "patient-age-unite"
-// * item[1].item[8].text = "Précisez (âge)"
-// * item[1].item[8].type = #choice
-// * item[1].item[8].answerOption[0].valueString = "ans"
-// * item[1].item[8].answerOption[1].valueString = "mois (si < 2 ans)"
-// * item[1].item[8].answerOption[2].valueString = "jours (si < 1 mois)"
 
 // PSIG a un référentiel des codes postaux / communes 
 // Peut-on l'utiliser ? le déclarant saisi le code postal ou la commune et sélectionne dans la liste proposée. En sortie, il faudrait qu'on ait 2 zones séparées (code postal + commune)
 * item[=].item[+].linkId = "patient-code-postal"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/addr"
 * item[=].item[=].text = "Code postal du domicile"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
-* item[=].item[+].linkId = "patient-pays"
-* item[=].item[=].text = "Pays (si patient résidant à l'étranger)"
+* item[=].item[+].linkId = "patient-commune"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/addr"
+* item[=].item[=].text = "Commune"
 * item[=].item[=].type = #string
+* item[=].item[=].required = true
+
+* item[=].item[+].linkId = "patient-pays"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/addr"
+* item[=].item[=].text = "Pays (si patient résidant à l'étranger)"
+* item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[=].item[+].linkId = "patient-informe"
 * item[=].item[=].text = "Le patient (ou le tiers) est-il informé du diagnostic ?"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1337 "Le patient (ou le tiers) est-il informé du diagnostic ?"
-* item[=].item[=].type = #choice
 * item[=].item[=].required = true
+* item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
@@ -122,49 +124,37 @@ Usage: #definition
 * item[=].item[+].linkId = "patient-peut-repondre"
 * item[=].item[=].text = "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1338 "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
-* item[=].item[=].type = #choice
 * item[=].item[=].required = true
+* item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
-
-// ne pas demander le code anonymat
-// * item[1].item[13].linkId = "patient-code-anonymat"
-// * item[1].item[13].text = "Code d'anonymat (à remplir par l'ARS)"
-// * item[1].item[13].type = #string
-
-// date et heure du signalement : calculées (maintenant) et non modifiables
-* item[=].item[+].linkId = "date-signalement"
-* item[=].item[=].text = "Date de signalement"
-* item[=].item[=].type = #dateTime
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
-* item[=].item[=].extension[=].valueExpression.language = #text/fhirpath
-* item[=].item[=].extension[=].valueExpression.expression = "now()"
-
-// supprimé la question "type de tierce personne" et remplacé par 2 rubriques séparées : 
-// - représentant légal (obligatoire pour les mineurs) [1..*] 
-// - Personne à contacter (si l’état clinique du patient ne lui permet pas de répondre à l’investigation de l’ARS) [0..1] 
-// avec pour ces 2 rubriques : nom, prénom, téléphone, courriel
 
 * item[+].linkId = "representant-legal"
 * item[=].text = "Représentant légal (obligatoire pour les mineurs)"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "representant-legal-nom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/guardian/guardianPerson/name/family"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "representant-legal-prenom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/guardian/guardianPerson/name/given"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "representant-legal-telephone"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/guardian/telecom[starts-with(@value,'tel:')]/@value"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "representant-legal-courriel"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/patient/guardian/telecom[starts-with(@value,'mailto:')]/@value"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
 
@@ -173,23 +163,33 @@ Usage: #definition
 * item[=].type = #group
 
 * item[=].item[+].linkId = "personne-de-confiance-qualite"
-* item[=].item[=].text = "Nom"
-* item[=].item[=].type = #string
-* item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/informant/relatedEntity[@classCode='ECON']/code/@code"
+* item[=].item[=].text = "Qualité"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "https://mos.esante.gouv.fr/NOS/JDV_J11-RelationPatient-CISIS/FHIR/JDV-J11-RelationPatient-CISIS"
 
 * item[=].item[+].linkId = "personne-de-confiance-nom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/informant/relatedEntity[@classCode='ECON']/relatedPerson/name/family"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "personne-de-confiance-prenom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/informant/relatedEntity[@classCode='ECON']/relatedPerson/name/given"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "personne-de-confiance-telephone"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/informant/relatedEntity[@classCode='ECON']/telecom[starts-with(@value,'tel:')]/@value"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "personne-de-confiance-courriel"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/informant/relatedEntity[@classCode='ECON']/telecom[starts-with(@value,'mailto:')]/@value"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
 
@@ -200,10 +200,10 @@ Usage: #definition
 
 * item[=].item[+].linkId = "debut-eruption"
 * item[=].item[=].text = "Date de début de l'éruption"
+* item[=].item[=].required = true
 * item[=].item[=].type = #date
 // code LOINC à vérifier avec Melissa.
 * item[=].item[=].code[+] = http://loinc.org#81268-5 "Date de début de l'éruption"
-* item[=].item[=].required = true
 
 * item[=].item[+].linkId = "fievre"
 * item[=].item[=].text = "Fièvre > 38,5° C"
@@ -261,17 +261,11 @@ Usage: #definition
 * item[=].item[+].linkId = "facteurs-risque"
 * item[=].item[=].text = "Facteurs de risque"
 * item[=].item[=].code[+] = http://loinc.org#46467-7 "Facteurs de risque"
-* item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-// ajouté jdv-facteur-risque-rougeole-cisis
+* item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "non"
-// * item[=].item[=].answerOption[+].valueString = "femme enceinte"
-// * item[=].item[=].answerOption[+].valueString = "immunodépression"
-// * item[=].item[=].answerOption[+].valueString = "nourrisson < 1 an"
-// * item[=].item[=].answerOption[+].valueString = "Autre"
 
-// il ne faudrait faire apparaître cette question si réponse "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque"
+// il ne faut faire apparaître cette question que si réponse "GEN-092.01.27" (Autre facteur de risque) dans la question précédente "facteurs de risque"
 * item[=].item[=].item[+].linkId = "facteurs-risque-autre"
 * item[=].item[=].item[=].text = "Facteur de risque : précisez"
 // trouver un code ?
@@ -285,12 +279,7 @@ Usage: #definition
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1339 "Complication"
 * item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-// ajouté jdv-complication-rougeole-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-complication-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "non"
-// * item[=].item[=].answerOption[+].valueString = "Encéphalite"
-// * item[=].item[=].answerOption[+].valueString = "Pneumopathie"
-// * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 // si je sélectionne "B05.8" (Rougeole avec autres complications) dans la question précédente "gravite-complications" alors je dois pouvoir saisir un texte libre pour préciser
 * item[=].item[=].item[+].linkId = "complications-autre"
@@ -336,18 +325,13 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-// Remplacé "Evolution" par "Statut clinique du patient"
 * item[=].item[+].linkId = "statut-clinique-du-patient"
 * item[=].item[=].text = "Statut clinique du patient"
 // code LOINC à vérifier avec Melissa
 * item[=].item[=].code[+] = http://loinc.org#11323-3 "Statut clinique du patient"
-* item[=].item[=].type = #choice
 * item[=].item[=].required = true
-// ajouté jdv-evolution-rougeole-cisis
+* item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-rougeole-cisis"
-//* item[=].item[=].answerOption[+].valueString = "Guérison"
-//* item[=].item[=].answerOption[+].valueString = "Encore malade"
-//* item[=].item[=].answerOption[+].valueString = "Décès"
 
 * item[=].item[=].item[+].linkId = "deces-date"
 * item[=].item[=].item[=].text = "Date du décès"
@@ -362,7 +346,6 @@ Usage: #definition
 * item[=].text = "Biologie"
 * item[=].type = #group
 
-// remplacé biologie (en cours/non fait) par Demande de confirmation biologique (oui / non)
 * item[=].item[+].linkId = "confirmation-biologique"
 * item[=].item[=].text = "Demande de confirmation biologique"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1360 "Demande de confirmation biologique"
@@ -370,10 +353,10 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
-// ajouté infobulle
 * item[=].item[+].linkId = "rtpcr-oropharynx"
 * item[=].item[=].text = "RT-PCR : oro-pharynx"
 * item[=].item[=].type = #group
+// infobulle
 * item[=].item[=].item[+].linkId = "rtpcr-oropharynx-definition"
 * item[=].item[=].item[=].text = "RT-PCR Oro-pharynx et autres échantillons de voies aériennes supérieures."
 * item[=].item[=].item[=].type = #display
@@ -381,199 +364,193 @@ Usage: #definition
 * item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
 * item[=].item[=].item[+].linkId = "rtpcr-oropharynx-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "rtpcr-oropharynx-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#91077-8 "Rougeole virus ARN [Présence/Seuil] Échantillon du système respiratoire supérieur ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-// remplacé "RT-PCR : kit salivaire (Oracol©)" par "RT-PCR : Salive" + infobulle
-* item[=].item[+].linkId = "rtpcr-kit-salivaire"
+* item[=].item[+].linkId = "rtpcr-salive"
 * item[=].item[=].text = "RT-PCR : Salive"
 * item[=].item[=].type = #group
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-definition"
+// infobulle
+* item[=].item[=].item[+].linkId = "rtpcr-salive-definition"
 * item[=].item[=].item[=].text = "Prélèvement à privilégier : recueil du liquide buccal sur Kit salivaire (Oracol©)."
 * item[=].item[=].item[=].type = #display
 * item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-date"
+* item[=].item[=].item[+].linkId = "rtpcr-salive-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
-* item[=].item[=].item[+].linkId = "rtpcr-kit-salivaire-interpretation"
+* item[=].item[=].item[+].linkId = "rtpcr-salive-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
-* item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].code[+] = http://loinc.org#108194-2 "Rougeole virus ARN [Présence/Seuil] Salive ; Qualitatif ; PCR amplification de cible"
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
+* item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "rtpcr-autre"
 * item[=].item[=].text = "RT-PCR : autre"
 * item[=].item[=].type = #group
 
-// Ajouté "type de prélèvement" pour "RT-PCR : autre"
 * item[=].item[=].item[+].linkId = "rtpcr-autre-prelevement"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "ClinicalDocument/component/structuredBody/component/section[title='Biologie']/entry/observation[code/originalText='rtpcr-autre-prelevement']/value/@code"
 * item[=].item[=].item[=].text = "Nature du prélèvement"
 * item[=].item[=].item[=].code[+] = http://snomed.info/sct#17636008 "prélèvement d'échantillon"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-rougeole-cisis"
 
 * item[=].item[=].item[+].linkId = "rtpcr-autre-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "rtpcr-autre-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#48508-6 "Rougeole virus ARN [Présence/Seuil] Milieux divers ; Qualitatif ; PCR amplification de cible"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igm-sang"
 * item[=].item[=].text = "IgM : sang"
 * item[=].item[=].type = #group
 
 * item[=].item[=].item[+].linkId = "igm-sang-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "igm-sang-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35276-5 "Rougeole virus Ac IgM [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-// Remplacé "IgM : kit salivaire (Oracol©)" par "IgM : salive"
 * item[=].item[+].linkId = "igm-salive"
 * item[=].item[=].text = "IgM : salive"
 * item[=].item[=].type = #group
 
 * item[=].item[=].item[+].linkId = "igm-salive-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "igm-salive-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108192-6 "Rougeole virus Ac IgM [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
 * item[=].item[+].linkId = "igg-sang"
 * item[=].item[=].text = "IgG : sang"
 * item[=].item[=].type = #group
 
 * item[=].item[=].item[+].linkId = "igg-sang-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "igg-sang-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#35275-7 "Rougeole virus Ac IgG [Présence/Seuil] Sérum ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-4-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
 
-// Ajouté date du 1er prélèvement
-* item[=].item[=].item[+].linkId = "igg-date-premier"
+* item[=].item[=].item[+].linkId = "igg-sang-date-premier-prelevement"
 * item[=].item[=].item[=].text = "Date du 1er prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// Remplacé "IgG : kit salivaire (Oracol©)" par "IgG : salive"
 * item[=].item[+].linkId = "igg-salive"
 * item[=].item[=].text = "IgG : salive"
 * item[=].item[=].type = #group
 
 * item[=].item[=].item[+].linkId = "igg-salive-date"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/effectiveTime"
 * item[=].item[=].item[=].text = "Date du prélèvement"
 * item[=].item[=].item[=].type = #date
 
-// remplacé "résultat" par "interpretation"
 * item[=].item[=].item[+].linkId = "igg-salive-interpretation"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='91077-8']/interpretationCode"
 * item[=].item[=].item[=].text = "Interprétation"
 * item[=].item[=].item[=].code[+] = http://loinc.org#108193-4 "Rougeole virus Ac IgG [Présence/Seuil] Salive ; Qualitatif ; Immunoanalyse"
 * item[=].item[=].item[=].type = #choice
-// Ajouté jdv-mso-resultat-qualitatif-2-cisis
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6576-8 "Positive"
-// * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA6577-6 "Negative"
-
-// supprimé car considéré comme un résultat IgG sang
-// * item[=].item[+].linkId = "seroconversion-igg"
-// * item[=].item[=].text = "Séroconversion, ascension des IgG"
-// * item[=].item[=].type = #choice
-// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-// * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
-
-// supprimé car idem date du prélèvement
-// * item[=].item[+].linkId = "igg-date-dernier"
-// * item[=].item[=].text = "Date du dernier prélèvement"
-// * item[=].item[=].type = #date
 
 * item[=].item[+].linkId = "envoi-cnr"
 * item[=].item[=].text = "Envoi de prélèvements au CNR"
 * item[=].item[=].type = #group
 
-// ajout info bulle "A compléter par le médecin généraliste."
 * item[=].item[=].item[+].linkId = "cnr-kit-salivaire"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Kit salivaire (Oracol©)"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1351 "Envoi kit salivaire au CNR"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+// infobulle
 * item[=].item[=].item[=].item[+].linkId = "cnr-kit-salivaire-definition"
 * item[=].item[=].item[=].item[=].text = "A compléter par le médecin généraliste."
 * item[=].item[=].item[=].item[=].type = #display
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-// Ajouté une date d'envoi Kit salivaire (Oracol©) au CNR si réponse oui à la question "cnr-kit-salivaire"
+// Date d'envoi Kit salivaire (Oracol©) au CNR si réponse oui à la question "cnr-kit-salivaire"
 * item[=].item[=].item[=].item[+].linkId = "cnr-kit-salivaire-date-envoi"
+* item[=].item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-kit-salivaire"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-// ajout info bulle "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Autres prélèvements"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1352 "Envoi autres prélèvements au CNR"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+// infobulle
 * item[=].item[=].item[=].item[+].linkId = "cnr-autres-prelevements-definition"
 * item[=].item[=].item[=].item[=].text = "A compléter par le biologiste ou l’ARS."
 * item[=].item[=].item[=].item[=].type = #display
 * item[=].item[=].item[=].item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl"
 * item[=].item[=].item[=].item[=].extension[=].valueCodeableConcept = http://hl7.org/fhir/questionnaire-item-control#help "Help-Button"
 
-// Ajouté une date d'envoi autre prélèvement au CNR si réponse oui à la question "cnr-autres-prelevements"
+// Date d'envoi autre prélèvement au CNR si réponse oui à la question "cnr-autres-prelevements"
 * item[=].item[=].item[=].item[+].linkId = "cnr-autres-prelevements-date-envoi"
+* item[=].item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].item[=].text = "Date d'envoi"
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-autres-prelevements"
@@ -581,6 +558,8 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[=].item[+].linkId = "cnr-souhait-kits"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Souhaitez-vous recevoir des kits pour prélèvements et envois d'échantillons de salive au CNR (recherche d'IgM/PCR) ?"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1359 "Souhaitez-vous recevoir des kits pour prélèvements et envois d’échantillons de salive au CNR (recherche d’IgM/PCR) ?"
 * item[=].item[=].item[=].type = #choice
@@ -588,6 +567,8 @@ Usage: #definition
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[=].item[+].linkId = "cnr-nombre-kits"
+* item[=].item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].item[=].text = "Nombre de kits pour prélèvements souhaité ?"
 * item[=].item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-429 "Nombre de kits"
 * item[=].item[=].item[=].item[=].type = #integer
@@ -595,23 +576,22 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-
 * item[+].linkId = "exposition"
 * item[=].text = "Exposition(s) à risque"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "collectivite-risque"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Le cas fréquente-t-il une collectivité accueillant des sujets à risque de rougeole grave ?"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-421 "Fréquentation d'une collectivité accueillant des sujets à risque de rougeole grave"
-* item[=].item[=].type = #choice
 * item[=].item[=].repeats = true
-// Ajouté jdv-collectivite-sujets-a-risque-rougeole-cisis
+* item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-collectivite-sujets-a-risque-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "Accueil petite enfance"
-// * item[=].item[=].answerOption[+].valueString = "Milieu de soin"
-// * item[=].item[=].answerOption[+].valueString = "Autre, précisez"
 
 * item[=].item[=].item[+].linkId = "collectivite-risque-autre"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Collectivité : précisez"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "collectivite-risque"
@@ -619,6 +599,8 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].answerCoding = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-092.06.11 "Autre collectivité"
 
 * item[=].item[+].linkId = "sujet-risque-entourage"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Présence de sujet à risque de rougeole grave dans l'entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Présence de sujet à risque de rougeole grave dans l’entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
 * item[=].item[=].type = #choice
@@ -626,6 +608,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[+].linkId = "immunoglobulines"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Administration d'immunoglobulines aux contacts à risque de rougeole grave"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Administration d’immunoglobulines aux contacts à risque de rougeole grave"
 * item[=].item[=].type = #choice
@@ -633,6 +617,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[+].linkId = "immunoglobulines-nombre"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Nombre de personnes"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-425 "Nombre d'admministration d'immunoglobines aux contacts àrisque de rougeole grave"
 * item[=].item[=].item[=].type = #integer
@@ -641,6 +627,8 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "ror-72h"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-426 "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].type = #choice
@@ -648,6 +636,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
 
 * item[=].item[=].item[+].linkId = "ror-72h-nombre"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Nombre de personnes"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-427 "Nombre d'administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].item[=].type = #integer
@@ -655,12 +645,13 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].operator = #=
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
-
 * item[+].linkId = "lieux-exposition"
 * item[=].text = "Lieux et circonstances de l'exposition dans les 7 à 18 jours avant la date de l'éruption"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "sejour-etranger"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Séjour à l'étranger"
 * item[=].item[=].code[+] = http://snomed.info/sct#276030007 "voyage à l'étranger ou en territoire ultramarin"
 * item[=].item[=].type = #choice
@@ -670,8 +661,9 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "sejour-etranger-pays"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Pays du séjour"
-// Code LOINC à vérifier par Melissa
 * item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du voyage [Localisation] Patient"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "sejour-etranger"
@@ -680,6 +672,8 @@ Usage: #definition
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[=].item[+].linkId = "contact-rougeole"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Contact avec un cas de rougeole"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-419 "Contact avec un cas de rougeole"
 * item[=].item[=].type = #choice
@@ -688,6 +682,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-lieu"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Lieu du contact"
 * item[=].item[=].item[=].code[+] = http://loinc.org#81267-7 "Contexte d'exposition à la maladie"
 * item[=].item[=].item[=].type = #choice
@@ -698,6 +694,8 @@ Usage: #definition
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-precision"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Précisez"
 // Trouver un code ?
 * item[=].item[=].item[=].type = #string
@@ -706,6 +704,8 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[+].linkId = "autres-cas-entourage"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Existence d'autres cas dans l'entourage"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-420 "Existence d'autres cas dans l'entourage"
 * item[=].item[=].type = #choice
@@ -714,6 +714,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "autres-cas-lieu"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Lieu"
 * item[=].item[=].item[=].code[+] = http://loinc.org#81267-7 "Contexte d'exposition à la maladie"
 * item[=].item[=].item[=].type = #choice
@@ -724,6 +726,8 @@ Usage: #definition
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[=].item[=].item[+].linkId = "autres-cas-precision"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Précisez"
 // Trouver un code ?
 * item[=].item[=].item[=].type = #string
@@ -732,6 +736,8 @@ Usage: #definition
 * item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 
 * item[=].item[=].item[+].linkId = "autres-cas-sejour-etranger"
+* item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].text = "Notion de séjour à l'étranger pour les autres cas"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-430 "Séjour à l’étranger pour les autres cas de rougeole dans l'entourage"
 * item[=].item[=].item[=].type = #choice
@@ -743,8 +749,9 @@ Usage: #definition
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[=].item[+].linkId = "autres-cas-pays"
+* item[=].item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].item[=].item[=].text = "Pays du séjour des autres cas"
-// Code LOINC à vérifier par Melissa
 * item[=].item[=].item[=].item[=].code[+] = http://loinc.org#94651-7 "Pays du voyage [Localisation] Patient ; Résultat nominal"
 * item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "autres-cas-sejour-etranger"
@@ -752,12 +759,13 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
 * item[=].item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
-
 * item[+].linkId = "vaccin-rougeole"
 * item[=].text = "Statut vaccinal Rougeole"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "vaccin-rougeole-nombre-doses"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Nombre total de doses reçues"
 * item[=].item[=].code[+] = http://loinc.org#30973-2 "Nombre de doses"
 * item[=].item[=].type = #choice
@@ -768,6 +776,8 @@ Usage: #definition
 * item[=].item[=].answerOption[+].valueString = "inconnu"
 
 * item[=].item[+].linkId = "vaccin-date-dose-1"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Date de la 1ère dose"
 // code à trouver ?
 * item[=].item[=].type = #date
@@ -783,6 +793,8 @@ Usage: #definition
 * item[=].item[=].enableBehavior = #any
 
 * item[=].item[+].linkId = "vaccin-date-dose-2"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Date de la 2ème dose"
 // code à trouver ?
 * item[=].item[=].type = #date
@@ -795,6 +807,8 @@ Usage: #definition
 * item[=].item[=].enableBehavior = #any
 
 * item[=].item[+].linkId = "vaccin-date-dose-3"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Date de la 3ème dose"
 // code à trouver ?
 * item[=].item[=].type = #date
@@ -803,15 +817,13 @@ Usage: #definition
 * item[=].item[=].enableWhen[=].answerString = "3"
 
 * item[=].item[+].linkId = "vaccin-source"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "observation[templateId/@root='1.2.250.1.213.1.1.3.80' and code/@code='à définir']/value"
 * item[=].item[=].text = "Informations recueillies d'après"
 * item[=].item[=].code[+] = http://loinc.org#48766-0 "Source de l'information"
 * item[=].item[=].type = #choice
-// Ajout jdv-origine-information-vaccin-rougeole-cisis
 * item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis"
-// * item[=].item[=].answerOption[+].valueString = "interrogatoire"
-// * item[=].item[=].answerOption[+].valueString = "carnet de santé ou de vaccination/dossier médical"
 
-// "Prescripteur" remplacé par "Signalant" 
 * item[+].linkId = "signalant"
 * item[=].text = "Signalant"
 * item[=].type = #group
@@ -885,60 +897,81 @@ Usage: #definition
 * item[=].text = "Biologiste"
 * item[=].type = #group
 
-// Identifiant RPPS du biologiste
 * item[=].item[+].linkId = "biologiste-rpps"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/id"
 * item[=].item[=].text = "N° RPPS"
 * item[=].item[=].type = #string
 
-// la profession du biologiste
 * item[=].item[+].linkId = "biologiste-profession"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/code/@code"
 * item[=].item[=].text = "Profession"
 * item[=].item[=].type = #string
 
-// le nom du biologiste
 * item[=].item[+].linkId = "biologiste-nom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/assignedPerson/name/family"
 * item[=].item[=].text = "Nom"
 * item[=].item[=].type = #string
 
-// le prénom du biologiste
 * item[=].item[+].linkId = "biologiste-prenom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/assignedPerson/name/given"
 * item[=].item[=].text = "Prénom"
 * item[=].item[=].type = #string
 
-// Adresse du biologiste 
 * item[=].item[+].linkId = "biologiste-adresse"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/addr"
 * item[=].item[=].text = "Adresse"
 * item[=].item[=].type = #string
 
-// Code postal du biologiste
 * item[=].item[+].linkId = "biologiste-code-postal"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/addr"
 * item[=].item[=].text = "Code postal"
 * item[=].item[=].type = #string
 
-// Commune du biologiste
 * item[=].item[+].linkId = "biologiste-commune"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/addr"
 * item[=].item[=].text = "Commune"
 * item[=].item[=].type = #string
 
-// N° FINESS du laboratoire
 * item[=].item[+].linkId = "biologiste-es-finess"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/id"
 * item[=].item[=].text = "N° FINESS du laboratoire"
 * item[=].item[=].type = #string
 
-// Nom du laboratoire
 * item[=].item[+].linkId = "biologiste-es-nom"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/representedOrganization/name"
 * item[=].item[=].text = "Nom du laboratoire"
 * item[=].item[=].type = #string
 
-// Téléphone du biologiste 
 * item[=].item[+].linkId = "biologiste-telephone"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/telecom[starts-with(@value,'tel:')]/@value"
 * item[=].item[=].text = "Téléphone"
 * item[=].item[=].type = #string
 
-// Courriel du biologiste 
 * item[=].item[+].linkId = "biologiste-courriel"
+* item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
+* item[=].item[=].extension[=].valueString = "ClinicalDocument/documentationOf/serviceEvent/performer/assignedEntity/telecom[starts-with(@value,'mailto:')]/@value"
 * item[=].item[=].text = "Courriel"
 * item[=].item[=].type = #string
+
+// date et heure du signalement : calculées (maintenant) et non modifiables
+* item[+].linkId = "date-signalement"
+* item[=].text = "Date de signalement"
+* item[=].type = #dateTime
+* item[=].required = true
+* item[=].readOnly = true
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-calculatedExpression"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "now()"
 
 
 

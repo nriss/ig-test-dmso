@@ -4,12 +4,15 @@ title Flux de données simplifié : hypothèse FHIR Questionnaire et Questionnai
 
 left to right direction
 
-actor "Éditeur de formulaires" as ED
+rectangle "Gestionnaire de questionnaires" as GQ {
+  actor "Éditeur de formulaires" as ED
+  actor "Expert interopérabilité" as EI
+  rectangle "Outil d'édition\nde questionnaire\n(création / modification\nde Questionnaire)" as FD
+  cloud "Repo de formulaires\nversionnés" as FM #LightYellow
+}
 actor "Médecin déclarant" as PS
 
-rectangle "Outil d'édition" as FD
-cloud "Repo de formulaires\nversionnés" as FM #LightYellow
-rectangle "Outil d'affichage\ngraphique" as FF
+rectangle "Outil de remplissage\nde questionnaire\n(création de\nQuestionnaireResponse)\n\nAuditEvent : logs de création\net d'accès aux QR" as FF
 cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
 rectangle "PSIG" as PSIG
 rectangle "DNUM" as DNUM
@@ -19,8 +22,9 @@ rectangle "Consommateurs" as DEST {
   rectangle "SI VSS" as VSS
 }
 
-ED --> FD
+ED --> FD : option A :\nconçoit le formulaire
 FD --> FM : Questionnaire
+EI --> FM : option B :\nrédige directement\nle Questionnaire (JSON)
 FM --> FF : Questionnaire
 AC --> FF : listes de choix,\npré-remplissage
 PS --> FF : saisit la réponse\nau questionnaire
