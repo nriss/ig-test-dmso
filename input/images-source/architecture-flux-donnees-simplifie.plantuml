@@ -5,6 +5,7 @@ title Flux de données simplifié : hypothèse FHIR Questionnaire et Questionnai
 left to right direction
 
 actor "Éditeur de formulaires" as ED
+actor "Expert interopérabilité" as EI
 actor "Médecin déclarant" as PS
 
 rectangle "Outil d'édition" as FD
@@ -19,8 +20,9 @@ rectangle "Consommateurs" as DEST {
   rectangle "SI VSS" as VSS
 }
 
-ED --> FD
+ED --> FD : option A :\nconçoit le formulaire
 FD --> FM : Questionnaire
+EI --> FM : option B :\nrédige directement\nle Questionnaire (JSON)
 FM --> FF : Questionnaire
 AC --> FF : listes de choix,\npré-remplissage
 PS --> FF : saisit la réponse\nau questionnaire
