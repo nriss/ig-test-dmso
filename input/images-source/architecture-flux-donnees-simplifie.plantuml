@@ -14,7 +14,6 @@ actor "Médecin déclarant" as PS
 
 rectangle "Outil de remplissage\nde questionnaire\n(création de\nQuestionnaireResponse)\n\nAuditEvent : logs de création\net d'accès aux QR" as FF
 cloud "Autocomplétion\n(SMT, Annuaire Santé)" as AC #LightYellow
-rectangle "PSIG" as PSIG
 rectangle "DNUM" as DNUM
 rectangle "Labo\n(à confirmer)" as DMP
 rectangle "Consommateurs" as DEST {
@@ -27,9 +26,8 @@ FD --> FM : Questionnaire
 EI --> FM : option B :\nrédige directement\nle Questionnaire (JSON)
 FM --> FF : Questionnaire
 AC --> FF : listes de choix,\npré-remplissage
-PS --> FF : saisit la réponse\nau questionnaire
-FF --> PSIG : QuestionnaireResponse
-PSIG --> DNUM : QuestionnaireResponse
+PS <--> FF : saisit la réponse\nau questionnaire\n(retour : message 200)
+FF --> DNUM : QuestionnaireResponse
 DMP ..> DNUM : CR-BIO\nCDA via MSS\nHL7 v2 via S/MIME
 DNUM --> VSS : données consolidées
 DNUM --> SPF : données consolidées\net anonymisées
