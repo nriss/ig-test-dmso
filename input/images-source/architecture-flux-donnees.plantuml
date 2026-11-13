@@ -9,7 +9,7 @@ actor "Médecin déclarant" as PS
 
 rectangle "Outil d'édition\n(Form Designer)" as FD
 rectangle "Repo de formulaires versionnés\n(Form Manager)" as FM
-rectangle "Outil d'affichage graphique\n(Form Filler)" as FF
+rectangle "Outil de remplissage\nde questionnaire\n(Form Filler)" as FF
 rectangle "Form Receiver" as FR
 rectangle "Form Response Manager\n(à instruire)" as FRM
 rectangle "Form Archiver\n(à instruire)" as FA
