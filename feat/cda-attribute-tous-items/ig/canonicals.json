@@ -1,0 +1,21 @@
+[{
+  "id" : "ans.fhir.fr.dmso",
+  "type" : "ImplementationGuide",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/ImplementationGuide/ans.fhir.fr.dmso",
+  "version" : "0.1.0",
+  "name" : "DMSO"
+},
+{
+  "id" : "QuestionnaireRougeole",
+  "type" : "Questionnaire",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/Questionnaire/QuestionnaireRougeole",
+  "version" : "0.1.0",
+  "name" : "QuestionnaireRougeole"
+},
+{
+  "id" : "questionnaire-item-cda-attribute",
+  "type" : "StructureDefinition",
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute",
+  "version" : "0.1.0",
+  "name" : "QuestionnaireItemCdaAttribute"
+}]

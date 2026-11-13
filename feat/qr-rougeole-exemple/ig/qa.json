@@ -1,0 +1,20 @@
+{
+  "url" : "https://interop.esante.gouv.fr/ig/fhir/dmso/ImplementationGuide/ans.fhir.fr.dmso",
+  "name" : "DMSO",
+  "title" : "IG Test DMSO",
+  "description" : "IG de test pour le DMSO",
+  "status" : "draft",
+  "package-id" : "ans.fhir.fr.dmso",
+  "ig-ver" : "0.1.0",
+  "date" : "Tue, 10 Nov, 2026 13:35:44 +0000",
+  "dateISO8601" : "2026-11-10T13:35:44+00:00",
+  "errs" : 30,
+  "warnings" : 168,
+  "hints" : 100,
+  "broken-links" : 8,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "6.0.0-snapshot1 (3)",
+  "maxMemory" : 1699067744
+}

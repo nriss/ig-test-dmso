@@ -1,0 +1,11 @@
+{
+  "feat/cda-attribute-tous-items": "2026-11-12T15:58:25Z",
+  "feat/date-signalement-calculee": "2026-11-03T13:56:35Z",
+  "feat/extension-cda-attribute": "2026-11-12T09:09:31Z",
+  "feat/page-architecture": "2026-11-04T15:59:03Z",
+  "feat/page-architecture-v2": "2026-11-03T10:35:30Z",
+  "feat/qr-rougeole-exemple": "2026-11-10T13:37:51Z",
+  "fix/questionnaire-rougeole-item-linkid-type": "2026-11-03T21:00:34Z",
+  "fix/questionnaire-rougeole-sushi": "2026-11-03T13:49:06Z",
+  "main": "2026-11-13T08:41:06Z"
+}

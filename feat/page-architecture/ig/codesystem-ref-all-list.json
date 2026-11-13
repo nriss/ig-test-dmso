@@ -1,0 +1,80 @@
+{
+  "codeSystems" : [{
+    "url" : "http://hl7.org/fhir/sid/icd-10",
+    "version" : "2.1.1",
+    "status" : "retired",
+    "name" : "Icd10",
+    "title" : "ICD-10",
+    "description" : "International Classification of Diseases revision 10 (ICD 10)",
+    "oids" : ["2.16.840.1.113883.6.3"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-complication-rougeole-cisis" : "Jdv Complication Rougeole CISIS"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-4-cisis" : "Jdv MSO Resultat Qualitatif 4 CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis" : "JDV Lieu Contact Rougeole CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-origine-information-vaccin-rougeole-cisis" : "Jdv Origine Information Vaccin Rougeole CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis" : "JDV Facteur Risque Rougeole CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-evolution-rougeole-cisis" : "JDV Evolution Rougeole CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-collectivite-sujets-a-risque-rougeole-cisis" : "Jdv Collectivite Sujets A Risque Rougeole CISIS",
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-mso-resultat-qualitatif-2-cisis" : "Jdv MSO Resultat Qualitatif 2 CISIS"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v2-0487",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "SpecimenType",
+    "title" : "specimenType",
+    "description" : "HL7-defined code system of concepts that describe the precise nature of an entity that may be used as the source material for an observation.  This is one of two code systems that are used instead of table 0070 (code system 2.16.840.1.113883.18.28) which conflated specimen types and specimen collection methods.   Used in HL7 Version 2.x messaging in the SPM segment.",
+    "oids" : ["2.16.840.1.113883.18.311"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-rougeole-cisis" : "jDV Specimen Type Rougeole CISIS"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+    "version" : "4.0.0",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for adminstrative purposes (as opposed to clinical gender)",
+    "oids" : ["2.16.840.1.113883.5.1"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-v3-AdministrativeGender-cisis" : "AdministrativeGender"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-SpecimenType",
+    "version" : "5.0.0",
+    "status" : "active",
+    "name" : "SpecimenType",
+    "title" : "SpecimenType",
+    "description" : "**** MISSING DESCRIPTION ****",
+    "oids" : ["2.16.840.1.113883.5.129"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-specimen-type-rougeole-cisis" : "jDV Specimen Type Rougeole CISIS"
+  },
+  {
+    "url" : "urn:iso:std:iso:3166",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "ISO3166Part1",
+    "title" : "ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code",
+    "description" : "ISO 3166-1 establishes codes that represent the current names of countries, dependencies, and other areas of particular geopolitical interest, on the basis of country names obtained from the United Nations.",
+    "oids" : ["1.0.3166.1"],
+    "uses" : {
+    },
+    "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis" : "Iso 3166 Part 1: 2 Letter Codes"
+  }]
+}

@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Description,Uses,Used,Sources
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-complication-rougeole-cisis,20260928134051,active,"1.2.250.1.213.1.1.5.847",JdvComplicationRougeoleCisis,Jdv Complication Rougeole CISIS,"Jdv Complication Rougeole CISIS","Questionnaire/QuestionnaireRougeole","hl7.terminology.r4"
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-facteur-risque-rougeole-cisis,20260928134051,active,"1.2.250.1.213.1.1.5.846",JdvFacteurRisqueRougeoleCisis,JDV Facteur Risque Rougeole CISIS,"JDV Facteur Risque Rougeole CISIS","Questionnaire/QuestionnaireRougeole","SCT,Other"
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis,20260916095457,active,"1.0.3166.1",Iso316612,Iso 3166 Part 1: 2 Letter Codes,"Iso 3166 Part 1: 2 Letter Codes","Questionnaire/QuestionnaireRougeole","hl7.terminology.r4"
+https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis,20260928134051,active,"1.2.250.1.213.1.1.5.850",JdvLieuContactRougeoleCisis,JDV Lieu Contact Rougeole CISIS,"JDV Lieu Contact Rougeole CISIS","Questionnaire/QuestionnaireRougeole","SCT"
