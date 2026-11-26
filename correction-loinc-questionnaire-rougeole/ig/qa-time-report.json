@@ -1,0 +1,432 @@
+{
+  "date" : "Thu, 26 Nov, 2026 15:57:49 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [{
+    "name" : "/fsh-generated/resources/ImplementationGuide-ans.fhir.fr.dmso.json",
+    "size" : 5604,
+    "processes" : [{
+      "activity" : "load",
+      "start" : 39,
+      "length" : 143
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 41,
+      "length" : 14
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 79
+    },
+    {
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 2516
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 46,
+      "length" : 15
+    },
+    {
+      "activity" : "generate1",
+      "start" : 46,
+      "length" : 103
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 113
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 58,
+      "length" : 2
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 64,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/Questionnaire-QuestionnaireRougeole.json",
+    "size" : 84430,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 27
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 61
+    },
+    {
+      "activity" : "load-configure",
+      "start" : 41,
+      "length" : 3
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 41,
+      "length" : 12
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 264
+    },
+    {
+      "activity" : "validate",
+      "start" : 44,
+      "length" : 1818
+    },
+    {
+      "activity" : "scanForUsageStats",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 46,
+      "length" : 20
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 267
+    },
+    {
+      "activity" : "generate2",
+      "start" : 50,
+      "length" : 672
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 53,
+      "length" : 1
+    },
+    {
+      "activity" : "makeDependencies",
+      "start" : 55,
+      "length" : 1
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 58,
+      "length" : 22
+    },
+    {
+      "activity" : "scanExamplesForR5",
+      "start" : 64,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "fsh-generated/resources/StructureDefinition-questionnaire-item-cda-attribute.json",
+    "size" : 1494,
+    "processes" : [{
+      "activity" : "loadResources",
+      "start" : 39,
+      "length" : 6
+    },
+    {
+      "activity" : "load",
+      "start" : 39,
+      "length" : 9
+    },
+    {
+      "activity" : "generateSnapshots",
+      "start" : 39,
+      "length" : 12
+    },
+    {
+      "activity" : "loadDepInfo",
+      "start" : 41,
+      "length" : 1
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 41,
+      "length" : 1
+    },
+    {
+      "activity" : "generateNarratives",
+      "start" : 41,
+      "length" : 27
+    },
+    {
+      "activity" : "validate",
+      "start" : 41,
+      "length" : 768
+    },
+    {
+      "activity" : "checkConformanceResources",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "translate",
+      "start" : 46,
+      "length" : 2
+    },
+    {
+      "activity" : "generate1",
+      "start" : 47,
+      "length" : 24
+    },
+    {
+      "activity" : "generate2",
+      "start" : 51,
+      "length" : 1059
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 255
+    },
+    {
+      "activity" : "generateValidationPack",
+      "start" : 58,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/fsh-link-references.md",
+    "size" : 156,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/fsh-generated/includes/menu.xml",
+    "size" : 2976
+  },
+  {
+    "name" : "/input/data/features.yml",
+    "size" : 164
+  },
+  {
+    "name" : "/input/intro-notes/Questionnaire-QuestionnaireRougeole-intro.md",
+    "size" : 223,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 42,
+      "length" : 1
+    },
+    {
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-intro.md",
+    "size" : 111,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 2
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/autres_ressources.md",
+    "size" : 155,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/architecture.md",
+    "size" : 10424,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 4
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/annexe-downloads.md",
+    "size" : 1751,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-vue-ensemble.md",
+    "size" : 96,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/translationinfo.md",
+    "size" : 59
+  },
+  {
+    "name" : "/input/pagecontent/spec-fonctionnelle-alimentation.md",
+    "size" : 61,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/change-log.md",
+    "size" : 330
+  },
+  {
+    "name" : "/input/pagecontent/spec-fonctionnelle-intro.md",
+    "size" : 82,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-flux-consommation.md",
+    "size" : 101,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 3
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/index.md",
+    "size" : 6762,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 3
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/spec-technique-flux-alimentation.md",
+    "size" : 99
+  },
+  {
+    "name" : "/input/pagecontent/annexe-loinc.md",
+    "size" : 15926,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 5
+    }]
+  },
+  {
+    "name" : "/input/pagecontent/annexe-securite.md",
+    "size" : 900
+  },
+  {
+    "name" : "/template/config",
+    "size" : 0
+  },
+  {
+    "name" : "/template/config/_config.yml",
+    "size" : 140,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images",
+    "size" : 0,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/input/images/ci-sis-logo.png",
+    "size" : 61365,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 46,
+      "length" : 1
+    },
+    {
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  },
+  {
+    "name" : "/temp/pages/_includes/artifacts.xml",
+    "size" : 216
+  },
+  {
+    "name" : "/temp/pages/_includes/fragment-artifacts-table.html",
+    "size" : 4272,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 52,
+      "length" : 1
+    }]
+  }]
+}

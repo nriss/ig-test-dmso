@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" lang="fr" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Codification LOINC pour le recueil d&#39;information - IG Test DMSO v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/style-ans.css"/>
+    <link rel="stylesheet" href="assets/css/style-add-ans.css"/>
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"6.3"}
+    h3,h4,h5,h6{--heading-prefix:"6.3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+<div id="family-nav">
+    <a id="hl7-search-lnk" data-no-external="true" href="http://hl7.org/fhir"><img height="50" alt="Visit the FHIR website" src="assets/images/fhir-logo-www.png"/> </a>
+  </div>
+  <div id="ans-nav" style="line-height: 50px; float: left; margin-top: 4px; margin-bottom: 8px; color: #808080; ">
+    <a id="hl7-logo" data-no-external="true" href="https://esante.gouv.fr/"><img height="50" alt="ANS Logo" src="assets/images/logo-ANS.svg"/></a>
+    <a id="hl7-search-lnk" data-no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+  </div>
+
+  <div id="ig-search">
+ </div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">IG Test DMSO</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+
+
+  <img alt="France (la) drapeau" src="../assets/images/fra.svg" height="16" title="France (la)"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Accueil</a>
+  </li>
+  <li>
+    <a href="architecture.html">Architecture</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Vol. 1 - Etude fonctionnelle
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec-fonctionnelle-intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="spec-fonctionnelle-alimentation.html">Alimentation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Vol. 2 - Détail des transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="spec-technique-intro.html">Introduction</a>
+      </li>
+      <li>
+        <a href="spec-technique-vue-ensemble.html">Vue d&apos;ensemble</a>
+      </li>
+      <li>
+        <a href="spec-technique-flux-alimentation.html">Flux d&apos;alimentation</a>
+      </li>
+      <li>
+        <a href="spec-technique-flux-consommation.html">Flux de consommation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="index.html" class="dropdown-toggle">Vol. 3 - Annexes
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="annexe-securite.html">Sécurité</a>
+      </li>
+      <li>
+        <a href="annexe-downloads.html">Téléchargements et usage</a>
+      </li>
+      <li>
+        <a href="annexe-loinc.html">Codification LOINC</a>
+      </li>
+      <li>
+        <a target="_blank" href="http://hl7.org/fhir/R4/index.html">Spécifications FHIR </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://esante.gouv.fr/">Site de l&apos;ANS </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Ressources de conformité</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://interop.esante.gouv.fr/ig/documentation/">Documentation</a>
+  </li>
+  <li>
+    <a href="change-log.html">Historique</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+
+<div style="float: var(--ig-right);padding: 8px 0px;" id="language">
+  <div id="select_flg" class="flaglist" style="background-image: url(assets/images/icon_arrow_down.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="drapeau English" src="assets/images/lang-fr.png"/>Français</div>
+  </div>
+  <div style="float: var(--ig-right); margin: 2px 0px; padding: 1px 0;color: var(--btn-text-color);font-size:12px">Language:</div>
+ 	<div id="flaglist" class="flaglist" style="display: none;position: absolute;right: 0;z-index: 100;background-image: url(assets/images/icon_arrow_up.png);background-position: 133px 3px;">
+    <div><img class="flag" alt="drapeau fr" src="assets/images/lang-fr.png"/>Français</div>
+
+    <div><a href="../en/annexe-loinc.html"><img class="flag" src="assets/images/lang-en.png" alt="drapeau en"/>English</a></div>
+
+  </div>
+</div>
+
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='autres_ressources.html'><b>Autres Ressources</b></a></li><li><b>Codification LOINC pour le recueil d'information</b></li>
+
+          <span style="float: var(--ig-right);">
+
+            <a href="annexe-downloads.html">&lt; précédent</a> | 
+
+            <a href="#bottom">bas de page</a>
+
+          | <a href="translationinfo.html">suivant &gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">IG Test DMSO - version de développement local (intégration continue v0.1.0) construite par les outils de publication FHIR (HL7® FHIR® Standard). Voir le <a href='https://interop.esante.gouv.fr/ig/fhir/dmso/history.html'>répertoire des versions publiées</a></p><!--EndReleaseHeader-->
+  <h2>Codification LOINC pour le recueil d&#39;information</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#1---données-relatives-à-lhospitalisation" id="markdown-toc-1---données-relatives-à-lhospitalisation">1 - Données relatives à l’hospitalisation</a></li>
+  <li><a href="#2--draft-fhir-données-cliniques-pathologie-date" id="markdown-toc-2--draft-fhir-données-cliniques-pathologie-date">2- DRAFT FHIR Données cliniques (pathologie, date…)</a></li>
+  <li><a href="#3---draft---fhir-voyage" id="markdown-toc-3---draft---fhir-voyage">3 - DRAFT - FHIR Voyage</a></li>
+  <li><a href="#4---draft-fhir-vaccination" id="markdown-toc-4---draft-fhir-vaccination">4 - DRAFT FHIR Vaccination</a></li>
+  <li><a href="#5---informations-sur-le-patient" id="markdown-toc-5---informations-sur-le-patient">5 - Informations sur le Patient</a></li>
+  <li><a href="#6--contact-signalant--biologiste" id="markdown-toc-6--contact-signalant--biologiste">6  Contact Signalant &amp; biologiste</a></li>
+  <li><a href="#draft-63-description-de-letablissement-facility--" id="markdown-toc-draft-63-description-de-letablissement-facility--">DRAFT 6.3 Description de l'Etablissement (facility  )</a></li>
+  <li><a href="#7---informations-sur-la-biologie" id="markdown-toc-7---informations-sur-la-biologie">7 - Informations sur la biologie</a></li>
+</ul>
+
+</div>
+<p><strong>Objet du document</strong> - ce document recense l'ensemble par thématique l'ensemble des informations commune à l'établissement de reccueil d'information épidémiologique. Il a été construit sur la base des besoins pour les Maladie à Signalement Obligatoire (arbovirose, rougeole) et à vocation à être étendu à l'ensemble des MSO ou représentation de données sous forme de FHIR Questionnaire</p>
+
+<p><strong>Utilisateurs cibles</strong></p>
+<ul>
+  <li>Experts Interopérabilité - rédaction des spécifications</li>
+  <li>Product Owner &amp; Buisiness Analyst en charge de la construction métier de nouveaux questionnaires</li>
+  <li>IA sous supervision humaine pour l'automatisation des taches</li>
+  <li><strong>La validation par des experts sémantique reste une étape indispensable pour les spécifications d'interopérabilité au niveau nationale</strong></li>
+</ul>
+
+<p><strong>Cycle d'évolution</strong> Ce document est amené à être incrémenté. Tout besoin entrant dans le périmètre de ce document et avec une valeur ajoutée pour l'harmonisation des questionnaire doit être remonté aux experts métier en charge de la maintenance du document</p>
+
+<p><strong>Précaution d'emploi</strong></p>
+<ul>
+  <li>les thématiques (sections) préfixées par DRAFT sont en cours de révision majeure et validation par les experts sémantiques de l'ANS. Elle ne doivent pas être utilisé sans l'aval des experts.</li>
+  <li>Les traductions des codes LOINC sont susceptible d'évoluer (et ne sont pas mise à jour) ; il est recommandé de récupérer &amp; valider les traductions officielles en cours depuis le SMT Web ou FTS.</li>
+  <li>La colonne "Value - Type &amp; contrainte sémantique" explicite les contraintes sémantique sur les réponses associées à la question. Elles doivent être vérifié au moment de la validation du code</li>
+  <li>Certaines question (colonne usage) sont associés à des notes précisants les choix réalisés et le contexte d'usage.</li>
+</ul>
+
+<h3 id="1---données-relatives-à-lhospitalisation">1 - Données relatives à l’hospitalisation</h3>
+
+<p><strong>Périmètre FHIR</strong> : Observation ou Questionnaire</p>
+
+<p><strong>Date de dernière revue</strong> 09/11/2026</p>
+
+<p><strong>Statut :</strong> validé</p>
+
+<p><strong>Note :</strong> NA</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Le patient a-t-il été hospitalisé</td>
+      <td>77974-4 Hopsitalisation du patient pour la pathologie d'intérêt</td>
+      <td>Booléen</td>
+    </tr>
+    <tr>
+      <td>Date d’hospitalisation</td>
+      <td>8656-1 Date d'admission à l'hopital</td>
+      <td>DateTime</td>
+    </tr>
+    <tr>
+      <td>Etablissement d’hospitalisation</td>
+      <td>58237-9 Nom de l'hopital</td>
+      <td>Codable Concept (/!\ doit être une donnée identifiante)</td>
+    </tr>
+    <tr>
+      <td>Le patient a-t-il été admis en réanimation</td>
+      <td>95420-6 Admission en soin intensif pour la pathologie d'intérêt</td>
+      <td>Booléan</td>
+    </tr>
+    <tr>
+      <td>Date d’entrée en réanimation</td>
+      <td>95367-9 Date d'admission en soin intensif</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Etablissement de soin (note 1)</td>
+      <td>76696-4 Nom de l'établissement</td>
+      <td>Codable Concept (/!\ doit être une donnée identifiante)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note 1 - le code 76696-4  évoque un établissement (facility), il a un périmètre plus large que le code 58237-9. Il doit être utilisé pour décrire la structure d'admission d'un patient dans le cas où celui ci peut être soit une structure hospitalière, soit un établissement médico-social (centre de jour, ephad…)</p>
+
+<h3 id="2--draft-fhir-données-cliniques-pathologie-date">2- DRAFT FHIR Données cliniques (pathologie, date…)</h3>
+
+<p><strong>Stratégie de codification</strong> : La liste des symptômes, signe, diagnostique et antécédant doit être reporté avec un code générique et une liste de résultats possible. Le choix du code doit tenir compte du contenu métier des données ; pour une liste métier ou une série de question cela peut se traduire dans plusieurs sous liste codées. Le choix de la terminologie pour les codes réponse ainsi que les valeurs est à faire valider par les experts sémantiques. <strong>L'expression d'information sur l'absence de symptome, diagnostic ou l'absence de réponse est à étudier par le CGTS</strong></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>**16/11/2026 - à confirmer : cette stratégie n'a pas été discuté pour la vague 1 des MSO ; au vue des contraintes projets une version code "le patient présente t'il le symptome X"</td>
+      <td>Oui/Non/NSP sera retenu.**</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Périmètre FHIR</strong> : Observation ou Questionnaire</p>
+
+<p><strong>Hors Perimetre FHIR</strong> : Condition</p>
+
+<p><strong>Date de dernière revue</strong> 20/11/2026</p>
+
+<p><strong>Statut :</strong> En cours</p>
+
+<p><strong>Note :</strong> traduction à faire + choix code complication</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type  &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Informations cliniques sur la maladie : signe et symptômes (fièvre, douleur articulaire) - voir note 1</td>
+      <td>104950-1 Signe ou symptôme associé</td>
+      <td>Codable Concept (SNOMED finding; disorder;or situation hierarchies)</td>
+    </tr>
+    <tr>
+      <td>Information diagnostic final</td>
+      <td>29308-4 Interprétation diagnostique</td>
+      <td>Codable Concept</td>
+    </tr>
+    <tr>
+      <td>Information symptome</td>
+      <td>75325-1 Symptôme</td>
+      <td>Codable concept - voir définition LOINC pour plus d'explication</td>
+    </tr>
+    <tr>
+      <td>Date de début de l’éruption</td>
+      <td>81268-5 Date de début de l'éruption</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Date des premiers signes cliniques</td>
+      <td>65222-2 Date et heure d'apparition des premiers symptomes [Horodatage] Patient ; Numérique</td>
+      <td>DateTime</td>
+    </tr>
+    <tr>
+      <td>Statut clinique du patient</td>
+      <td>11323-3 Etat de santé du patient rapporté</td>
+      <td>Codable Concept</td>
+    </tr>
+    <tr>
+      <td>Date du décès</td>
+      <td>81954-0 Date du décès [Date] Patient ; Numérique</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Complication</td>
+      <td>67187-5 Type of complication</td>
+      <td>Codable Concept</td>
+    </tr>
+    <tr>
+      <td>Complication, autre</td>
+      <td>A TROUVER</td>
+      <td>Texte</td>
+    </tr>
+    <tr>
+      <td>Antécédant de maladie - à valider</td>
+      <td>11349-8 History of Past illness</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Le patient a t'il des signes cliniques associé à la maladie</td>
+      <td>95419-8    Whether the patient has symptoms related to condition of interest</td>
+      <td>Booléen</td>
+    </tr>
+    <tr>
+      <td>Statut du diagnostique</td>
+      <td>33999-4 Diagnosis status</td>
+      <td>Codable Concept (nouveau, suspecté, confirmé, non confirmé, supprimé…)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note 1</strong> : Informations cliniques sur la maladie : signe et symptômes</p>
+<ul>
+  <li>Périmètre : Cette catégorie permet d’inclure uniquement des signes cliniques, symptôme et pathologie.</li>
+  <li>Hors périmètre : Les éléments antécédents, traitement et actes/procédure sont exclus de cette catégorie.</li>
+</ul>
+
+<p><strong>Note 2</strong> - Codes complications alternatifs :</p>
+<ul>
+  <li>19817-6 [LOINC] Complications</li>
+  <li>55109-3 Complications peut être utilisé pour typer un document décrivant les investigation liée à une complication</li>
+</ul>
+
+<h3 id="3---draft---fhir-voyage">3 - DRAFT - FHIR Voyage</h3>
+
+<p><strong>Stratégie de codification</strong> : Les codes utilisés pour décrire les voyages sont génériques, il ne mentionnent les contraintes métier nécessaire à l'enregistrement des données (ex. 15 j avant le début des symptômes). Pour le CERFA Chikungunya, plusieur occurrence des informations voyage sont demandés ; le patron ci-dessous n'en tient pas compte.</p>
+
+<p><strong>Périmètre FHIR</strong> : Observation ou Questionnaire</p>
+
+<p><strong>Contrainte du modèle syntaxique :</strong> Le format final doit permettre de grouper les informations voyage, pays, département et dates.</p>
+
+<p><strong>Date de dernière revue</strong> 09/11/2026</p>
+
+<p><strong>Statut :</strong> En cours de validation</p>
+
+<p><strong>Note :</strong></p>
+<ul>
+  <li>traduction à faire +</li>
+  <li>choix code pays \&amp; date</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Voyage dans les XX jours précédant/suivant</td>
+      <td><strong>8691-8 History of Travel</strong>.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Pays</td>
+      <td><strong>82753-5 County of travel [Location]</strong> ; <br /><strong>94651-7 Pays du voyage [Localisation] Patient ; Résultat nominal</strong> =&gt; Pays du voyage ?</td>
+      <td>VS</td>
+    </tr>
+    <tr>
+      <td>Département/territoire ultramarin</td>
+      <td><strong>82754-3 State of travel</strong></td>
+      <td>VS</td>
+    </tr>
+    <tr>
+      <td>Date de début du voyage</td>
+      <td><strong>91560-3 Date of departure from travel destination</strong></td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Date de fin</td>
+      <td><strong>91559-5 Date of arrival at travel destination</strong></td>
+      <td>Date</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="4---draft-fhir-vaccination">4 - DRAFT FHIR Vaccination</h3>
+
+<p><strong>Stratégie de codification</strong> : <strong><em>Revue à faire sur la base des informations demandés dans les CERFA (utilisation ATC vs code SNOMED CT ; organisation des données…)</em></strong></p>
+
+<p><strong>Périmètre FHIR</strong> : Observation ou Questionnaire</p>
+
+<p><strong>Date de dernière revue</strong> 09/11/2026</p>
+
+<p><strong>Statut :</strong> DRAFT à discuter avec l'équipe sémantique - ne pas implémenter</p>
+
+<p><strong>Note :</strong> certains codes loinc spécifique à l'immunisation existent</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Statut de vaccination (immunisation)</td>
+      <td><strong>11370-4 Immunization status - Reported</strong></td>
+      <td>VS avec les vaccins</td>
+    </tr>
+    <tr>
+      <td>Antécédents de vaccination</td>
+      <td><strong>41291-6 History of Immunization</strong> (plus intéressant)</td>
+      <td>VS <strong>Administration of vaccine to produce active immunity (procedure)</strong>, SCTID: <strong>33879002</strong>, + CI-SIS pour les « non vaccination a »</td>
+    </tr>
+    <tr>
+      <td>Date de vaccination</td>
+      <td><strong>29742-4 Date last dose</strong>. Note : plus générique sur l’administration médicament</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Nombre de dose reçues</td>
+      <td><strong>30973-2 Dose number</strong></td>
+      <td>Nombre</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="5---informations-sur-le-patient">5 - Informations sur le Patient</h3>
+
+<p><strong>Stratégie de codification</strong> : Le choix du code LOINC approprié pour chaque données "sexe/genre" est à faire au regard des valeurs attendues et sources d'information.</p>
+
+<p><strong>Périmètre FHIR</strong> :  Questionnaire</p>
+
+<p><strong>Date de dernière revue</strong> 09/11/2026</p>
+
+<p><strong>Statut :</strong> validé</p>
+
+<p><strong>Note :</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nom du patient</td>
+      <td>45394-4 Nom de famille du patient</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Prénom</td>
+      <td>45392-8 Prénom du patient</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Téléphone patient</td>
+      <td>42077-8 Numéro de téléphone du patient</td>
+      <td>Tele (datatype HL7 v2)</td>
+    </tr>
+    <tr>
+      <td>E-mail</td>
+      <td>76458-9 Adresse mail du patient</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Date de naissance</td>
+      <td>21112-8 Date de naissance [Horodatage] Patient ; Numérique</td>
+      <td>DateTime</td>
+    </tr>
+    <tr>
+      <td>Sexe à la naissance</td>
+      <td>76689-9 Sexe à la naissance [Type] Patient ; Résultat nominal</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Sexe (biologique)</td>
+      <td>46098-0 Sexe [Type] Patient ; Résultat nominal</td>
+      <td>JDV Administrative gender</td>
+    </tr>
+    <tr>
+      <td>Sexe administratif</td>
+      <td>107454-1 Genre administratif</td>
+      <td><em>à confirmer</em> JDV Administrative gender</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note 1</strong> - La notion de Sexe réfère à une réalité génétique ou physiologique ; la notion de genre réfère à une construction sociale de l'individu &amp; son identitée.</p>
+
+<h4 id="choix-du-code-pour-désigner-le-genre-ou-lidentité-de-genre-dans-un-document-de-santé">Choix du code pour désigner le genre ou l'identité de genre dans un document de santé</h4>
+<p><em>Cette section est issue d'une revue de littérature faite par IA (23/11/2026)- elle est données à titre indicative</em></p>
+<h4 id="tableau-des-principales-données">Tableau des principales données</h4>
+<p>|Notion HL7|Signification|Intérêt en santé|Structuration FHIR| Code LOINC|
+|-|-|-|-|-|
+|Gender Identity (GI)|Genre auquel une personne s'identifie|Relation de soin, respect de l'identité, certains usages cliniques|    individual-genderIdentity| 76691-5|
+|Sex Parameter| for Clinical Use (SPCU)|    Paramètre sexué pertinent pour une utilisation clinique déterminée    Interprétation d'un examen, valeur de référence, décision clinique|    patient-sexParameterForClinicalUse| 99501-9|
+|Recorded Sex or Gender (RSG)|    Sexe ou genre tel qu'enregistré dans une source donnée |    Documents administratifs, état civil, systèmes historiques, sexe assigné à la naissance|    individual-recordedSexOrGender| 99502-7 ; 46098-0 ; 74698-2|
+|Administrative Sex/Gender|    Information utilisée à des fins administratives|    Identification, gestion administrative, échange avec certains SI|    forme particulière de RSG| |
+|Legal Sex/Gender    |Sexe/genre légal enregistré par une autorité    |Identité légale    |forme particulière de RSG |
+|Sex Assigned at Birth|    Sexe assigné/enregistré à la naissance|    Peut être pertinent pour certains usages cliniques ou historiques    |forme particulière de RSG|76689-9|
+|Billing Sex    |Sexe utilisé pour la facturation|    Règles administratives ou assurantielles|    RSG contextualisé
+|Pronouns|    Pronoms que la personne souhaite voir utilisés|    Communication avec le patient|    individual-pronouns| 90778-2|</p>
+
+<h5 id="sources-principales">Sources principales</h5>
+<p>[HL7 Cross Paradigm Implementation Guide: Gender Harmony – Model]décrit le modèle conceptuel et la distinction entre :</p>
+<ul>
+  <li>Gender Identity (GI)</li>
+  <li>Sex Parameter for Clinical Use (SPCU)</li>
+  <li>Recorded Sex or Gender (RSG)</li>
+  <li>Name to Use (NtU)</li>
+  <li>Pronouns
+<a href="https://www.hl7.org/xprod/ig/uv/gender-harmony/terminology.html">HL7 Gender Harmony – Terminology
+</a> documente les terminologies et jeux de valeurs associés aux différents concepts, ainsi que les principes de binding et d'utilisation des terminologies dans un contexte international.</li>
+</ul>
+
+<h3 id="6--contact-signalant--biologiste">6  Contact Signalant &amp; biologiste</h3>
+
+<h4 id="informations-sur-le-signalant-et-le-biologiste">Informations sur le signalant et le biologiste</h4>
+
+<p><strong>Stratégie de codification</strong> : Choix de distinguer tant que faire se peut les informations sur le laboratoire à l'origine des résultats et le signalant. <strong>Attention, certains codes génériques peuvent se recouper entre les section et l'ensemble de ses code est susceptible d'être réutiliser pour exprimer une information similaire dans d'autres cas d'usage.</strong></p>
+
+<p><strong>Périmètre FHIR</strong> :  Questionnaire</p>
+
+<p><strong>Date de dernière revue</strong> 09/11/2026</p>
+
+<p><strong>Statut :</strong> a valider + faire demande de codes</p>
+
+<h5 id="61-biologiste--laboratoire">6.1 Biologiste / Laboratoire</h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code question</th>
+      <th>Type de réponse, contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>N° FINESS du laboratoire</td>
+      <td>91562-9 Identifiant du laboratoire</td>
+      <td>Attention la donnée doit être identifiante</td>
+    </tr>
+    <tr>
+      <td>Nom de du laboratoire</td>
+      <td>68994-3 Nom du laboratoire</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Adresse du laboratoire</td>
+      <td>68989-3 Adresse du laboratoire</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Code postal du laboratoire</td>
+      <td>52831-5 Code postal de l'établissement</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Commune du laboratoire</td>
+      <td>65647-0 Ville de l'établissement</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Directeur du laboratoire (RPPS)</td>
+      <td>68990-1 Directeur du laboratoire, identifiant</td>
+      <td>Attention la donnée doit être identifiante</td>
+    </tr>
+    <tr>
+      <td>Téléphone du Laboratoire</td>
+      <td>75549-6 Numéro de téléphone du laboratoire</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Email biologiste</td>
+      <td>90097-7     Adresse mail du responsable du compte rendu</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h5 id="62-signalant-ps--etablissement-psig">6.2 Signalant /PS / Etablissement (PSIG)</h5>
+<p>| Usage | Code question | Type de réponse, contrainte sémantique |
+|—|—|—|
+| Identifiant du PS |  45952-9 National provider ID  | |
+| Nom du signalant | <strong>74549-7</strong> <em>Nom de la personne signalant une pathologie</em>  | |
+| Prénom du signalant | <strong>A DEMANDER</strong>| |
+| Téléphone du signalant | 74548-9 Numéro de téléphone du signalant  | |
+| Email du signalant | <strong>74547-1</strong> — Person reporting to CDC - Email | | 
+| Adresse du PS | <strong>A DEMANDER</strong>  | |
+| Code postal du PS |      87720-9     Code postal du fournisseur | |
+| Commune du PS  |      52531-1     Commune du fournisseur | |
+| N° FINESS de l’établissement |75524-9 Identifiant de l'établissement | |
+| Nom de l’établissement | 76696-4 Nom de l'établissement | |</p>
+
+<h3 id="draft-63-description-de-letablissement-facility--">DRAFT 6.3 Description de l'Etablissement (facility  )</h3>
+<p>| Usage | Code question | Type de réponse, contrainte sémantique |
+|—|—|—|
+| N° FINESS de l’établissement |75524-9 Identifiant de l'établissement | |
+| Nom de l’établissement | 76696-4 Nom de l'établissement | |
+| Code postal de l'établissement| <strong>52831-5</strong> — Postal code [Location] Facility | |
+| Commune de l'établissement | <strong>65647-0</strong> — City Facility | |
+| Email Commune de l'établissement | <strong>65650-4</strong> — Email address Facility||</p>
+
+<h3 id="7---informations-sur-la-biologie">7 - Informations sur la biologie</h3>
+
+<p><strong>Contenu</strong> Cette section contient l'ensemble des codifications pour contextualiser des informations de biologie demandé dans les questionnaires. Les codes LOINC décrivant les analyses spécifiques ne sont pas inclus dans ce tableau.</p>
+
+<p><strong>Périmètre FHIR</strong> : Questionnaire</p>
+
+<p><strong>Date de dernière revue</strong> 24/11/2026</p>
+
+<p><strong>Statut :</strong> en cours</p>
+
+<p><strong>Note :</strong> A finaliser</p>
+<ul>
+  <li>traduction</li>
+  <li>choix des codes</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Usage</th>
+      <th>Code</th>
+      <th>Value - Type &amp; contrainte sémantique</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nature du prélèvement (si noté prélèvement autre)</td>
+      <td>66746-9 Observation [Type] Prélèvement ; Résultat nominal</td>
+      <td>VS specimen-cisis (codes HL7)</td>
+    </tr>
+    <tr>
+      <td>Date associée au résultat de biologie (voir note 1)</td>
+      <td>33882-2 Date du recueil [Date] Concerne l'échantillon ; Numérique</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Date de premier prélèvement positif</td>
+      <td>95366-1     Date du premier recueil d'échantillons positifs [Date] Patient ; Numérique</td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Prélèvement envoyé au laboratoire de référence (CNR)</td>
+      <td><strong>82314-6 Specimen sent to CDC</strong></td>
+      <td>Booléen</td>
+    </tr>
+    <tr>
+      <td>Date d'envoi du prélèvement au laboratoire de référence (CNR)</td>
+      <td><strong>89264-6 Date specimen was sent to public health laboratory ou  85930-6 Date specimen sent to CDC</strong></td>
+      <td>Date</td>
+    </tr>
+    <tr>
+      <td>Besoin de kit de prélèvement</td>
+      <td>Codification local perenne à faire</td>
+      <td>Booléen</td>
+    </tr>
+    <tr>
+      <td>Nombre de kit de prélèvement à envoyer</td>
+      <td>Codification local perenne à faire</td>
+      <td>integer</td>
+    </tr>
+    <tr>
+      <td><strong>Confirmation Biologique</strong></td>
+      <td>TBD</td>
+      <td>TBD</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note 1</strong> Cette donnée métier correspond à la date de prélèvement et non à celle de l'analyse conformément à ce qui est demandé dans les spécifications du CR de Biologie</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:var(--ig-left);">&#xA0;
+
+                <a href="annexe-downloads.html">&lt; précédent</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">haut</a>
+              </td>
+              <td style="text-align:var(--ig-right);">&#xA0;
+
+                <a href="translationinfo.html">suivant ></a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://esante.gouv.fr">Agence du Numérique en Santé (ANS) - 2-10 Rue d&#39;Oradour-sur-Glane, 75015 Paris</a>.  
+          Le package ans.fhir.fr.dmso#0.1.0 est basé sur <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Date de génération : 
+  <span title="2026-11-26 15:51:00 +0000">
+    2026-11-26
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+            Liens: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table des matières</a> |
+<a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">Rapport de QA</a> |
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/fhir/dmso/history.html">Historique des versions</a>
+<a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://interop.esante.gouv.fr/ig/documentation">Documentation</a>
+ | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/ansforge/FIG_ans-ig-sample/issues/new">New Issue</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+
+  <!-- Ajout ANS -->
+  <script src="assets/js/app.js" type="text/javascript"> </script>
+  <script src="assets/js/vendor.js" type="text/javascript"> </script>
+  <!-- Fin ajout ANS -->
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  <!-- AJOUT ANS -->
+
+<footer class="footer footer-principal" role="contentinfo">
+  <div class="footer__region1">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <div class="logos">        
+            <div class="logo logo--0">
+              <a href="https://solidarites-sante.gouv.fr" title="Ministère des Solidarités et de la Santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ministere.svg" alt="Ministère des Solidarités et de la Santé" width="133" height="77" loading="lazy" />
+                
+              </a>
+            </div>
+        
+            <div class="logo logo--1">
+              <a href="https://esante.gouv.fr/" title="Agence du numérique en santé (nouvelle fenêtre)" target="_blank" rel="nofollow">
+                
+                <img src="assets/images/logo-ANS-footer.svg" alt="Agence du numérique en santé" width="106" height="74" loading="lazy" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 col-lg-4 text-center text-md-left">
+          <p class="footer__title">Agence du Numérique en Santé</p>
+          <p>2-10 Rue d'Oradour-sur-Glane 75015 Paris</p>
+
+          <!-- <div class="m-social">
+            <ul class="m-social__list">        
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.linkedin.com/company/agence-du-numerique-en-sante/" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-linkedin" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#linkedin"></use></svg>
+                  </div>
+                  <span class="sr-only">linkedin</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://twitter.com/esante_gouv_fr" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-twitter" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#twitter"></use></svg>
+                  </div>
+                  <span class="sr-only">twitter</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://www.youtube.com/channel/UCd1zuSaU5cE1lRCpwv_HSMA" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-youtube" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#youtube"></use></svg>
+                  </div>
+                  <span class="sr-only">youtube</span>
+                </a>
+              </li>
+              <li class="m-social__item">
+                <a class="m-social__link" href="https://esante.gouv.fr/rss.xml" target="_blank" rel="nofollow">
+                  <div class="m-social__icon">
+                    <svg class="svg-icon svg-rss" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#rss"></use></svg>
+                  </div>
+                  <span class="sr-only">rss</span>
+                </a>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+        
+        <div class="col-6 col-lg-4">
+          <ul class="footer-list">
+            <li class="footer-list__item footer-list__item--hasIcon">
+              <a href="mailto:ci-sis@esante.gouv.fr" class="mailto-link">
+                <svg class="svg-icon svg-angle-right" aria-hidden="true" focusable="false"><use href="assets/images/icon-sprite.svg#angle-right"></use></svg>Contact</a>
+              </li>
+              <!-- <li class="footer-list__item">
+                <a href="https://interop-pprod.esante.gouv.fr/ci-sis-specifications/wp-content/uploads/CGU_espace_de_tests_v1.1.pdf" class="file-link">Mentions légales</a>
+              </li>
+               -->
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="footer__region2">
+      <div class="container">
+        <div class="footer-contentinfo">
+          <ul class="footer-list footer-list--inline">
+
+          </ul>
+        </div>
+      </div>
+    </div> -->
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,32 @@
+# ans.fhir.fr.dmso#0.1.0: IG Test DMSO(en)
+
+## Pages
+
+* [Accueil](index.md)
+* [Informations sur la traduction](translationinfo.md)
+* [Architecture](architecture.md)
+* [Autres Ressources](autres_ressources.md)
+* [Flux de consommation](spec-technique-flux-consommation.md)
+* [Artifacts Summary](artifacts.md)
+* [Vue d'ensemble](spec-technique-vue-ensemble.md)
+* [Téléchargements et usages](annexe-downloads.md)
+* [Historique des versions](change-log.md)
+* [Introduction](spec-technique-intro.md)
+* [Vue d'ensemble](spec-fonctionnelle-intro.md)
+* [Flux d'alimentation](spec-technique-flux-alimentation.md)
+* [Sécurité](annexe-securite.md)
+* [Alimentation](spec-fonctionnelle-alimentation.md)
+
+## Resources
+
+### Extensions
+
+* [Attribut CDA de l'item de questionnaire](StructureDefinition-questionnaire-item-cda-attribute.md)
+
+### ImplementationGuides
+
+* [IG Test DMSO](ImplementationGuide-ans.fhir.fr.dmso.md)
+
+### Questionnaires
+
+* [Rougeole - cerfa n° 12554*04](Questionnaire-QuestionnaireRougeole.md)
