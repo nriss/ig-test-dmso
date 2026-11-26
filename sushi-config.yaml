@@ -67,6 +67,8 @@ pages:
             title: Sécurité
         annexe-downloads.md:
             title: Téléchargements et usages
+        annexe-loinc.md:
+            title: Codification LOINC pour le recueil d'information
     translationinfo.md:
         title: Informations sur la traduction
 
@@ -84,6 +86,7 @@ menu:
     Vol. 3 - Annexes:
         Sécurité: annexe-securite.html
         Téléchargements et usage: annexe-downloads.html
+        Codification LOINC: annexe-loinc.html
         "Spécifications FHIR ": new-tab {{site.data.fhir.path}}index.html
         "Site de l'ANS ": new-tab https://esante.gouv.fr/
     Ressources de conformité: artifacts.html
