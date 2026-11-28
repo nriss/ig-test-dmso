@@ -154,8 +154,8 @@ Une question est définie dans un `item` du `Questionnaire` (ici la question « 
   ],
   "type": "choice",
   "answerOption": [
-    { "valueCoding": { "system": "http://loinc.org", "code": "LA33-6", "display": "Yes" } },
-    { "valueCoding": { "system": "http://loinc.org", "code": "LA32-8", "display": "No" } }
+    { "valueCoding": { "system": "http://snomed.info/sct", "code": "373066001", "display": "oui" } },
+    { "valueCoding": { "system": "http://snomed.info/sct", "code": "373067005", "display": "non" } }
   ]
 }
 ```
@@ -166,7 +166,7 @@ Une question est définie dans un `item` du `Questionnaire` (ici la question « 
 {
   "linkId": "fievre",
   "answer": [
-    { "valueCoding": { "system": "http://loinc.org", "code": "LA33-6", "display": "Yes" } }
+    { "valueCoding": { "system": "http://snomed.info/sct", "code": "373066001", "display": "oui" } }
   ]
 }
 ```

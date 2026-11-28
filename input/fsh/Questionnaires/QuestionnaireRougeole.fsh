@@ -117,8 +117,8 @@ Usage: #definition
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1337 "Le patient (ou le tiers) est-il informé du diagnostic ?"
 * item[=].item[=].required = true
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[+].linkId = "patient-peut-repondre"
@@ -126,8 +126,8 @@ Usage: #definition
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1338 "L'état clinique du patient lui permet-il de répondre à l'investigation ?"
 * item[=].item[=].required = true
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[+].linkId = "representant-legal"
@@ -209,54 +209,54 @@ Usage: #definition
 * item[=].item[=].text = "Fièvre > 38,5° C"
 * item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#R50.9 "Fièvre, sans précision"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "exantheme"
 * item[=].item[=].text = "Exanthème maculo papuleux"
 * item[=].item[=].code[+] = http://snomed.info/sct#247471006 "éruption maculopapuleuse"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 // il ne faudrait faire apparaître cette question si réponse oui à la question précédente "Exanthème maculo papuleux"
 * item[=].item[=].item[+].linkId = "exantheme-generalise"
 * item[=].item[=].item[=].text = "Exanthème maculo papuleux généralisé"
 * item[=].item[=].item[=].code[+] = http://snomed.info/sct#725119006 "éruption cutanée généralisée"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].item[=].enableWhen[+].question = "exantheme"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[+].linkId = "toux"
 * item[=].item[=].text = "Toux"
 * item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#R05 "Toux"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "conjonctivite"
 * item[=].item[=].text = "Conjonctivite"
 * item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#H10.9 "Conjonctivite, sans précision"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "coryza"
 * item[=].item[=].text = "Coryza"
 * item[=].item[=].code[+] = http://hl7.org/fhir/sid/icd-10#J00 "Rhinopharyngite aigüe [rhume banal]"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "koplik"
 * item[=].item[=].text = "Signe de Köplik"
 * item[=].item[=].code[+] = http://snomed.info/sct#271667004 "signes de Koplik"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "facteurs-risque"
 * item[=].item[=].text = "Facteurs de risque"
@@ -294,36 +294,36 @@ Usage: #definition
 * item[=].item[=].type = #choice
 // code LOINC à vérifier avec Melissa
 * item[=].item[=].code[+] = http://loinc.org#77974-4 "Hospitalisation"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[+].linkId = "hospitalisation-date"
 * item[=].item[=].item[=].text = "Date d'hospitalisation"
 * item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[=].item[+].linkId = "hospitalisation-lieu"
 * item[=].item[=].item[=].text = "Lieu de l'hospitalisation"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[+].linkId = "reanimation"
 * item[=].item[=].text = "Réanimation"
 * item[=].item[=].code[+] = http://snomed.info/sct#305351004 "admission aux soins intensifs"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[+].linkId = "reanimation-date"
 * item[=].item[=].item[=].text = "Date"
 * item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].enableWhen[+].question = "reanimation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[+].linkId = "statut-clinique-du-patient"
 * item[=].item[=].text = "Statut clinique du patient"
@@ -350,8 +350,8 @@ Usage: #definition
 * item[=].item[=].text = "Demande de confirmation biologique"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1360 "Demande de confirmation biologique"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "rtpcr-oropharynx"
 * item[=].item[=].text = "RT-PCR : oro-pharynx"
@@ -513,8 +513,8 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Kit salivaire (Oracol©)"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1351 "Envoi kit salivaire au CNR"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 // infobulle
 * item[=].item[=].item[=].item[+].linkId = "cnr-kit-salivaire-definition"
 * item[=].item[=].item[=].item[=].text = "A compléter par le médecin généraliste."
@@ -530,7 +530,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-kit-salivaire"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[=].item[+].linkId = "cnr-autres-prelevements"
 * item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -538,8 +538,8 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Autres prélèvements"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1352 "Envoi autres prélèvements au CNR"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 // infobulle
 * item[=].item[=].item[=].item[+].linkId = "cnr-autres-prelevements-definition"
 * item[=].item[=].item[=].item[=].text = "A compléter par le biologiste ou l’ARS."
@@ -555,7 +555,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-autres-prelevements"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[=].item[+].linkId = "cnr-souhait-kits"
 * item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -563,8 +563,8 @@ Usage: #definition
 * item[=].item[=].item[=].text = "Souhaitez-vous recevoir des kits pour prélèvements et envois d'échantillons de salive au CNR (recherche d'IgM/PCR) ?"
 * item[=].item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#MED-1359 "Souhaitez-vous recevoir des kits pour prélèvements et envois d’échantillons de salive au CNR (recherche d’IgM/PCR) ?"
 * item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[=].item[+].linkId = "cnr-nombre-kits"
 * item[=].item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -574,7 +574,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "cnr-souhait-kits"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[+].linkId = "exposition"
 * item[=].text = "Exposition(s) à risque"
@@ -604,8 +604,8 @@ Usage: #definition
 * item[=].item[=].text = "Présence de sujet à risque de rougeole grave dans l'entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Présence de sujet à risque de rougeole grave dans l’entourage du cas (femme enceinte, immunodéprimé, nourrisson)"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[+].linkId = "immunoglobulines"
 * item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -613,8 +613,8 @@ Usage: #definition
 * item[=].item[=].text = "Administration d'immunoglobulines aux contacts à risque de rougeole grave"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-423 "Administration d’immunoglobulines aux contacts à risque de rougeole grave"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[+].linkId = "immunoglobulines-nombre"
 * item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -624,7 +624,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "immunoglobulines"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[+].linkId = "ror-72h"
 * item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -632,8 +632,8 @@ Usage: #definition
 * item[=].item[=].text = "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-426 "Administration dans les 72 heures suivant le 1er contact du vaccin ROR aux personnes contact"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[+].linkId = "ror-72h-nombre"
 * item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -643,7 +643,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #integer
 * item[=].item[=].item[=].enableWhen[+].question = "ror-72h"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[+].linkId = "lieux-exposition"
 * item[=].text = "Lieux et circonstances de l'exposition dans les 7 à 18 jours avant la date de l'éruption"
@@ -656,8 +656,8 @@ Usage: #definition
 * item[=].item[=].code[+] = http://snomed.info/sct#276030007 "voyage à l'étranger ou en territoire ultramarin"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "sejour-etranger-pays"
@@ -668,7 +668,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "sejour-etranger"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[=].item[+].linkId = "contact-rougeole"
@@ -677,8 +677,8 @@ Usage: #definition
 * item[=].item[=].text = "Contact avec un cas de rougeole"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-419 "Contact avec un cas de rougeole"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-lieu"
@@ -690,7 +690,7 @@ Usage: #definition
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].enableWhen[+].question = "contact-rougeole"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[=].item[=].item[+].linkId = "contact-rougeole-precision"
@@ -701,7 +701,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "contact-rougeole"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[+].linkId = "autres-cas-entourage"
 * item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -709,8 +709,8 @@ Usage: #definition
 * item[=].item[=].text = "Existence d'autres cas dans l'entourage"
 * item[=].item[=].code[+] = https://smt.esante.gouv.fr/fhir/CodeSystem/terminologie-cisis#GEN-420 "Existence d'autres cas dans l'entourage"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[+].linkId = "autres-cas-lieu"
@@ -722,7 +722,7 @@ Usage: #definition
 * item[=].item[=].item[=].repeats = true
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 * item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-lieu-contact-rougeole-cisis"
 
 * item[=].item[=].item[+].linkId = "autres-cas-precision"
@@ -733,7 +733,7 @@ Usage: #definition
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 
 * item[=].item[=].item[+].linkId = "autres-cas-sejour-etranger"
 * item[=].item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
@@ -743,9 +743,9 @@ Usage: #definition
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].enableWhen[+].question = "autres-cas-entourage"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA33-6 "Yes"
-* item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA32-8 "No"
+* item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
+* item[=].item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 * item[=].item[=].item[=].answerOption[+].valueCoding = http://loinc.org#LA12688-0 "Don't know"
 
 * item[=].item[=].item[=].item[+].linkId = "autres-cas-pays"
@@ -756,7 +756,7 @@ Usage: #definition
 * item[=].item[=].item[=].item[=].type = #choice
 * item[=].item[=].item[=].item[=].enableWhen[+].question = "autres-cas-sejour-etranger"
 * item[=].item[=].item[=].item[=].enableWhen[=].operator = #=
-* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://loinc.org#LA33-6 "Yes"
+* item[=].item[=].item[=].item[=].enableWhen[=].answerCoding = http://snomed.info/sct#373066001 "oui"
 * item[=].item[=].item[=].item[=].answerValueSet = "https://smt.esante.gouv.fr/fhir/ValueSet/jdv-hl7-iso3166-1-2-cisis"
 
 * item[+].linkId = "vaccin-rougeole"
