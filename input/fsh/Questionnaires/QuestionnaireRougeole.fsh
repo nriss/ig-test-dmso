@@ -72,12 +72,14 @@ Usage: #definition
 * item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
 * item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/telecom[starts-with(@value,'tel:')]/@value"
 * item[=].item[=].text = "Téléphone"
+* item[=].item[=].code[+] = http://loinc.org#42077-8 "Numéro de téléphone du patient"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "patient-courriel"
 * item[=].item[=].extension[+].url = "https://interop.esante.gouv.fr/ig/fhir/dmso/StructureDefinition/questionnaire-item-cda-attribute"
 * item[=].item[=].extension[=].valueString = "ClinicalDocument/recordTarget/patientRole/telecom[starts-with(@value,'mailto:')]/@value"
 * item[=].item[=].text = "Courriel"
+* item[=].item[=].code[+] = http://loinc.org#76458-9 "Adresse mail du patient"
 * item[=].item[=].type = #string
 
 * item[=].item[+].linkId = "patient-sexe"
@@ -299,6 +301,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "hospitalisation-date"
 * item[=].item[=].item[=].text = "Date d'hospitalisation"
+* item[=].item[=].item[=].code[+] = http://loinc.org#8656-1 "Date d'admission à l'hôpital"
 * item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -306,6 +309,7 @@ Usage: #definition
 
 * item[=].item[=].item[+].linkId = "hospitalisation-lieu"
 * item[=].item[=].item[=].text = "Lieu de l'hospitalisation"
+* item[=].item[=].item[=].code[+] = http://loinc.org#58237-9 "Nom de l'hôpital"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].enableWhen[+].question = "hospitalisation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -313,13 +317,14 @@ Usage: #definition
 
 * item[=].item[+].linkId = "reanimation"
 * item[=].item[=].text = "Réanimation"
-* item[=].item[=].code[+] = http://snomed.info/sct#305351004 "admission aux soins intensifs"
+* item[=].item[=].code[+] = http://loinc.org#95420-6 "Admission en soin intensif pour la pathologie d'intérêt"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373066001 "oui"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#373067005 "non"
 
 * item[=].item[=].item[+].linkId = "reanimation-date"
 * item[=].item[=].item[=].text = "Date"
+* item[=].item[=].item[=].code[+] = http://loinc.org#95367-9 "Date d'admission en soin intensif"
 * item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].enableWhen[+].question = "reanimation"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
@@ -336,7 +341,7 @@ Usage: #definition
 * item[=].item[=].item[+].linkId = "deces-date"
 * item[=].item[=].item[=].text = "Date du décès"
 // code LOINC à vérifier avec Melissa
-* item[=].item[=].code[+] = http://loinc.org#81954-0 "Date du décès [Date] Patient ; Numérique"
+* item[=].item[=].item[=].code[+] = http://loinc.org#81954-0 "Date du décès [Date] Patient ; Numérique"
 * item[=].item[=].item[=].type = #date
 * item[=].item[=].item[=].enableWhen[+].question = "statut-clinique-du-patient"
 * item[=].item[=].item[=].enableWhen[=].operator = #=
